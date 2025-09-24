@@ -1,0 +1,146 @@
+ItemList
+
+Purpose:
+Represents a list of items with associated values, optionally incorporating temporal structure or random shuffling. Can include item positions and customizable GP parameters for value generation.
+
+Constructor:
+ItemList(length, condition="Temporal", locations=None, wordpool=None, gp_params=None, rng=None)
+
+Parameters:
+
+length (int): Number of items in the list.
+
+condition (str): "Temporal" applies smooth temporal correlation, "Random" shuffles values.
+
+locations (list or array, optional): Positions (x, y) for each item.
+
+wordpool (list, optional): Pool of item names to sample from. Defaults to "item_0", "item_1", ....
+
+gp_params (dict, optional): Parameters for temporal structure:
+
+decay_factor (float)
+
+effect_strength (float)
+
+mean_range (tuple)
+
+var_range (tuple)
+
+rng (np.random.Generator, optional): RNG for reproducible numbers. If None, generates a new RNG.
+
+Attributes:
+
+items (np.array): Item names.
+
+vals (np.array): Associated numeric values.
+
+pos (np.array or None): Item positions.
+
+gp_params (dict): GP parameters used for generating values.
+
+rng (np.random.Generator): RNG used.
+
+Methods:
+
+temporalCondition(): Generates temporally correlated values.
+
+randomCondition(): Generates values then shuffles them.
+
+__str__() / __repr__() / _repr_html_(): Human-readable or HTML representation.
+
+
+ItemProcessor
+
+Purpose:
+Manages a list of items and supports probabilistic recall selection, using first-recall probabilities and lag-based conditional probabilities.
+
+Constructor:
+ItemProcessor(itemlist, rng=None)
+
+Parameters:
+
+itemlist (ItemList): The ItemList object to process.
+
+rng (np.random.Generator, optional): RNG; generates one if None.
+
+Attributes:
+
+items (np.array): Items available for recall.
+
+vals (np.array): Values of items.
+
+pos (np.array or None): Positions of items.
+
+serialpos (list): Serial positions of items (0-indexed).
+
+length (int): Remaining items.
+
+rng (np.random.Generator): RNG used for selections.
+
+Methods:
+
+hasItems() -> bool: Returns True if items remain.
+
+pickFirstItem(probs) -> (item, val, pos, serialpos): Randomly selects an item using first-recall probabilities.
+
+pickItem(lag_probs, prev_serialpos) -> (item, val, pos, serialpos, chosen_lag): Picks an item using lag probabilities.
+
+_removeItem(idx): Removes an item at the specified index.
+
+__str__() / __repr__() / _repr_html_(): Returns readable or HTML representation.
+
+
+SimulatedSubjectData
+
+Purpose:
+Simulates behavioral recall data for a subject, generating multiple item lists and recall events, with value guesses based on subset means.
+
+Constructor:
+SimulatedSubjectData(subject, first_recall, lag_crp, recall_rate, value_acc, item_lists=None, gp_params=None, seed=None)
+
+Parameters:
+subject (str or int): Subject identifier.
+
+first_recall (list or array): Probabilities for recalling each item first.
+
+lag_crp (list or array): Lag-based conditional recall probabilities.
+
+recall_rate (float): Probability of recalling an item.
+
+value_acc (float): Accuracy of value guesses (0–1).
+
+item_lists (list of ItemList, optional): Predefined lists.
+
+gp_params (dict, optional): GP parameters for generating values.
+
+seed (int, optional): RNG seed; generates one if None.
+
+Attributes:
+
+df (pd.DataFrame): Stores generated recall data.
+
+item_lists (list): List of ItemList objects.
+
+gp_params (dict): GP parameters.
+
+rng (np.random.Generator): RNG used throughout.
+
+seed (int): RNG seed.
+
+Methods:
+
+resetDF(): Clears the DataFrame.
+
+generateLocations(r, n): Generates n random (x, y) positions within range r.
+
+generateLists(list_len, num_lists, wordpool=None, pos=None): Generates item lists with temporal or random conditions.
+
+_guessByMean(subset_mean, max_val_range=15): Generates value guesses around mean.
+
+convertCRP(crp): Converts CRP array into lag probability dict.
+
+normalizeDict(lag_probs): Normalizes a probability dictionary to sum 1.
+
+generateData(list_len, num_lists, wordpool=None, gen_pos=False, guess_by_subset=True, reset=True): Simulates encoding and recall, returns a DataFrame.
+
+__str__() / __repr__() / _repr_html_(): Readable or HTML representation of subject data.
