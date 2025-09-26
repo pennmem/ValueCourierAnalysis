@@ -3,7 +3,7 @@ import numpy as np
 
 # ------------------ ItemList ------------------
 class ItemList:
-    def __init__(self, length, condition="Temporal", locations=None, wordpool=None, gp_params=None, rng=None):
+    def __init__(self, length, condition="Temporal", locations=None, wordpool=None, complex_params=None, simple_params=None, rng=None):
         self.length = length
         self.condition = condition
         if rng is None:
@@ -22,29 +22,56 @@ class ItemList:
         # Locations
         self.pos = None if locations is None else np.array(locations.copy())
 
-        # GP parameters
-        default_gp_params = {
+        # complex Temporal parameters
+        default_complex_params = {
             "decay_factor": 1.0,
             "effect_strength": 1.0,
             "mean_range": (4, 10),
             "var_range": (2, 6),
             "val_range": (0,15)
         }
-        self.gp_params = default_gp_params if gp_params is None else {**default_gp_params, **gp_params}
+        self.complex_params = default_complex_params if complex_params is None else {**default_complex_params, **complex_params}
+        
+        # complex Temporal parameters
+        default_simple_params = {
+            "val_range": (0,20),
+            "recency_buf": 3,
+            "primacy_buf": 2, 
+            "num_chosen": 4
+        }
+        self.simple_params = default_simple_params if simple_params is None else {**default_simple_params, **simple_params}
 
         self.vals = np.zeros(self.length)
         if condition == "Temporal":
-            self.temporalCondition()
+            self.temporalConditionComplex()
         elif condition == "Random":
             self.randomCondition()
 
-    def temporalCondition(self):
+            
+#     def temporalConditionSimple(self):
+#         n = self.length
+#         # decay_factor = self.simple_params["decay_factor"]
+#         # effect_strength = self.simple_params["effect_strength"]
+#         # mean_range = self.simple_params["mean_range"]
+#         # var_range = self.gp_psimple_paramsarams["var_range"]
+#         val_range = self.simple_params["val_range"]
+        
+#         # number of items from start of list that should not be included
+#         primacy_buf = self.simple_params['primacy_buf']
+#         # number of items from end of list that should not be included
+#         recency_buf = self.simple_params['recency_buf']
+        
+#         positions = np.arange(n)
+        
+        
+    
+    def temporalConditionComplex(self):
         n = self.length
-        decay_factor = self.gp_params["decay_factor"]
-        effect_strength = self.gp_params["effect_strength"]
-        mean_range = self.gp_params["mean_range"]
-        var_range = self.gp_params["var_range"]
-        val_range = self.gp_params["val_range"]
+        decay_factor = self.complex_params["decay_factor"]
+        effect_strength = self.complex_params["effect_strength"]
+        mean_range = self.complex_params["mean_range"]
+        var_range = self.complex_params["var_range"]
+        val_range = self.complex_params["val_range"]
 
         positions = np.arange(n)
         cov = np.exp(-np.square(positions.reshape(-1, 1) - positions) / (2 * decay_factor**2))
@@ -66,8 +93,9 @@ class ItemList:
         return self.vals
 
 
-    def randomCondition(self):
-        vals = self.temporalCondition().copy()
+    def randomCondition(self, complex=True):
+        if complex:
+            vals = self.temporalConditionComplex().copy()
         self.rng.shuffle(vals)
         self.vals = vals
         return self.vals
@@ -78,7 +106,8 @@ class ItemList:
         s += f"Values: {np.round(self.vals, 2).tolist()}\n"
         if self.pos is not None:
             s += f"Positions: {self.pos.tolist()}\n"
-        s += f"GP params: {self.gp_params}\n"
+        s += f"Simple params: {self.simple_params}\n"
+        s += f"Complex params: {self.complex_params}\n"
         s += f"RNG: {self.rng}\n"
         return s
 
@@ -191,7 +220,7 @@ class ItemProcessor:
 # ------------------ SimulatedSubjectData ------------------
 class SimulatedSubjectData:
     def __init__(self, subject, first_recall, lag_crp, recall_rate, value_acc, 
-                 item_lists=None, gp_params=None, seed=None):
+                 item_lists=None, simple_params=None,complex_params=None, seed=None):
         self.resetDF()
         self.subject = subject
         self.first_recall = first_recall
@@ -200,15 +229,24 @@ class SimulatedSubjectData:
         self.recall_rate = recall_rate
         self.value_acc = value_acc
 
-        # GP parameters
-        default_gp_params = {
+        # complex Temporal parameters
+        default_complex_params = {
             "decay_factor": 1.0,
             "effect_strength": 1.0,
             "mean_range": (4, 10),
             "var_range": (2, 6),
             "val_range": (0,15)
         }
-        self.gp_params = default_gp_params if gp_params is None else {**default_gp_params, **gp_params}
+        self.complex_params = default_complex_params if complex_params is None else {**default_complex_params, **complex_params}
+        
+        # complex Temporal parameters
+        default_simple_params = {
+            "val_range": (0,20),
+            "recency_buf": 3,
+            "primacy_buf": 2, 
+            "num_chosen": 4
+        }
+        self.simple_params = default_simple_params if simple_params is None else {**default_simple_params, **simple_params}
 
         # RNG setup
         if seed is None:
@@ -236,7 +274,7 @@ class SimulatedSubjectData:
 
         item_lists = [
             ItemList(list_len, condition, wordpool=wordpool, locations=pos, 
-                     gp_params=self.gp_params, rng=self.rng)
+                     complex_params=self.complex_params, simple_params=self.simple_params, rng=self.rng)
             for condition in conditions
         ]
         self.item_lists = item_lists
@@ -346,13 +384,67 @@ class SimulatedSubjectData:
         self.df = pd.concat([pd.DataFrame(encoding_rows), pd.DataFrame(recall_rows)], ignore_index=True)
         return self.df.copy()
 
+    # BROKEN
+    def getSubjectLagCRP(self, list_len):
+        data = self.df.copy()
+        center = list_len - 1
+        min_lag = -center
+        max_lag = center + 1
+        actual = {lag: 0 for lag in range(min_lag, max_lag)}
+        possible = {lag: 0 for lag in range(min_lag, max_lag)}
+        for session_id, session_data in data.groupby('session'):
+            recalls = session_data[session_data.type == 'REC_WORD']
+            # print(recalls)
+            words = session_data[session_data.type == 'WORD']
+            if recalls.empty or words.empty:
+                print(f"session {session_id} has no events")
+                continue
+            # print(recalls.intruded)
+            recalls = recalls[(recalls['trial'] != -999)]
+            word_to_pos = dict(zip(words['item'], words['serialpos']))
+            # print(word_to_pos)
+            # print(recalls)
+            for trial in recalls['trial'].unique():
+                trial_words = words[words['trial'] == trial]['item'].tolist()
+                trial_recalls = (recalls[recalls['trial'] == trial]
+                                 .sort_values('rectime')
+                                 .drop_duplicates('item'))
+
+                if len(trial_recalls) < 2:
+                    print(f"session {session_id}, trial {trial} doesn't have enough events")
+                    continue
+                trial_recalls = trial_recalls[trial_recalls['item'].isin(trial_words)]
+                recall_pos = [word_to_pos[w] for w in trial_recalls['item']]
+                # print(recall_pos)
+                for i, cur in enumerate(recall_pos[:-1]):
+                    lag = recall_pos[i+1] - cur
+                    if min_lag <= lag <= max_lag and lag != 0:
+                        actual[lag] += 1
+                    for pos in set(range(1, list_len+1)) - set(recall_pos[:i+1]):
+                        pl = pos - cur
+                        if min_lag <= pl <= max_lag and pl != 0:
+                            possible[pl] += 1
+
+        # build CRP array
+        full_len = 2*list_len - 1
+        crp = np.full(full_len, np.nan)
+        center = list_len - 1
+        for lag in range(min_lag, max_lag):
+            idx = center + lag
+            if 0 <= idx < full_len:
+                crp[idx] = (actual[lag] / possible[lag]) if possible[lag] > 0 else np.nan
+        crp[center] = 0.0
+        self.lag_crp = crp.copy()
+        return crp
+    
     def __str__(self):
         s = f"SimulatedSubjectData (Subject: {self.subject})\n"
         s += f"First recall probs: {self.first_recall}\n"
         s += f"Lag CRP: {self.lag_crp}\n"
         s += f"Recall rate: {self.recall_rate}\n"
         s += f"Value accuracy: {self.value_acc}\n"
-        s += f"GP params: {self.gp_params}\n"
+        s += f"Simple params: {self.simple_params}\n"
+        s += f"Complex params: {self.complex_params}\n"
         s += f"Seed: {self.seed}\n"
         s += f"RNG: {self.rng}\n"
         if self.item_lists is not None:
