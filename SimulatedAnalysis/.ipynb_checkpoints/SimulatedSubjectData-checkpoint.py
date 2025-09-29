@@ -67,7 +67,9 @@ class ItemList:
         rng = self.rng
 
         if n <= primacy_buf + recency_buf:
-            raise ValueError("List length too short for buffers.")
+            recency_buf = 0
+            primacy_buf=0
+            print("List length too short for buffers.")
 
         middle_len = n - (primacy_buf + recency_buf)
         first_half_size = middle_len // 2
