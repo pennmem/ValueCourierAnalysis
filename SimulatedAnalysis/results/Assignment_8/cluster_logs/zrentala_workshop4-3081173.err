@@ -1,0 +1,2 @@
+2025-09-29 12:48:32,699 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.140:36063'
+slurmstepd: error: *** JOB 3081173 ON node40 CANCELLED AT 2025-09-29T12:48:33 ***

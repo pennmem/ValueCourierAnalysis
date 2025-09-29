@@ -1,68 +1,114 @@
 import pandas as pd
 import numpy as np
 
+# ------------------ DEFAULT PARAMETERS ------------------
+DEFAULT_SIMPLE_PARAMS = {
+    "val_range": (0, 19),
+    "recency_buf": 3,
+    "primacy_buf": 2, 
+    "num_in_group_chosen": 4,
+    "high_first": True,  # default; will be overwritten during list generation
+}
+
+DEFAULT_COMPLEX_PARAMS = {
+    "decay_factor": 1.0,
+    "effect_strength": 1.0,
+    "mean_range": (4, 10),
+    "var_range": (2, 6),
+    "val_range": (0, 15),
+}
+
+def merge_params(defaults, overrides):
+    """Merge defaults with user-provided parameters."""
+    return {**defaults, **(overrides or {})}
+
+
 # ------------------ ItemList ------------------
 class ItemList:
-    def __init__(self, length, condition="Temporal", locations=None, wordpool=None, complex_params=None, simple_params=None, rng=None):
+    def __init__(self, length, condition="Temporal", complex_temp=False, locations=None,
+                 wordpool=None, complex_params=None, simple_params=None, rng=None):
         self.length = length
         self.condition = condition
-        if rng is None:
-            seed = int(np.random.SeedSequence().entropy)
-            self.rng = np.random.default_rng(seed)
-        else:
-            self.rng = rng
-
-        # Wordpool handling
+        self.rng = rng if rng is not None else np.random.default_rng()
         self.items = (
             np.array([f"item_{i}" for i in range(length)])
             if wordpool is None
-            else self.rng.choice(wordpool, size=length, replace=False)
+            else np.random.choice(wordpool, size=length, replace=False)
         )
+        if locations is None:
+            self.pos = None
+        else:
+            self.pos = locations.copy()
+        self.complex_params = complex_params or {}
+        self.simple_params = simple_params or DEFAULT_SIMPLE_PARAMS.copy()
 
-        # Locations
-        self.pos = None if locations is None else np.array(locations.copy())
-
-        # complex Temporal parameters
-        default_complex_params = {
-            "decay_factor": 1.0,
-            "effect_strength": 1.0,
-            "mean_range": (4, 10),
-            "var_range": (2, 6),
-            "val_range": (0,15)
-        }
-        self.complex_params = default_complex_params if complex_params is None else {**default_complex_params, **complex_params}
-        
-        # complex Temporal parameters
-        default_simple_params = {
-            "val_range": (0,20),
-            "recency_buf": 3,
-            "primacy_buf": 2, 
-            "num_chosen": 4
-        }
-        self.simple_params = default_simple_params if simple_params is None else {**default_simple_params, **simple_params}
-
-        self.vals = np.zeros(self.length)
         if condition == "Temporal":
-            self.temporalConditionComplex()
+            if complex_temp:
+                self.temporalConditionComplex()
+            else:
+                self.temporalConditionSimple()
         elif condition == "Random":
             self.randomCondition()
+        else:
+            raise ValueError(f"Unknown condition: {condition}")
+
 
             
-#     def temporalConditionSimple(self):
-#         n = self.length
-#         # decay_factor = self.simple_params["decay_factor"]
-#         # effect_strength = self.simple_params["effect_strength"]
-#         # mean_range = self.simple_params["mean_range"]
-#         # var_range = self.gp_psimple_paramsarams["var_range"]
-#         val_range = self.simple_params["val_range"]
-        
-#         # number of items from start of list that should not be included
-#         primacy_buf = self.simple_params['primacy_buf']
-#         # number of items from end of list that should not be included
-#         recency_buf = self.simple_params['recency_buf']
-        
-#         positions = np.arange(n)
-        
+    def temporalConditionSimple(self):
+        n = self.length
+        sp = self.simple_params
+        val_range = sp["val_range"]
+        primacy_buf = sp["primacy_buf"]
+        recency_buf = sp["recency_buf"]
+        num_in_group_chosen = sp["num_in_group_chosen"]
+        high_first = sp.get("high_first", True)
+
+        # Check that buffers and group sizes are compatible with list length
+        assert n > primacy_buf + recency_buf, "List length too short for buffers."
+        middle_len = n - (primacy_buf + recency_buf)
+        assert middle_len >= 0, "Middle length must be non-negative."
+
+        # Determine first_half and second_half lengths
+        first_half_size = min(num_in_group_chosen, middle_len)
+        second_half_size = middle_len - first_half_size
+
+        # Sample middle values without replacement
+        first_half = self.rng.choice(range(val_range[0], val_range[1]+1),
+                                     first_half_size, replace=False)
+        second_half_pool = [v for v in range(val_range[0], val_range[1]+1) if v not in first_half]
+        if second_half_size > 0:
+            second_half = self.rng.choice(second_half_pool, second_half_size, replace=False)
+        else:
+            second_half = np.array([], dtype=int)
+
+        middle_vals = np.concatenate([first_half, second_half])
+        assert len(middle_vals) == middle_len, "Middle values length mismatch!"
+
+        # Shuffle middle values
+        self.rng.shuffle(middle_vals)
+
+        # Initialize final array
+        vals = np.zeros(n, dtype=int)
+
+        # Fill primacy buffer
+        if primacy_buf > 0:
+            vals[:primacy_buf] = self.rng.choice(range(val_range[0], val_range[1]+1),
+                                                 primacy_buf, replace=False)
+
+        # Fill middle
+        vals[primacy_buf:n - recency_buf] = middle_vals
+
+        # Fill recency buffer
+        if recency_buf > 0:
+            vals[n - recency_buf:] = self.rng.choice(range(val_range[0], val_range[1]+1),
+                                                     recency_buf, replace=False)
+
+        # Optionally flip high_first
+        if high_first:
+            vals = vals[::-1]
+
+        self.vals = vals
+        return self.vals
         
     
     def temporalConditionComplex(self):
@@ -96,6 +142,8 @@ class ItemList:
     def randomCondition(self, complex=True):
         if complex:
             vals = self.temporalConditionComplex().copy()
+        else: 
+            va;s = self.temporalConditionSimple().copy()
         self.rng.shuffle(vals)
         self.vals = vals
         return self.vals
@@ -219,40 +267,28 @@ class ItemProcessor:
 
 # ------------------ SimulatedSubjectData ------------------
 class SimulatedSubjectData:
-    def __init__(self, subject, first_recall, lag_crp, recall_rate, value_acc, 
-                 item_lists=None, simple_params=None,complex_params=None, seed=None):
-        self.resetDF()
+    def __init__(self, subject, first_recall, lag_crp, recall_rate, value_acc,
+                 simple_params=None, complex_params=None, seed=None):
         self.subject = subject
         self.first_recall = first_recall
         self.lag_crp = lag_crp
-        self.item_lists = item_lists
         self.recall_rate = recall_rate
         self.value_acc = value_acc
+        self.item_lists = None
+        self.curr_sess_idx = 0
 
-        # complex Temporal parameters
-        default_complex_params = {
-            "decay_factor": 1.0,
-            "effect_strength": 1.0,
-            "mean_range": (4, 10),
-            "var_range": (2, 6),
-            "val_range": (0,15)
-        }
-        self.complex_params = default_complex_params if complex_params is None else {**default_complex_params, **complex_params}
-        
-        # complex Temporal parameters
-        default_simple_params = {
-            "val_range": (0,20),
-            "recency_buf": 3,
-            "primacy_buf": 2, 
-            "num_chosen": 4
-        }
-        self.simple_params = default_simple_params if simple_params is None else {**default_simple_params, **simple_params}
+        # Merge parameters
+        self.simple_params = merge_params(DEFAULT_SIMPLE_PARAMS, simple_params)
+        self.complex_params = merge_params(DEFAULT_COMPLEX_PARAMS, complex_params)
 
-        # RNG setup
+        # RNG
         if seed is None:
             seed = int(np.random.SeedSequence().entropy)
         self.seed = seed
         self.rng = np.random.default_rng(seed)
+
+        # Initialize empty dataframe
+        self.resetDF()
 
     def resetDF(self):
         columns = [
@@ -265,18 +301,38 @@ class SimulatedSubjectData:
     def generateLocations(self, r, n):
         return [(self.rng.uniform(0, r), self.rng.uniform(0, r)) for _ in range(n)]
 
-    def generateLists(self, list_len, num_lists, wordpool=None, pos=None):
+    def generateLists(self, list_len, num_lists, wordpool=None, pos=None, random_high_first=True):
         half = num_lists // 2
         conditions = ["Temporal"] * half + ["Random"] * half
         if num_lists % 2 == 1:
             conditions.append(self.rng.choice(["Temporal", "Random"]))
         self.rng.shuffle(conditions)
 
-        item_lists = [
-            ItemList(list_len, condition, wordpool=wordpool, locations=pos, 
-                     complex_params=self.complex_params, simple_params=self.simple_params, rng=self.rng)
-            for condition in conditions
-        ]
+        # ------------------ HANDLE TEMPORAL HIGH_FIRST ------------------
+        temporal_count = sum(1 for c in conditions if c == "Temporal")
+        high_first_flags = [True]*(temporal_count//2) + [False]*(temporal_count//2)
+        if temporal_count % 2 == 1:
+            high_first_flags.append(bool(self.rng.integers(0, 2)))
+        self.rng.shuffle(high_first_flags)
+
+        item_lists = []
+        for condition in conditions:
+            sp = self.simple_params.copy()
+            if condition == "Temporal" and random_high_first:
+                sp["high_first"] = high_first_flags.pop()
+
+            il = ItemList(
+                list_len,
+                condition,
+                complex_temp=False,
+                wordpool=wordpool,
+                locations=pos,
+                complex_params=self.complex_params,
+                simple_params=sp,
+                rng=self.rng,
+            )
+            item_lists.append(il)
+
         self.item_lists = item_lists
         return item_lists, conditions
 
@@ -298,7 +354,7 @@ class SimulatedSubjectData:
             return {lag: 1/n for lag in lag_probs}
         return {lag: p/total for lag, p in lag_probs.items()}
 
-    def generateData(self, list_len, num_lists, wordpool=None, gen_pos=False, guess_by_subset=True, reset=True):
+    def generateData(self, list_len, num_lists, num_lists_per_sess = 10, wordpool=None, gen_pos=False, guess_by_subset=True, reset=True):
         if reset:
             self.resetDF()
             self.item_lists = None
@@ -335,9 +391,10 @@ class SimulatedSubjectData:
                 prev_serialpos = serialpos
                 recall_row = {
                     'experiment': experiment,
-                    'item_name': item,
+                    'item': item,
                     'item_val': val,
-                    'list': list_num,
+                    'trial': list_num,
+                    'rectime': list_num, # not actually how it's supposed to be 
                     'recalled': 1,
                     'recallpos': recall_pos + 1,
                     'serialpos': serialpos + 1,
@@ -363,9 +420,10 @@ class SimulatedSubjectData:
                 recall_row = recall_dict[item] if recalled else None
                 encoding_row = {
                     'experiment': experiment,
-                    'item_name': item,
+                    'item': item,
                     'item_val': item_list.vals[serialpos],
-                    'list': list_num,
+                    'trial': list_num,
+                    'rectime': list_num if recalled else -1, # not actually how it's supposed to be 
                     'recalled': int(recalled),
                     'recallpos': recall_row['recallpos'] if recalled else -1,
                     'serialpos': serialpos + 1,
@@ -374,12 +432,16 @@ class SimulatedSubjectData:
                     'val_list_avg': list_mean,
                     'val_guess': val_guess,
                     'pos_x': item_list.pos[serialpos][0],
-                    'pos_y': item_list.pos[serialpos][1]
+                    'pos_y': item_list.pos[serialpos][1],
+                    'session': self.curr_sess_idx
                 }
                 encoding_rows.append(encoding_row)
                 if recalled:
                     recall_row['val_guess'] = val_guess
+                    recall_row['session'] = self.curr_sess_idx
                     recall_rows.append(recall_row)
+                    
+            if list_num % num_lists_per_sess == 0 and list_num != 0: self.curr_sess_idx += 1
 
         self.df = pd.concat([pd.DataFrame(encoding_rows), pd.DataFrame(recall_rows)], ignore_index=True)
         return self.df.copy()

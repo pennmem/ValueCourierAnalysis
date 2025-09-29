@@ -1,0 +1,20 @@
+2025-09-29 14:02:09,788 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.107:46206'
+2025-09-29 14:02:11,148 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.107:43207
+2025-09-29 14:02:11,148 - distributed.worker - INFO -          Listening to: tcp://192.168.86.107:43207
+2025-09-29 14:02:11,148 - distributed.worker - INFO -           Worker name:            SLURMCluster-37
+2025-09-29 14:02:11,148 - distributed.worker - INFO -          dashboard at:       192.168.86.107:39943
+2025-09-29 14:02:11,148 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.101:42031
+2025-09-29 14:02:11,148 - distributed.worker - INFO - -------------------------------------------------
+2025-09-29 14:02:11,148 - distributed.worker - INFO -               Threads:                          1
+2025-09-29 14:02:11,148 - distributed.worker - INFO -                Memory:                   9.31 GiB
+2025-09-29 14:02:11,148 - distributed.worker - INFO -       Local Directory: /home1/zrentala/dask-worker-space/dask-scratch-space/worker-f47tc6k2
+2025-09-29 14:02:11,149 - distributed.worker - INFO - -------------------------------------------------
+2025-09-29 14:02:11,498 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-09-29 14:02:11,498 - distributed.worker - INFO -         Registered to: tcp://192.168.86.101:42031
+2025-09-29 14:02:11,498 - distributed.worker - INFO - -------------------------------------------------
+2025-09-29 14:02:11,499 - distributed.core - INFO - Starting established connection to tcp://192.168.86.101:42031
+2025-09-29 14:02:13,773 - distributed.worker - INFO - Stopping worker at tcp://192.168.86.107:43207. Reason: scheduler-remove-worker
+2025-09-29 14:02:13,776 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://192.168.86.107:46206'. Reason: scheduler-remove-worker
+2025-09-29 14:02:13,781 - distributed.nanny - INFO - Worker closed
+2025-09-29 14:02:13,782 - distributed.core - INFO - Connection to tcp://192.168.86.101:42031 has been closed.
+slurmstepd: error: *** JOB 3081242 ON node07 CANCELLED AT 2025-09-29T14:02:13 ***

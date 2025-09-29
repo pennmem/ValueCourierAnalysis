@@ -1,0 +1,20 @@
+2025-09-29 14:02:09,972 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.108:40179'
+2025-09-29 14:02:11,368 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.108:37935
+2025-09-29 14:02:11,368 - distributed.worker - INFO -          Listening to: tcp://192.168.86.108:37935
+2025-09-29 14:02:11,368 - distributed.worker - INFO -           Worker name:            SLURMCluster-38
+2025-09-29 14:02:11,369 - distributed.worker - INFO -          dashboard at:       192.168.86.108:42701
+2025-09-29 14:02:11,369 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.101:42031
+2025-09-29 14:02:11,369 - distributed.worker - INFO - -------------------------------------------------
+2025-09-29 14:02:11,369 - distributed.worker - INFO -               Threads:                          1
+2025-09-29 14:02:11,369 - distributed.worker - INFO -                Memory:                   9.31 GiB
+2025-09-29 14:02:11,369 - distributed.worker - INFO -       Local Directory: /home1/zrentala/dask-worker-space/dask-scratch-space/worker-ibac5670
+2025-09-29 14:02:11,369 - distributed.worker - INFO - -------------------------------------------------
+2025-09-29 14:02:11,751 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-09-29 14:02:11,751 - distributed.worker - INFO -         Registered to: tcp://192.168.86.101:42031
+2025-09-29 14:02:11,751 - distributed.worker - INFO - -------------------------------------------------
+2025-09-29 14:02:11,752 - distributed.core - INFO - Starting established connection to tcp://192.168.86.101:42031
+2025-09-29 14:02:13,762 - distributed.worker - ERROR - Scheduler was unaware of this worker 'tcp://192.168.86.108:37935'. Shutting down.
+2025-09-29 14:02:13,762 - distributed.worker - INFO - Stopping worker at tcp://192.168.86.108:37935. Reason: worker-close
+2025-09-29 14:02:13,764 - distributed.core - INFO - Connection to tcp://192.168.86.101:42031 has been closed.
+2025-09-29 14:02:13,766 - distributed.nanny - INFO - Worker closed
+slurmstepd: error: *** JOB 3081255 ON node08 CANCELLED AT 2025-09-29T14:02:13 ***

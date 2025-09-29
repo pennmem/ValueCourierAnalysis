@@ -1,0 +1,186 @@
+2025-09-29 12:48:29,399 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.107:38510'
+2025-09-29 12:48:30,683 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.107:34994
+2025-09-29 12:48:30,683 - distributed.worker - INFO -          Listening to: tcp://192.168.86.107:34994
+2025-09-29 12:48:30,683 - distributed.worker - INFO -           Worker name:             SLURMCluster-4
+2025-09-29 12:48:30,684 - distributed.worker - INFO -          dashboard at:       192.168.86.107:44375
+2025-09-29 12:48:30,684 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.101:41007
+2025-09-29 12:48:30,684 - distributed.worker - INFO - -------------------------------------------------
+2025-09-29 12:48:30,684 - distributed.worker - INFO -               Threads:                          1
+2025-09-29 12:48:30,684 - distributed.worker - INFO -                Memory:                   9.31 GiB
+2025-09-29 12:48:30,684 - distributed.worker - INFO -       Local Directory: /home1/zrentala/dask-worker-space/dask-scratch-space/worker-i6gaz6gn
+2025-09-29 12:48:30,684 - distributed.worker - INFO - -------------------------------------------------
+2025-09-29 12:48:30,970 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-09-29 12:48:30,971 - distributed.worker - INFO -         Registered to: tcp://192.168.86.101:41007
+2025-09-29 12:48:30,971 - distributed.worker - INFO - -------------------------------------------------
+2025-09-29 12:48:30,971 - distributed.core - INFO - Starting established connection to tcp://192.168.86.101:41007
+[I 2025-09-29 12:48:31,047] A new study created in memory with name: no-name-9cddbd72-6b22-4b23-90c1-69a30377cfb6
+[W 2025-09-29 12:48:31,055] Trial 0 failed with parameters: {'lag_0': 0.0017678573392526339, 'lag_1': 0.205770777937457, 'lag_2': 0.5141432450473677, 'lag_3': 0.13610889531717424, 'lag_4': 0.9987411407799751, 'lag_5': 0.8583593630020001, 'lag_6': 0.29890211368601555, 'lag_7': 0.8670134582863693, 'lag_8': 0.7381304910502342, 'lag_9': 0.8588037771988278, 'lag_10': 0.671662421023233, 'lag_11': 0.36132475423894184, 'lag_12': 0.3582300632533595, 'lag_13': 0.007046941145406876, 'lag_14': 0.1782629709312136, 'lag_15': 0.36897322364103025, 'lag_16': 0.34355059931644183, 'lag_17': 0.7067157861077801, 'lag_18': 0.4505652982113748, 'lag_19': 0.4289556001249071, 'lag_20': 0.8082355369549721, 'lag_21': 0.13382000979552433, 'lag_22': 0.6224598204682817, 'lag_23': 0.09961883579563437, 'lag_24': 0.6749246207565454, 'lag_25': 0.12446033059750182, 'lag_26': 0.5117045354216176, 'lag_27': 0.7218947162280506, 'lag_28': 0.7580317490964411} because of the following error: ValueError('could not broadcast input array from shape (5,) into shape (10,)').
+Traceback (most recent call last):
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop_311/lib/python3.11/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "/tmp/ipykernel_139921/4077541180.py", line 32, in objective
+  File "/home1/zrentala/ValueCourierAnalysis/SimulatedAnalysis/SimulatedSubjectData.py", line 382, in generateData
+    self.generateLists(list_len=list_len, num_lists=num_lists, wordpool=wordpool, pos=pos)
+  File "/home1/zrentala/ValueCourierAnalysis/SimulatedAnalysis/SimulatedSubjectData.py", line 342, in generateLists
+    il = ItemList(
+         ^^^^^^^^^
+  File "/home1/zrentala/ValueCourierAnalysis/SimulatedAnalysis/SimulatedSubjectData.py", line 59, in __init__
+    self.temporalConditionSimple()
+  File "/home1/zrentala/ValueCourierAnalysis/SimulatedAnalysis/SimulatedSubjectData.py", line 115, in temporalConditionSimple
+    vals[start:end] = middle_vals
+    ~~~~^^^^^^^^^^^
+ValueError: could not broadcast input array from shape (5,) into shape (10,)
+[W 2025-09-29 12:48:31,057] Trial 0 failed with value None.
+2025-09-29 12:48:31,074 - distributed.worker - WARNING - Compute Failed
+Key:       optimize_subject-189a8301-552b-4dcc-93fc-efb33d55405c
+Function:  execute_task
+args:      ((<function optimize_subject at 0x2b8698e33880>, 'Optimization_Results', 'LTP574', (<class 'dict'>, [['LTP564', (<class 'dict'>, [['recall_rate', 0.6644628099173554], ['first_recall', array([0.04878049, 0.07317073, 0.02439024, 0.07317073, 0.07317073,
+       0.02439024, 0.02439024, 0.04878049, 0.        , 0.        ,
+       0.02439024, 0.02439024, 0.        , 0.14634146, 0.41463415])], ['lag_crp', array([0.10714286, 0.02173913, 0.07936508, 0.15068493, 0.07058824,
+       0.09183673, 0.1       , 0.06015038, 0.10958904, 0.11038961,
+       0.09302326, 0.08095238, 0.11627907, 0.13807531, 0.        ,
+       0.17596567, 0.12037037, 0.11578947, 0.0974359 , 0.11176471,
+       0.05063291, 0.11764706, 0.06034483, 0.10576923, 0.07608696,
+       0.05882353, 0.        , 0.03448276, 0.11111111])]])], ['LTP565', (<class 'dict'>, [['recall_rate', 0.7995337995337995], ['first_recall', array([0.5       , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.        ,
+kwargs:    {}
+Exception: "ValueError('could not broadcast input array from shape (5,) into shape (10,)')"
+
+[I 2025-09-29 12:48:31,076] A new study created in memory with name: no-name-972a5da0-58a4-48c1-bf9f-97554ff5ceef
+[W 2025-09-29 12:48:31,083] Trial 0 failed with parameters: {'lag_0': 0.26998865282359336, 'lag_1': 0.8197791543518244, 'lag_2': 0.1858031405490678, 'lag_3': 0.0941743337366322, 'lag_4': 0.014307020126239972, 'lag_5': 0.5534620034438035, 'lag_6': 0.9418706619476094, 'lag_7': 0.28231322176782525, 'lag_8': 0.364628823209771, 'lag_9': 0.9202387650542603, 'lag_10': 0.30508486303106636, 'lag_11': 0.0331371493739269, 'lag_12': 0.49364003983367394, 'lag_13': 0.750326494886736, 'lag_14': 0.9938293228002796, 'lag_15': 0.4189496822900869, 'lag_16': 0.2819194774820666, 'lag_17': 0.8916913086313119, 'lag_18': 0.9290990828230221, 'lag_19': 0.4649372470740358, 'lag_20': 0.16843970859079704, 'lag_21': 0.5770668832930106, 'lag_22': 0.1498316673773093, 'lag_23': 0.6618165596568664, 'lag_24': 0.2673641340309964, 'lag_25': 0.4512358832164223, 'lag_26': 0.2654001944696151, 'lag_27': 0.6689074003269692, 'lag_28': 0.3747941252673205} because of the following error: ValueError('could not broadcast input array from shape (5,) into shape (10,)').
+Traceback (most recent call last):
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop_311/lib/python3.11/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "/tmp/ipykernel_139921/4077541180.py", line 32, in objective
+  File "/home1/zrentala/ValueCourierAnalysis/SimulatedAnalysis/SimulatedSubjectData.py", line 382, in generateData
+    self.generateLists(list_len=list_len, num_lists=num_lists, wordpool=wordpool, pos=pos)
+  File "/home1/zrentala/ValueCourierAnalysis/SimulatedAnalysis/SimulatedSubjectData.py", line 342, in generateLists
+    il = ItemList(
+         ^^^^^^^^^
+  File "/home1/zrentala/ValueCourierAnalysis/SimulatedAnalysis/SimulatedSubjectData.py", line 59, in __init__
+    self.temporalConditionSimple()
+  File "/home1/zrentala/ValueCourierAnalysis/SimulatedAnalysis/SimulatedSubjectData.py", line 115, in temporalConditionSimple
+    vals[start:end] = middle_vals
+    ~~~~^^^^^^^^^^^
+ValueError: could not broadcast input array from shape (5,) into shape (10,)
+[W 2025-09-29 12:48:31,083] Trial 0 failed with value None.
+2025-09-29 12:48:31,100 - distributed.worker - WARNING - Compute Failed
+Key:       optimize_subject-1230efef-c415-4f94-8f28-5df668e1904a
+Function:  execute_task
+args:      ((<function optimize_subject at 0x2b8699245580>, 'Optimization_Results', 'LTP573', (<class 'dict'>, [['LTP564', (<class 'dict'>, [['recall_rate', 0.6644628099173554], ['first_recall', array([0.04878049, 0.07317073, 0.02439024, 0.07317073, 0.07317073,
+       0.02439024, 0.02439024, 0.04878049, 0.        , 0.        ,
+       0.02439024, 0.02439024, 0.        , 0.14634146, 0.41463415])], ['lag_crp', array([0.10714286, 0.02173913, 0.07936508, 0.15068493, 0.07058824,
+       0.09183673, 0.1       , 0.06015038, 0.10958904, 0.11038961,
+       0.09302326, 0.08095238, 0.11627907, 0.13807531, 0.        ,
+       0.17596567, 0.12037037, 0.11578947, 0.0974359 , 0.11176471,
+       0.05063291, 0.11764706, 0.06034483, 0.10576923, 0.07608696,
+       0.05882353, 0.        , 0.03448276, 0.11111111])]])], ['LTP565', (<class 'dict'>, [['recall_rate', 0.7995337995337995], ['first_recall', array([0.5       , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.        ,
+kwargs:    {}
+Exception: "ValueError('could not broadcast input array from shape (5,) into shape (10,)')"
+
+[I 2025-09-29 12:48:31,103] A new study created in memory with name: no-name-8ea353f2-434b-4549-ab74-4659559281ab
+[W 2025-09-29 12:48:31,109] Trial 0 failed with parameters: {'lag_0': 0.09111499836473323, 'lag_1': 0.1981068054005018, 'lag_2': 0.025446790262733606, 'lag_3': 0.18601341829359683, 'lag_4': 0.12805095796984325, 'lag_5': 0.5807745681345686, 'lag_6': 0.6244242239625719, 'lag_7': 0.8417159892712907, 'lag_8': 0.6671861586574765, 'lag_9': 0.2813357844224138, 'lag_10': 0.5943754991328833, 'lag_11': 0.5959037220340716, 'lag_12': 0.39655789647368334, 'lag_13': 0.7531570435413589, 'lag_14': 0.7479204108875406, 'lag_15': 0.3495134460665659, 'lag_16': 0.28749689218461805, 'lag_17': 0.27328960682994485, 'lag_18': 0.07261898461795599, 'lag_19': 0.49783865912098235, 'lag_20': 0.49282850861271343, 'lag_21': 0.052572532736363614, 'lag_22': 0.984902381865109, 'lag_23': 0.14857043580153018, 'lag_24': 0.6639086622678158, 'lag_25': 0.45613675103231655, 'lag_26': 0.40038550118962896, 'lag_27': 0.8932175808515533, 'lag_28': 0.19888860746833165} because of the following error: ValueError('could not broadcast input array from shape (5,) into shape (10,)').
+Traceback (most recent call last):
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop_311/lib/python3.11/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "/tmp/ipykernel_139921/4077541180.py", line 32, in objective
+  File "/home1/zrentala/ValueCourierAnalysis/SimulatedAnalysis/SimulatedSubjectData.py", line 382, in generateData
+    self.generateLists(list_len=list_len, num_lists=num_lists, wordpool=wordpool, pos=pos)
+  File "/home1/zrentala/ValueCourierAnalysis/SimulatedAnalysis/SimulatedSubjectData.py", line 342, in generateLists
+    il = ItemList(
+         ^^^^^^^^^
+  File "/home1/zrentala/ValueCourierAnalysis/SimulatedAnalysis/SimulatedSubjectData.py", line 59, in __init__
+    self.temporalConditionSimple()
+  File "/home1/zrentala/ValueCourierAnalysis/SimulatedAnalysis/SimulatedSubjectData.py", line 115, in temporalConditionSimple
+    vals[start:end] = middle_vals
+    ~~~~^^^^^^^^^^^
+ValueError: could not broadcast input array from shape (5,) into shape (10,)
+[W 2025-09-29 12:48:31,110] Trial 0 failed with value None.
+2025-09-29 12:48:31,126 - distributed.worker - WARNING - Compute Failed
+Key:       optimize_subject-2020240a-a187-4cb6-b19c-0a8a3aeb6fc3
+Function:  execute_task
+args:      ((<function optimize_subject at 0x2b86992c3ec0>, 'Optimization_Results', 'LTP565', (<class 'dict'>, [['LTP564', (<class 'dict'>, [['recall_rate', 0.6644628099173554], ['first_recall', array([0.04878049, 0.07317073, 0.02439024, 0.07317073, 0.07317073,
+       0.02439024, 0.02439024, 0.04878049, 0.        , 0.        ,
+       0.02439024, 0.02439024, 0.        , 0.14634146, 0.41463415])], ['lag_crp', array([0.10714286, 0.02173913, 0.07936508, 0.15068493, 0.07058824,
+       0.09183673, 0.1       , 0.06015038, 0.10958904, 0.11038961,
+       0.09302326, 0.08095238, 0.11627907, 0.13807531, 0.        ,
+       0.17596567, 0.12037037, 0.11578947, 0.0974359 , 0.11176471,
+       0.05063291, 0.11764706, 0.06034483, 0.10576923, 0.07608696,
+       0.05882353, 0.        , 0.03448276, 0.11111111])]])], ['LTP565', (<class 'dict'>, [['recall_rate', 0.7995337995337995], ['first_recall', array([0.5       , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.        ,
+kwargs:    {}
+Exception: "ValueError('could not broadcast input array from shape (5,) into shape (10,)')"
+
+[I 2025-09-29 12:48:31,129] A new study created in memory with name: no-name-d72d2147-3444-4510-9f65-a8fe4da40a88
+[W 2025-09-29 12:48:31,135] Trial 0 failed with parameters: {'lag_0': 0.3641873061296206, 'lag_1': 0.35200323076159673, 'lag_2': 0.6022542876243352, 'lag_3': 0.3394663307305843, 'lag_4': 0.3125703505477169, 'lag_5': 0.198639543521588, 'lag_6': 0.051370516738366255, 'lag_7': 0.7820056866117409, 'lag_8': 0.8524109854215268, 'lag_9': 0.8916773066904398, 'lag_10': 0.5457366376266896, 'lag_11': 0.8321043075526257, 'lag_12': 0.1991425854443979, 'lag_13': 0.8524672179498112, 'lag_14': 0.05732275826232515, 'lag_15': 0.2945413480024443, 'lag_16': 0.05186168551309641, 'lag_17': 0.5814314502884843, 'lag_18': 0.7060763757242889, 'lag_19': 0.06579089410245054, 'lag_20': 0.8994583897782729, 'lag_21': 0.9109149801656274, 'lag_22': 0.38306115359485127, 'lag_23': 0.26489909950858914, 'lag_24': 0.31603998036487796, 'lag_25': 0.00469137342577591, 'lag_26': 0.03202152053794234, 'lag_27': 0.23398652612671594, 'lag_28': 0.20149585781380328} because of the following error: ValueError('could not broadcast input array from shape (5,) into shape (10,)').
+Traceback (most recent call last):
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop_311/lib/python3.11/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "/tmp/ipykernel_139921/4077541180.py", line 32, in objective
+  File "/home1/zrentala/ValueCourierAnalysis/SimulatedAnalysis/SimulatedSubjectData.py", line 382, in generateData
+    self.generateLists(list_len=list_len, num_lists=num_lists, wordpool=wordpool, pos=pos)
+  File "/home1/zrentala/ValueCourierAnalysis/SimulatedAnalysis/SimulatedSubjectData.py", line 342, in generateLists
+    il = ItemList(
+         ^^^^^^^^^
+  File "/home1/zrentala/ValueCourierAnalysis/SimulatedAnalysis/SimulatedSubjectData.py", line 59, in __init__
+    self.temporalConditionSimple()
+  File "/home1/zrentala/ValueCourierAnalysis/SimulatedAnalysis/SimulatedSubjectData.py", line 115, in temporalConditionSimple
+    vals[start:end] = middle_vals
+    ~~~~^^^^^^^^^^^
+ValueError: could not broadcast input array from shape (5,) into shape (10,)
+[W 2025-09-29 12:48:31,136] Trial 0 failed with value None.
+2025-09-29 12:48:31,152 - distributed.worker - WARNING - Compute Failed
+Key:       optimize_subject-33453d00-851d-4739-8b8c-023b4a50cbef
+Function:  execute_task
+args:      ((<function optimize_subject at 0x2b86993118a0>, 'Optimization_Results', 'LTP586', (<class 'dict'>, [['LTP564', (<class 'dict'>, [['recall_rate', 0.6644628099173554], ['first_recall', array([0.04878049, 0.07317073, 0.02439024, 0.07317073, 0.07317073,
+       0.02439024, 0.02439024, 0.04878049, 0.        , 0.        ,
+       0.02439024, 0.02439024, 0.        , 0.14634146, 0.41463415])], ['lag_crp', array([0.10714286, 0.02173913, 0.07936508, 0.15068493, 0.07058824,
+       0.09183673, 0.1       , 0.06015038, 0.10958904, 0.11038961,
+       0.09302326, 0.08095238, 0.11627907, 0.13807531, 0.        ,
+       0.17596567, 0.12037037, 0.11578947, 0.0974359 , 0.11176471,
+       0.05063291, 0.11764706, 0.06034483, 0.10576923, 0.07608696,
+       0.05882353, 0.        , 0.03448276, 0.11111111])]])], ['LTP565', (<class 'dict'>, [['recall_rate', 0.7995337995337995], ['first_recall', array([0.5       , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.        ,
+kwargs:    {}
+Exception: "ValueError('could not broadcast input array from shape (5,) into shape (10,)')"
+
+[I 2025-09-29 12:48:31,200] A new study created in memory with name: no-name-4ec9bd98-d197-4b11-a4dc-303f8495a2d1
+[W 2025-09-29 12:48:31,206] Trial 0 failed with parameters: {'lag_0': 0.6133078218152369, 'lag_1': 0.9225105075505194, 'lag_2': 0.5184431321524056, 'lag_3': 0.09190324690396402, 'lag_4': 0.3725520624903374, 'lag_5': 0.44807676501295657, 'lag_6': 0.28634776007786417, 'lag_7': 0.3021064048414567, 'lag_8': 0.7104425463696057, 'lag_9': 0.5753415833237484, 'lag_10': 0.4622420388023611, 'lag_11': 0.30404118133981006, 'lag_12': 0.7420434339128917, 'lag_13': 0.9494723154577294, 'lag_14': 0.5444100005004101, 'lag_15': 0.07365058094180407, 'lag_16': 0.9784872174560018, 'lag_17': 0.856929824906209, 'lag_18': 0.8661114357096351, 'lag_19': 0.7802410135095006, 'lag_20': 0.6636848069922872, 'lag_21': 0.4719543893715034, 'lag_22': 0.643086620717146, 'lag_23': 0.0542823452556043, 'lag_24': 0.6093688432601133, 'lag_25': 0.7491108792385217, 'lag_26': 0.987384903146212, 'lag_27': 0.22421088875155662, 'lag_28': 0.24280798436636253} because of the following error: ValueError('could not broadcast input array from shape (5,) into shape (10,)').
+Traceback (most recent call last):
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop_311/lib/python3.11/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "/tmp/ipykernel_139921/4077541180.py", line 32, in objective
+  File "/home1/zrentala/ValueCourierAnalysis/SimulatedAnalysis/SimulatedSubjectData.py", line 382, in generateData
+    self.generateLists(list_len=list_len, num_lists=num_lists, wordpool=wordpool, pos=pos)
+  File "/home1/zrentala/ValueCourierAnalysis/SimulatedAnalysis/SimulatedSubjectData.py", line 342, in generateLists
+    il = ItemList(
+         ^^^^^^^^^
+  File "/home1/zrentala/ValueCourierAnalysis/SimulatedAnalysis/SimulatedSubjectData.py", line 59, in __init__
+    self.temporalConditionSimple()
+  File "/home1/zrentala/ValueCourierAnalysis/SimulatedAnalysis/SimulatedSubjectData.py", line 115, in temporalConditionSimple
+    vals[start:end] = middle_vals
+    ~~~~^^^^^^^^^^^
+ValueError: could not broadcast input array from shape (5,) into shape (10,)
+[W 2025-09-29 12:48:31,207] Trial 0 failed with value None.
+2025-09-29 12:48:31,222 - distributed.worker - WARNING - Compute Failed
+Key:       optimize_subject-543d12d2-cf98-4f71-bc26-00442d72e59e
+Function:  execute_task
+args:      ((<function optimize_subject at 0x2b869936c040>, 'Optimization_Results', 'LTP596', (<class 'dict'>, [['LTP564', (<class 'dict'>, [['recall_rate', 0.6644628099173554], ['first_recall', array([0.04878049, 0.07317073, 0.02439024, 0.07317073, 0.07317073,
+       0.02439024, 0.02439024, 0.04878049, 0.        , 0.        ,
+       0.02439024, 0.02439024, 0.        , 0.14634146, 0.41463415])], ['lag_crp', array([0.10714286, 0.02173913, 0.07936508, 0.15068493, 0.07058824,
+       0.09183673, 0.1       , 0.06015038, 0.10958904, 0.11038961,
+       0.09302326, 0.08095238, 0.11627907, 0.13807531, 0.        ,
+       0.17596567, 0.12037037, 0.11578947, 0.0974359 , 0.11176471,
+       0.05063291, 0.11764706, 0.06034483, 0.10576923, 0.07608696,
+       0.05882353, 0.        , 0.03448276, 0.11111111])]])], ['LTP565', (<class 'dict'>, [['recall_rate', 0.7995337995337995], ['first_recall', array([0.5       , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        , 0.        ,
+kwargs:    {}
+Exception: "ValueError('could not broadcast input array from shape (5,) into shape (10,)')"
+
+slurmstepd: error: *** JOB 3081171 ON node07 CANCELLED AT 2025-09-29T12:48:33 ***
