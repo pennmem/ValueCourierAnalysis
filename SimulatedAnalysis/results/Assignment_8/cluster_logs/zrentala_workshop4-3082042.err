@@ -1,0 +1,3 @@
+2025-10-06 11:29:02,874 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.107:45273'
+2025-10-06 11:30:02,873 - distributed.nanny - INFO - Closing Nanny at 'tcp://192.168.86.107:45273'. Reason: failure-to-start-<class 'TimeoutError'>
+slurmstepd: error: *** JOB 3082042 ON node07 CANCELLED AT 2025-10-06T14:06:10 ***

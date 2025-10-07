@@ -3,11 +3,13 @@ import numpy as np
 
 # ------------------ DEFAULT PARAMETERS ------------------
 DEFAULT_SIMPLE_PARAMS = {
-    "val_range": (1, 20),
+    "val_range": (1, 50),
     "recency_buf": 3,
     "primacy_buf": 2, 
     "num_in_group_chosen": 4,
     "high_first": True,  # default; will be overwritten during list generation
+    "target_var": [5,15],
+    "target_mean": [10,40]
 }
 
 DEFAULT_COMPLEX_PARAMS = {
@@ -53,8 +55,80 @@ class ItemList:
             raise ValueError(f"Unknown condition: {condition}")
 
 
-    # def _cullWordpool(self, fullset, subset):
-    #     return [v for v in fullset if v not in subset]
+#     def temporalConditionSimple(self):
+#         n = self.length
+#         sp = self.simple_params
+#         val_min, val_max = sp["val_range"]
+#         primacy_buf = sp["primacy_buf"]
+#         recency_buf = sp["recency_buf"]
+#         num_in_group_chosen = sp["num_in_group_chosen"]
+#         high_first = sp.get("high_first", True)
+#         rng = self.rng
+
+#         if n <= primacy_buf + recency_buf:
+#             recency_buf = 0
+#             primacy_buf=0
+#             print("List length too short for buffers.")
+
+#         middle_len = n - (primacy_buf + recency_buf)
+#         first_half_size = middle_len // 2
+#         second_half_size = middle_len - first_half_size
+
+#         midpoint = (val_min + val_max) // 2
+        
+#         # print(midpoint)
+
+#         if high_first:
+#             first_range = np.arange(midpoint, val_max + 1)
+#             second_range = np.arange(val_min, midpoint)
+#         else:
+#             first_range = np.arange(val_min, midpoint)
+#             second_range = np.arange(midpoint, val_max + 1)
+
+#         # --- First half of middle ---
+#         first_half = rng.choice(first_range, num_in_group_chosen, replace=False)
+#         first_range = np.setdiff1d(first_range, first_half)  # remove chosen
+
+#         first_not_in_group = rng.choice(second_range, first_half_size - num_in_group_chosen, replace=False)
+#         second_range = np.setdiff1d(second_range, first_not_in_group)  # remove chosen
+
+#         first_half = np.concatenate([first_half, first_not_in_group])
+#         rng.shuffle(first_half)
+
+#         # --- Second half of middle ---
+#         second_half = rng.choice(second_range, num_in_group_chosen, replace=False)
+#         second_range = np.setdiff1d(second_range, second_half)
+
+#         second_not_in_group = rng.choice(first_range, second_half_size - num_in_group_chosen, replace=False)
+#         first_range = np.setdiff1d(first_range, second_not_in_group)
+
+#         second_half = np.concatenate([second_half, second_not_in_group])
+#         rng.shuffle(second_half)
+
+#         middle_vals = np.concatenate([first_half, second_half])
+#         vals = np.zeros(n, dtype=int)
+
+#         # --- Remaining pool for buffers ---
+#         remainder_range = np.setdiff1d(np.arange(val_min, val_max + 1), middle_vals)
+
+#         # Primacy buffer
+#         if primacy_buf > 0:
+#             primacy_choice = rng.choice(remainder_range, primacy_buf, replace=False)
+#             remainder_range = np.setdiff1d(remainder_range, primacy_choice)
+#             vals[:primacy_buf] = primacy_choice
+
+#         # Middle
+#         vals[primacy_buf:n - recency_buf] = middle_vals
+
+#         # Recency buffer
+#         if recency_buf > 0:
+#             recency_choice = rng.choice(remainder_range, recency_buf, replace=False)
+#             vals[n - recency_buf:] = recency_choice
+
+#         self.vals = vals
+#         return vals
+
+    import numpy as np
 
     def temporalConditionSimple(self):
         n = self.length
@@ -66,19 +140,23 @@ class ItemList:
         high_first = sp.get("high_first", True)
         rng = self.rng
 
+        # --- Adjust buffers if list too short ---
         if n <= primacy_buf + recency_buf:
+            primacy_buf = 0
             recency_buf = 0
-            primacy_buf=0
             print("List length too short for buffers.")
 
         middle_len = n - (primacy_buf + recency_buf)
         first_half_size = middle_len // 2
         second_half_size = middle_len - first_half_size
 
-        midpoint = (val_min + val_max) // 2
-        
-        # print(midpoint)
+        # --- Targets for mean/SD (optional) ---
+        target_mean = sp["target_mean"][0] + rng.random() * (sp["target_mean"][1] - sp["target_mean"][0])
+        target_var  = sp["target_var"][0] + rng.random() * (sp["target_var"][1] - sp["target_var"][0])
 
+        midpoint = (val_min + val_max) // 2
+
+        # --- Define normalized ranges ---
         if high_first:
             first_range = np.arange(midpoint, val_max + 1)
             second_range = np.arange(val_min, midpoint)
@@ -88,10 +166,10 @@ class ItemList:
 
         # --- First half of middle ---
         first_half = rng.choice(first_range, num_in_group_chosen, replace=False)
-        first_range = np.setdiff1d(first_range, first_half)  # remove chosen
+        first_range = np.setdiff1d(first_range, first_half)
 
         first_not_in_group = rng.choice(second_range, first_half_size - num_in_group_chosen, replace=False)
-        second_range = np.setdiff1d(second_range, first_not_in_group)  # remove chosen
+        second_range = np.setdiff1d(second_range, first_not_in_group)
 
         first_half = np.concatenate([first_half, first_not_in_group])
         rng.shuffle(first_half)
@@ -106,76 +184,35 @@ class ItemList:
         second_half = np.concatenate([second_half, second_not_in_group])
         rng.shuffle(second_half)
 
+        # --- Combine middle ---
         middle_vals = np.concatenate([first_half, second_half])
-        vals = np.zeros(n, dtype=int)
+        vals = np.zeros(n, dtype=float)
 
-        # --- Remaining pool for buffers ---
+        # --- Fill middle portion ---
+        vals[primacy_buf:n - recency_buf] = middle_vals
+
+        # --- Buffers from remaining pool ---
         remainder_range = np.setdiff1d(np.arange(val_min, val_max + 1), middle_vals)
 
-        # Primacy buffer
         if primacy_buf > 0:
             primacy_choice = rng.choice(remainder_range, primacy_buf, replace=False)
             remainder_range = np.setdiff1d(remainder_range, primacy_choice)
             vals[:primacy_buf] = primacy_choice
 
-        # Middle
-        vals[primacy_buf:n - recency_buf] = middle_vals
-
-        # Recency buffer
         if recency_buf > 0:
             recency_choice = rng.choice(remainder_range, recency_buf, replace=False)
             vals[n - recency_buf:] = recency_choice
 
-        self.vals = vals
-        return vals
+        # --- Optional: normalize & rescale to target mean/SD ---
+        if target_mean is not None and target_var is not None:
+            current_mean = vals.mean()
+            current_var = vals.var()
+            scale = np.sqrt(target_var / current_var) if current_var > 0 else 1.0
+            vals = target_mean + (vals - current_mean) * scale
 
-    
-    
+        self.vals = vals.astype(int)  # cast to int, like C# rounding
+        return self.vals
 
-#         middle_len = n - (primacy_buf + recency_buf)
-#         first_half_size = min(num_in_group_chosen, middle_len)
-#         second_half_size = middle_len - first_half_size
-
-#         # Determine first_half and second_half ranges
-#         midpoint = (val_min + val_max) // 2
-#         if high_first:
-#             first_range = range(midpoint, val_max + 1)
-#             second_range = range(val_min, midpoint)
-#         else:
-#             first_range = range(val_min, midpoint)
-#             second_range = range(midpoint, val_max + 1)
-
-#         rng = self.rng
-
-#         # Sample middle values
-#         first_half = rng.choice(list(first_range), first_half_size, replace=False)
-        
-#         second_half_pool = self._cullWordpool(second_range, first_half)
-#         second_half = rng.choice(second_half_pool, second_half_size, replace=False) if second_half_size > 0 else []
-
-#         middle_vals = np.concatenate([first_half, second_half])
-#         rng.shuffle(middle_vals)
-
-#         # Initialize final array
-#         vals = np.zeros(n, dtype=int)
-
-#         # Fill primacy buffer
-#         primacy_pool = self._cullWordpool(range(val_min, val_max + 1), middle_vals)
-#         if primacy_buf > 0:
-#             primacy_choice = rng.choice(primacy_pool, primacy_buf, replace=False)
-#             vals[:primacy_buf] = primacy_choice
-
-#         # Fill middle
-#         vals[primacy_buf:n - recency_buf] = middle_vals
-
-#         # Fill recency buffer
-#         recency_pool = self._cullWordpool(range(val_min, val_max + 1), np.concatenate([middle_vals, vals[:primacy_buf]]))
-#         if recency_buf > 0:
-#             vals[n - recency_buf:] = rng.choice(recency_pool, recency_buf, replace=False)
-
-#         self.vals = vals
-#         return vals
-    
     
     def temporalConditionComplex(self):
         n = self.length

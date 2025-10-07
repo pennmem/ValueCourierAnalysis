@@ -1,0 +1,95 @@
+2025-10-03 11:29:15,230 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.108:46362'
+2025-10-03 11:29:16,577 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.108:40467
+2025-10-03 11:29:16,577 - distributed.worker - INFO -          Listening to: tcp://192.168.86.108:40467
+2025-10-03 11:29:16,577 - distributed.worker - INFO -           Worker name:             SLURMCluster-2
+2025-10-03 11:29:16,577 - distributed.worker - INFO -          dashboard at:       192.168.86.108:38546
+2025-10-03 11:29:16,577 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.108:45752
+2025-10-03 11:29:16,577 - distributed.worker - INFO - -------------------------------------------------
+2025-10-03 11:29:16,577 - distributed.worker - INFO -               Threads:                          1
+2025-10-03 11:29:16,578 - distributed.worker - INFO -                Memory:                   9.31 GiB
+2025-10-03 11:29:16,578 - distributed.worker - INFO -       Local Directory: /home1/zrentala/dask-worker-space/dask-scratch-space/worker-e5_9m7n_
+2025-10-03 11:29:16,578 - distributed.worker - INFO - -------------------------------------------------
+2025-10-03 11:29:16,914 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-10-03 11:29:16,915 - distributed.worker - INFO -         Registered to: tcp://192.168.86.108:45752
+2025-10-03 11:29:16,915 - distributed.worker - INFO - -------------------------------------------------
+2025-10-03 11:29:16,915 - distributed.core - INFO - Starting established connection to tcp://192.168.86.108:45752
+2025-10-03 11:29:17,027 - distributed.worker - WARNING - Compute Failed
+Key:       optimize_subject_multi-251530ff-6b1b-4922-a3b9-90cb33a5f887
+Function:  execute_task
+args:      ((<function optimize_subject_multi at 0x2acc30ae3920>, 'Optimization_Results_Multi', 'LTP569', (<class 'dict'>, [['LTP564', (<class 'dict'>, [['recall_rate', 0.6644628099173554], ['first_recall', array([0.04878049, 0.07317073, 0.02439024, 0.07317073, 0.07317073,
+       0.02439024, 0.02439024, 0.04878049, 0.        , 0.        ,
+       0.02439024, 0.02439024, 0.        , 0.14634146, 0.41463415])], ['lag_crp', array([0.10714286, 0.02173913, 0.07936508, 0.15068493, 0.07058824,
+       0.09183673, 0.1       , 0.06015038, 0.10958904, 0.11038961,
+       0.09302326, 0.08095238, 0.11627907, 0.13807531, 0.        ,
+       0.17596567, 0.12037037, 0.11578947, 0.0974359 , 0.11176471,
+       0.05063291, 0.11764706, 0.06034483, 0.10576923, 0.07608696,
+       0.05882353, 0.        , 0.03448276, 0.11111111])]])], ['LTP565', (<class 'dict'>, [['recall_rate', 0.7995337995337995], ['first_recall', array([0.5       , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        ,
+kwargs:    {}
+Exception: "KeyError('target_crp')"
+
+2025-10-03 11:29:17,045 - distributed.worker - WARNING - Compute Failed
+Key:       optimize_subject_multi-1ef0a2c2-d682-4633-9177-2271acf5d08b
+Function:  execute_task
+args:      ((<function optimize_subject_multi at 0x2acc30efd1c0>, 'Optimization_Results_Multi', 'LTP592', (<class 'dict'>, [['LTP564', (<class 'dict'>, [['recall_rate', 0.6644628099173554], ['first_recall', array([0.04878049, 0.07317073, 0.02439024, 0.07317073, 0.07317073,
+       0.02439024, 0.02439024, 0.04878049, 0.        , 0.        ,
+       0.02439024, 0.02439024, 0.        , 0.14634146, 0.41463415])], ['lag_crp', array([0.10714286, 0.02173913, 0.07936508, 0.15068493, 0.07058824,
+       0.09183673, 0.1       , 0.06015038, 0.10958904, 0.11038961,
+       0.09302326, 0.08095238, 0.11627907, 0.13807531, 0.        ,
+       0.17596567, 0.12037037, 0.11578947, 0.0974359 , 0.11176471,
+       0.05063291, 0.11764706, 0.06034483, 0.10576923, 0.07608696,
+       0.05882353, 0.        , 0.03448276, 0.11111111])]])], ['LTP565', (<class 'dict'>, [['recall_rate', 0.7995337995337995], ['first_recall', array([0.5       , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        ,
+kwargs:    {}
+Exception: "KeyError('target_crp')"
+
+2025-10-03 11:29:17,065 - distributed.worker - WARNING - Compute Failed
+Key:       optimize_subject_multi-4fde8b95-3d7a-434d-9372-806ef9db59b0
+Function:  execute_task
+args:      ((<function optimize_subject_multi at 0x2acc30efff60>, 'Optimization_Results_Multi', 'LTP567', (<class 'dict'>, [['LTP564', (<class 'dict'>, [['recall_rate', 0.6644628099173554], ['first_recall', array([0.04878049, 0.07317073, 0.02439024, 0.07317073, 0.07317073,
+       0.02439024, 0.02439024, 0.04878049, 0.        , 0.        ,
+       0.02439024, 0.02439024, 0.        , 0.14634146, 0.41463415])], ['lag_crp', array([0.10714286, 0.02173913, 0.07936508, 0.15068493, 0.07058824,
+       0.09183673, 0.1       , 0.06015038, 0.10958904, 0.11038961,
+       0.09302326, 0.08095238, 0.11627907, 0.13807531, 0.        ,
+       0.17596567, 0.12037037, 0.11578947, 0.0974359 , 0.11176471,
+       0.05063291, 0.11764706, 0.06034483, 0.10576923, 0.07608696,
+       0.05882353, 0.        , 0.03448276, 0.11111111])]])], ['LTP565', (<class 'dict'>, [['recall_rate', 0.7995337995337995], ['first_recall', array([0.5       , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        ,
+kwargs:    {}
+Exception: "KeyError('target_crp')"
+
+2025-10-03 11:29:17,102 - distributed.worker - WARNING - Compute Failed
+Key:       optimize_subject_multi-632904f8-81d1-4fb0-a48a-57a1aa5d0c88
+Function:  execute_task
+args:      ((<function optimize_subject_multi at 0x2acc30efe020>, 'Optimization_Results_Multi', 'LTP564', (<class 'dict'>, [['LTP564', (<class 'dict'>, [['recall_rate', 0.6644628099173554], ['first_recall', array([0.04878049, 0.07317073, 0.02439024, 0.07317073, 0.07317073,
+       0.02439024, 0.02439024, 0.04878049, 0.        , 0.        ,
+       0.02439024, 0.02439024, 0.        , 0.14634146, 0.41463415])], ['lag_crp', array([0.10714286, 0.02173913, 0.07936508, 0.15068493, 0.07058824,
+       0.09183673, 0.1       , 0.06015038, 0.10958904, 0.11038961,
+       0.09302326, 0.08095238, 0.11627907, 0.13807531, 0.        ,
+       0.17596567, 0.12037037, 0.11578947, 0.0974359 , 0.11176471,
+       0.05063291, 0.11764706, 0.06034483, 0.10576923, 0.07608696,
+       0.05882353, 0.        , 0.03448276, 0.11111111])]])], ['LTP565', (<class 'dict'>, [['recall_rate', 0.7995337995337995], ['first_recall', array([0.5       , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        ,
+kwargs:    {}
+Exception: "KeyError('target_crp')"
+
+2025-10-03 11:29:17,142 - distributed.worker - WARNING - Compute Failed
+Key:       optimize_subject_multi-7029a1d2-a7ec-4312-aa24-19380345ba30
+Function:  execute_task
+args:      ((<function optimize_subject_multi at 0x2acc30fa5e40>, 'Optimization_Results_Multi', 'LTP595', (<class 'dict'>, [['LTP564', (<class 'dict'>, [['recall_rate', 0.6644628099173554], ['first_recall', array([0.04878049, 0.07317073, 0.02439024, 0.07317073, 0.07317073,
+       0.02439024, 0.02439024, 0.04878049, 0.        , 0.        ,
+       0.02439024, 0.02439024, 0.        , 0.14634146, 0.41463415])], ['lag_crp', array([0.10714286, 0.02173913, 0.07936508, 0.15068493, 0.07058824,
+       0.09183673, 0.1       , 0.06015038, 0.10958904, 0.11038961,
+       0.09302326, 0.08095238, 0.11627907, 0.13807531, 0.        ,
+       0.17596567, 0.12037037, 0.11578947, 0.0974359 , 0.11176471,
+       0.05063291, 0.11764706, 0.06034483, 0.10576923, 0.07608696,
+       0.05882353, 0.        , 0.03448276, 0.11111111])]])], ['LTP565', (<class 'dict'>, [['recall_rate', 0.7995337995337995], ['first_recall', array([0.5       , 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.        ,
+kwargs:    {}
+Exception: "KeyError('target_crp')"
+
+2025-10-03 11:29:19,668 - distributed.worker - INFO - Stopping worker at tcp://192.168.86.108:40467. Reason: scheduler-remove-worker
+2025-10-03 11:29:19,672 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://192.168.86.108:46362'. Reason: scheduler-remove-worker
+2025-10-03 11:29:19,677 - distributed.nanny - INFO - Worker closed
+2025-10-03 11:29:19,677 - distributed.core - INFO - Connection to tcp://192.168.86.108:45752 has been closed.
+slurmstepd: error: *** JOB 3081519 ON node08 CANCELLED AT 2025-10-03T11:29:19 ***
