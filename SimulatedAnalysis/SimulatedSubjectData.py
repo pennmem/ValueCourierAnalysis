@@ -32,11 +32,18 @@ class ItemList:
         self.length = length
         self.condition = condition
         self.rng = rng if rng is not None else np.random.default_rng()
-        self.items = (
-            np.array([f"item_{i}" for i in range(length)])
-            if wordpool is None
-            else np.random.choice(wordpool, size=length, replace=False)
-        )
+        
+        if wordpool is None:
+            # synthetic pool: item_0 ... item_{length-1}; itemno is 1..length
+            self.items = np.array([f"item_{i}" for i in range(length)])
+            self.itemnos = np.arange(1, length + 1, dtype=int)
+        else:
+            # pick by index so we retain the original line numbers (1-based)
+            pool = np.asarray(wordpool)
+            idx = self.rng.choice(pool.shape[0], size=length, replace=False)
+            self.items = pool[idx]
+            self.itemnos = (idx + 1).astype(int)
+            
         if locations is None:
             self.pos = None
         else:
@@ -254,6 +261,7 @@ class ItemList:
     def __str__(self):
         s = f"ItemList ({self.condition}) - Length: {self.length}\n"
         s += f"Items: {self.items.tolist()}\n"
+        s += f"Item no: {self.itemnos.tolist()}\n"
         s += f"Values: {np.round(self.vals, 2).tolist()}\n"
         if self.pos is not None:
             s += f"Positions: {self.pos.tolist()}\n"
@@ -271,6 +279,7 @@ class ItemList:
 class ItemProcessor:
     def __init__(self, itemlist, rng=None):
         self.items = itemlist.items.copy()
+        self.itemnos = itemlist.itemnos.copy()
         self.vals = itemlist.vals.copy()
         self.pos = itemlist.pos.copy() if itemlist.pos is not None else None
         self.length = itemlist.length
@@ -290,12 +299,13 @@ class ItemProcessor:
 
         idx = self.rng.choice(np.arange(len(probs)), p=probs)
         item = self.items[idx]
+        itemno = self.itemnos[idx]
         val = self.vals[idx]
         pos = self.pos[idx] if self.pos is not None else (np.nan, np.nan)
         serialpos = self.serialpos[idx]
 
         self._removeItem(idx)
-        return item, val, pos, serialpos
+        return item, itemno, val, pos, serialpos
 
     def pickItem(self, lag_probs, prev_serialpos):
         if not lag_probs:
@@ -337,17 +347,19 @@ class ItemProcessor:
                 chosen_lag = valid_lags[item_idx_in_valid]
 
         item = self.items[item_idx]
+        itemno = self.itemnos[item_idx]
         val = self.vals[item_idx]
         pos = self.pos[item_idx] if self.pos is not None else (np.nan, np.nan)
         serialpos = self.serialpos[item_idx]
 
         self._removeItem(item_idx)
-        return item, val, pos, serialpos, chosen_lag
+        return item, itemno, val, pos, serialpos, chosen_lag
 
 
 
     def _removeItem(self, idx):
         self.items = np.delete(self.items, idx)
+        self.itemnos = np.delete(self.itemnos, idx)
         self.vals = np.delete(self.vals, idx)
         if self.pos is not None:
             self.pos = np.delete(self.pos, idx, axis=0)
@@ -395,7 +407,7 @@ class SimulatedSubjectData:
 
     def resetDF(self):
         columns = [
-            'experiment', 'item_name', 'item_val', 'list',
+            'experiment', 'item', 'itemno', 'item_val', 'list',
             'recalled', 'recallpos', 'serialpos', 'subject', 'type',
             'val_list_avg', 'val_guess', 'pos_x', 'pos_y'
         ]
@@ -481,11 +493,11 @@ class SimulatedSubjectData:
 
             while item_proc.hasItems():
                 if first_item:
-                    item, val, pos, serialpos = item_proc.pickFirstItem(self.first_recall)
+                    item, itemno, val, pos, serialpos = item_proc.pickFirstItem(self.first_recall)
                     first_item = False
                     # print("picked first item")
                 else:
-                    item, val, pos, serialpos, chosen_lag = item_proc.pickItem(lag_probs, prev_serialpos)
+                    item, itemno, val, pos, serialpos, chosen_lag = item_proc.pickItem(lag_probs, prev_serialpos)
                     # print(f"picked {recall_pos} item")
                 
                 if self.rng.random() > self.recall_rate:
@@ -495,6 +507,7 @@ class SimulatedSubjectData:
                 recall_row = {
                     'experiment': experiment,
                     'item': item,
+                    'itemno': int(itemno),
                     'item_val': val,
                     'trial': list_num,
                     'rectime': list_num, # not actually how it's supposed to be 
@@ -518,12 +531,15 @@ class SimulatedSubjectData:
             else:
                 val_guess = self._guessByMean(list_mean)
 
-            for serialpos, item in enumerate(item_list.items):
+            for serialpos, item_pair in enumerate(zip(item_list.items, item_list.itemnos)):
+                item=item_pair[0]
+                itemno=item_pair[1]
                 recalled = item in recall_dict
                 recall_row = recall_dict[item] if recalled else None
                 encoding_row = {
                     'experiment': experiment,
                     'item': item,
+                    'itemno': int(itemno),
                     'item_val': item_list.vals[serialpos],
                     'trial': list_num,
                     'rectime': list_num if recalled else -1, # not actually how it's supposed to be 
