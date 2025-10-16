@@ -490,6 +490,7 @@ class SimulatedSubjectData:
             lag_probs = self.convertCRP(self.lag_crp.copy())
             prev_serialpos = -1
             recall_pos = 0
+            condition = item_list.condition
 
             while item_proc.hasItems():
                 if first_item:
@@ -519,7 +520,8 @@ class SimulatedSubjectData:
                     'val_list_avg': list_mean,
                     'val_guess': np.nan,
                     'pos_x': pos[0],
-                    'pos_y': pos[1]
+                    'pos_y': pos[1],
+                    'value_condition': condition
                 }
                 recall_dict[item] = recall_row
                 recall_pos += 1
@@ -552,7 +554,8 @@ class SimulatedSubjectData:
                     'val_guess': val_guess,
                     'pos_x': item_list.pos[serialpos][0],
                     'pos_y': item_list.pos[serialpos][1],
-                    'session': self.curr_sess_idx
+                    'session': self.curr_sess_idx,
+                    'value_condition': condition,
                 }
                 encoding_rows.append(encoding_row)
                 if recalled:
