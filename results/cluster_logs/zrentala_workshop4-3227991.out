@@ -1,0 +1,35 @@
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/0/ephys/current_processed/LTP610_session_0_clean_raw.fif...
+    Range : 0 ... 4190207 =      0.000 ...  2046.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/0/ephys/current_processed/LTP610_session_0_clean_raw-1.fif...
+    Range : 4190208 ... 8380415 =   2046.000 ...  4092.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/0/ephys/current_processed/LTP610_session_0_clean_raw-2.fif...
+    Range : 8380416 ... 12085247 =   4092.000 ...  5901.000 secs
+Ready.
+Reading 0 ... 12085247  =      0.000 ...  5901.000 secs...
+Not setting metadata
+75 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 75 events and 4916 original time points ...
+0 bad epochs dropped
+[ok] LTP610 s0 (ValueCourier): (11, 5761)
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/2/ephys/current_processed/LTP610_session_2_clean_raw.fif...
+    Range : 0 ... 4190207 =      0.000 ...  2046.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/2/ephys/current_processed/LTP610_session_2_clean_raw-1.fif...
+    Range : 4190208 ... 8380415 =   2046.000 ...  4092.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/2/ephys/current_processed/LTP610_session_2_clean_raw-2.fif...
+    Range : 8380416 ... 12568575 =   4092.000 ...  6137.000 secs
+Ready.
+Reading 0 ... 12568575  =      0.000 ...  6137.000 secs...
+Not setting metadata
+150 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 150 events and 4916 original time points ...
+0 bad epochs dropped
+[ok] LTP610 s2 (ValueCourier): (11, 5761)
+saved → results/erp_ValueCourier_subject_LTP610.pkl

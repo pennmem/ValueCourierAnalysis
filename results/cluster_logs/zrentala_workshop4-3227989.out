@@ -1,0 +1,20 @@
+Opening raw data file /protocols/ltp/subjects/LTP609/experiments/ValueCourier/sessions/0/ephys/current_processed/LTP609_session_0_clean_raw.fif...
+    Range : 0 ... 4190207 =      0.000 ...  2046.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP609/experiments/ValueCourier/sessions/0/ephys/current_processed/LTP609_session_0_clean_raw-1.fif...
+    Range : 4190208 ... 8380415 =   2046.000 ...  4092.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP609/experiments/ValueCourier/sessions/0/ephys/current_processed/LTP609_session_0_clean_raw-2.fif...
+    Range : 8380416 ... 11370495 =   4092.000 ...  5552.000 secs
+Ready.
+Reading 0 ... 11370495  =      0.000 ...  5552.000 secs...
+Not setting metadata
+75 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 75 events and 4916 original time points ...
+0 bad epochs dropped
+[ok] LTP609 s0 (ValueCourier): (11, 5761)
+[load fail] LTP609 s1 (ValueCourier): Some events outside bounds of EEG (eegoffset < 0)
+[skip] LTP609 s1 (ValueCourier): load failure or no events
+saved → results/erp_ValueCourier_subject_LTP609.pkl

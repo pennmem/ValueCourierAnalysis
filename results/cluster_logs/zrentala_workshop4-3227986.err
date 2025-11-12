@@ -1,0 +1,38 @@
+distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.142:40895'
+distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-worker-space/worker-jinufo9k', purging
+distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-worker-space/worker-izlg2e51', purging
+distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-worker-space/worker-65tblpmy', purging
+distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-worker-space/worker-e1l2dp9r', purging
+distributed.worker - INFO -       Start worker at: tcp://192.168.86.142:45732
+distributed.worker - INFO -          Listening to: tcp://192.168.86.142:45732
+distributed.worker - INFO -          dashboard at:       192.168.86.142:37047
+distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.107:43297
+distributed.worker - INFO - -------------------------------------------------
+distributed.worker - INFO -               Threads:                          1
+distributed.worker - INFO -                Memory:                  14.90 GiB
+distributed.worker - INFO -       Local Directory: /home1/zrentala/dask-worker-space/dask-worker-space/worker-cu1ajj3c
+distributed.worker - INFO - -------------------------------------------------
+distributed.worker - INFO -         Registered to: tcp://192.168.86.107:43297
+distributed.worker - INFO - -------------------------------------------------
+distributed.core - INFO - Starting established connection
+distributed.worker - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker.html#memtrim for more information. -- Unmanaged memory: 10.46 GiB -- Worker memory limit: 14.90 GiB
+distributed.worker - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker.html#memtrim for more information. -- Unmanaged memory: 10.56 GiB -- Worker memory limit: 14.90 GiB
+distributed.worker - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker.html#memtrim for more information. -- Unmanaged memory: 10.70 GiB -- Worker memory limit: 14.90 GiB
+distributed.worker - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker.html#memtrim for more information. -- Unmanaged memory: 10.92 GiB -- Worker memory limit: 14.90 GiB
+distributed.worker - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker.html#memtrim for more information. -- Unmanaged memory: 10.54 GiB -- Worker memory limit: 14.90 GiB
+distributed.worker - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker.html#memtrim for more information. -- Unmanaged memory: 10.62 GiB -- Worker memory limit: 14.90 GiB
+distributed.worker - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker.html#memtrim for more information. -- Unmanaged memory: 10.78 GiB -- Worker memory limit: 14.90 GiB
+distributed.worker - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker.html#memtrim for more information. -- Unmanaged memory: 10.47 GiB -- Worker memory limit: 14.90 GiB
+distributed.worker - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker.html#memtrim for more information. -- Unmanaged memory: 10.60 GiB -- Worker memory limit: 14.90 GiB
+distributed.worker - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker.html#memtrim for more information. -- Unmanaged memory: 10.73 GiB -- Worker memory limit: 14.90 GiB
+distributed.worker - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker.html#memtrim for more information. -- Unmanaged memory: 10.86 GiB -- Worker memory limit: 14.90 GiB
+distributed.worker - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker.html#memtrim for more information. -- Unmanaged memory: 10.99 GiB -- Worker memory limit: 14.90 GiB
+distributed.worker - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker.html#memtrim for more information. -- Unmanaged memory: 11.18 GiB -- Worker memory limit: 14.90 GiB
+distributed.worker - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker.html#memtrim for more information. -- Unmanaged memory: 11.38 GiB -- Worker memory limit: 14.90 GiB
+distributed.worker - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker.html#memtrim for more information. -- Unmanaged memory: 11.58 GiB -- Worker memory limit: 14.90 GiB
+distributed.worker - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker.html#memtrim for more information. -- Unmanaged memory: 10.59 GiB -- Worker memory limit: 14.90 GiB
+distributed.worker - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker.html#memtrim for more information. -- Unmanaged memory: 10.78 GiB -- Worker memory limit: 14.90 GiB
+distributed.worker - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker.html#memtrim for more information. -- Unmanaged memory: 10.98 GiB -- Worker memory limit: 14.90 GiB
+distributed.worker - INFO - Stopping worker at tcp://192.168.86.142:45732
+distributed.nanny - INFO - Worker closed
+slurmstepd: error: *** JOB 3227986 ON node42 CANCELLED AT 2025-11-12T17:51:05 ***

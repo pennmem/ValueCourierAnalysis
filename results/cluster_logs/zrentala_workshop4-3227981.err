@@ -1,0 +1,14 @@
+distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.142:41240'
+distributed.worker - INFO -       Start worker at: tcp://192.168.86.142:40267
+distributed.worker - INFO -          Listening to: tcp://192.168.86.142:40267
+distributed.worker - INFO -          dashboard at:       192.168.86.142:38055
+distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.107:46368
+distributed.worker - INFO - -------------------------------------------------
+distributed.worker - INFO -               Threads:                          1
+distributed.worker - INFO -                Memory:                  14.90 GiB
+distributed.worker - INFO -       Local Directory: /home1/zrentala/dask-worker-space/dask-worker-space/worker-izlg2e51
+distributed.worker - INFO - -------------------------------------------------
+distributed.worker - INFO -         Registered to: tcp://192.168.86.107:46368
+distributed.worker - INFO - -------------------------------------------------
+distributed.core - INFO - Starting established connection
+slurmstepd: error: *** JOB 3227981 ON node42 CANCELLED AT 2025-11-12T17:48:48 ***

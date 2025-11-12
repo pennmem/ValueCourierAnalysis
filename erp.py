@@ -18,24 +18,26 @@ from dask.distributed import wait
 from scipy.signal import butter, filtfilt, hilbert
 from matplotlib.colors import to_rgb
 
-# --- TOP-LEVEL worker (put at module scope, not inside the class) ---
+
+# --- TOP-LEVEL worker (must be at module scope) ---
 def _compute_subject_worker(subject, df, config):
     """
     Stateless worker: re-create a tiny ERPGenerator without a client
     and call compute_subject. Avoids pickling the original `self`.
     """
-    gen = ERPGenerator([subject], experiment=config["experiment"], create_client=False)
-    # fan out kwargs except experiment
+    gen = ERPGenerator(
+        subjects=[subject],
+        experiment=config["experiment"],
+        create_client=False
+    )
     kwargs = {k: v for k, v in config.items() if k != "experiment"}
-    return gen.compute_subject(df=df, subject=subject, **kwargs)
+    return gen.compute_subject(df=df, subject=subject, experiment=config["experiment"], **kwargs)
 
 
 class ERPGenerator:
     """
     ERP/ERBP (band power) workflow focused on selecting electrodes and frequency bands.
 
-    Key features
-    ------------
     - Choose electrodes by list, regex, or 'all'
     - Optional bandpass filter (freq_band=(f_lo, f_hi) in Hz)
     - Optional Hilbert power (envelope^2) after bandpass
@@ -49,15 +51,22 @@ class ERPGenerator:
     # ---------- construction ----------
     def __init__(
         self,
-        subjects: Iterable[str],
-        experiment: str,
+        subjects: Optional[Iterable[str]] = None,                  # now optional
+        experiment: Optional[Union[str, Iterable[str]]] = None,    # now optional (str or list[str])
         dask_args: Optional[dict] = None,
         create_client: bool = True,
     ):
-        self.subjects = list(subjects)
-        self.experiment = experiment
-        self.client = None
+        self.subjects = None if subjects is None else list(subjects)
 
+        # normalize experiments to a list or None
+        if experiment is None:
+            self.experiments = None
+        elif isinstance(experiment, (list, tuple, set)):
+            self.experiments = [str(e) for e in experiment]
+        else:
+            self.experiments = [str(experiment)]
+
+        self.client = None
         if create_client:
             if dask_args is None:
                 dask_args = {
@@ -92,13 +101,11 @@ class ERPGenerator:
           - regex string or compiled pattern
         """
         ch_names = eeg['channel'].values.astype(str)
-        print(ch_names)
         if channels == 'all' or channels is None:
             keep = ch_names
         elif isinstance(channels, (list, tuple)):
             keep = [c for c in ch_names if c in set(channels)]
         else:
-            # regex
             pat = re.compile(channels) if isinstance(channels, str) else channels
             keep = [c for c in ch_names if pat.search(c)]
         if len(keep) == 0:
@@ -121,9 +128,7 @@ class ERPGenerator:
 
     @staticmethod
     def _to_hilbert_power(data: np.ndarray) -> np.ndarray:
-        """
-        Instantaneous band power: |hilbert(x)|^2
-        """
+        """Instantaneous band power: |hilbert(x)|^2"""
         analytic = hilbert(data, axis=-1)
         return np.abs(analytic) ** 2
 
@@ -138,6 +143,40 @@ class ERPGenerator:
         sd = base.mean(dim='event').std(dim='time', ddof=1)  # (channel,)
         return (eeg - mu) / sd
 
+    # ---------- discovery helpers ----------
+    def _resolve_subjects_experiments(
+        self,
+        df: pd.DataFrame,
+        subjects: Optional[Iterable[str]] = None,
+        experiments: Optional[Iterable[str]] = None,
+    ) -> Tuple[List[str], List[str]]:
+        """
+        Resolve subjects/experiments to concrete lists using `df`.
+        - If subjects is None → all subjects (optionally filtered by experiments)
+        - If experiments is None → all experiments for those subjects
+        """
+        # resolve subjects
+        if subjects is None:
+            if experiments is not None:
+                subs = df[df["experiment"].isin(list(experiments))]["subject"].dropna().unique()
+            else:
+                subs = df["subject"].dropna().unique()
+            subjects_resolved = sorted(map(str, subs))
+        else:
+            subjects_resolved = sorted(map(str, subjects))
+
+        # resolve experiments
+        if experiments is None:
+            exps = (
+                df[df["subject"].isin(subjects_resolved)]["experiment"]
+                .dropna().unique()
+            )
+            experiments_resolved = sorted(map(str, exps))
+        else:
+            experiments_resolved = sorted(map(str, experiments))
+
+        return subjects_resolved, experiments_resolved
+
     # ---------- IO for a session ----------
     def _load_session(
         self,
@@ -145,6 +184,7 @@ class ERPGenerator:
         subject: str,
         session: int,
         trange: Tuple[int, int],
+        experiment: str,   # <- explicit
         clean: bool = True,
         evs_type: Optional[Union[str, List[str], Tuple[str, ...], set]] = 'WORD',
     ) -> Tuple[Optional[xr.DataArray], Optional[pd.DataFrame]]:
@@ -152,10 +192,10 @@ class ERPGenerator:
         Return (eeg, events) or (None, None).
         """
         try:
-            sel = (df['subject'] == subject) & (df['experiment'] == self.experiment) & (df['session'] == session)
+            sel = (df['subject'] == subject) & (df['experiment'] == experiment) & (df['session'] == session)
             df_sel = df.loc[sel]
             if df_sel.empty:
-                raise ValueError(f"No matching row for {subject} {self.experiment} session {session}")
+                raise ValueError(f"No matching row for {subject} {experiment} session {session}")
 
             row = df_sel.iloc[0]
             reader = cml.CMLReader(subject=row['subject'], experiment=row['experiment'], session=row['session'])
@@ -169,12 +209,9 @@ class ERPGenerator:
             eeg = reader.load_eeg(events=evs, rel_start=trange[0], rel_stop=trange[1], clean=clean).to_ptsa()
             return eeg, evs
         except Exception as e:
-            print(f"[load fail] {subject} s{session}: {e}")
+            print(f"[load fail] {subject} s{session} ({experiment}): {e}")
             return None, None
 
-    
-
-        
     # ---------- core: one subject ----------
     def compute_subject(
         self,
@@ -191,46 +228,45 @@ class ERPGenerator:
         outdir: str = "results",
         fname_prefix: str = "erp_subject_",
         event_average: bool = True,                        # average over events before session-avg
+        experiment: Optional[str] = None,                  # <- explicit experiment required here
     ) -> Optional[xr.DataArray]:
         """
         Returns channel x time (xarray) averaged across sessions (and events if requested).
         Saves pickle on success.
         """
+        if experiment is None:
+            raise ValueError("compute_subject requires a concrete `experiment` string.")
+
         if exclude_sessions is None:
             exclude_sessions = [24]
 
-        # find sessions for this subject in df
-        sub_df = df.query('subject == @subject and experiment == @self.experiment')
+        # find sessions for this subject+experiment
+        sub_df = df.query('subject == @subject and experiment == @experiment')
         sub_df = sub_df.loc[~sub_df['session'].isin(exclude_sessions)].sort_values('session')
 
         if sub_df.empty:
-            print(f"[skip] {subject}: no sessions")
+            print(f"[skip] {subject} ({experiment}): no sessions")
             return None
 
         # canonical time vector (helps enforce alignment)
         n_samp = int((trange[1] - trange[0]) * sample_rate / 1000) + 1
         time = np.linspace(trange[0], trange[1], n_samp)
-        print(len(time))
-        # time = eeg['time'] 
-        # time = None
 
         session_arrays: List[xr.DataArray] = []
 
         for _, row in sub_df.iterrows():
             s = int(row['session'])
-            eeg, evs = self._load_session(df, subject, s, trange, clean=True, evs_type='WORD')
-            print(len(eeg['time']))
-            # time = eeg['time']
+            eeg, evs = self._load_session(df, subject, s, trange, experiment=experiment, clean=True, evs_type='WORD')
             if eeg is None or evs is None or len(evs) == 0:
-                print(f"[skip] {subject} s{s}: load failure or no events")
+                print(f"[skip] {subject} s{s} ({experiment}): load failure or no events")
                 continue
 
             # alignment sanity
             if evs['eegoffset'].max() < 0:
-                print(f"[skip] {subject} s{s}: no aligned EEG")
+                print(f"[skip] {subject} s{s} ({experiment}): no aligned EEG")
                 continue
             if len(np.unique(evs['session'])) != 1 or int(evs.iloc[0]['session']) != s:
-                print(f"[skip] {subject} s{s}: session mismatch")
+                print(f"[skip] {subject} s{s} ({experiment}): session mismatch")
                 continue
 
             # resample if needed
@@ -238,9 +274,9 @@ class ERPGenerator:
             if sr_now != sample_rate:
                 eeg = eeg.resampled(sample_rate)
 
-            # enforce length & time coordinates
+            # enforce length & time coordinates (keep your existing policy)
             if len(eeg['time']) != len(time):
-                print(f"[skip] {subject} s{s}: time misalignment after resample")
+                print(f"[skip] {subject} s{s} ({experiment}): time misalignment after resample")
                 continue
             eeg = eeg.assign_coords(time=time)
 
@@ -263,60 +299,89 @@ class ERPGenerator:
                 eeg = eeg.mean(dim='event')
 
             session_arrays.append(eeg)
-
-            print(f"[ok] {subject} s{s}: {eeg.shape}")
+            print(f"[ok] {subject} s{s} ({experiment}): {eeg.shape}")
 
         if len(session_arrays) == 0:
-            print(f"[skip] {subject}: no valid sessions")
+            print(f"[skip] {subject} ({experiment}): no valid sessions")
             return None
 
         # average over sessions
-        stack = xr.concat(session_arrays, dim='session')  # (session, channel, time) or (session, event, channel, time) if event_average=False
-        if event_average:
-            out = stack.mean(dim='session')               # (channel, time)
-        else:
-            # event-average across sessions then sessions
-            out = stack.mean(dim=('event', 'session'))
+        stack = xr.concat(session_arrays, dim='session')  # (session, channel, time)
+        out = stack.mean(dim='session') if event_average else stack.mean(dim=('event', 'session'))
 
-        # save
+        # save (experiment-aware default prefix)
         os.makedirs(outdir, exist_ok=True)
+        if fname_prefix is None or fname_prefix == "erp_subject_":
+            fname_prefix = f"erp_{experiment}_subject_"
         path = os.path.join(outdir, f"{fname_prefix}{subject}.pkl")
         self.save_dict({'data': out}, path)
         return out
 
     # ---------- run many subjects ----------
-    # inside ERPGenerator
-    def compute_all_subjects(self, df: pd.DataFrame, **kwargs) -> None:
-        if self.client is None:
-            for s in self.subjects:
-                try:
-                    self.compute_subject(df=df, subject=s, **kwargs)
-                except Exception as e:
-                    print(f"[err] {s}: {e}")
+    def compute_all_subjects(
+        self,
+        df: pd.DataFrame,
+        subjects: Optional[Iterable[str]] = None,        # allow overrides
+        experiments: Optional[Iterable[str]] = None,     # allow overrides
+        **kwargs,
+    ) -> None:
+        """
+        Resolve subjects/experiments if None, then compute per subject for each experiment.
+        Uses Dask if a client exists.
+        """
+        # resolve from args or from self.* or from df
+        subj_basis = subjects if subjects is not None else self.subjects
+        exp_basis  = experiments if experiments is not None else self.experiments
+        subjects_resolved, experiments_resolved = self._resolve_subjects_experiments(df, subj_basis, exp_basis)
+
+        if not subjects_resolved:
+            print("[compute_all_subjects] No subjects found.")
+            return
+        if not experiments_resolved:
+            print("[compute_all_subjects] No experiments found for those subjects.")
             return
 
-        config = {"experiment": self.experiment, **kwargs}
-        futures = self.client.map(_compute_subject_worker, self.subjects, df=df, config=config)
-        wait(futures)
-        try:
-            errs = da.get_exceptions(futures, range(len(self.subjects)))
-            print(errs)
-        except Exception:
-            print("completed without reported exceptions")
+        # serial path
+        if self.client is None:
+            for exp in experiments_resolved:
+                for s in subjects_resolved:
+                    try:
+                        # ensure experiment-aware default prefix unless user provided one
+                        local_kwargs = dict(kwargs)
+                        if "fname_prefix" not in local_kwargs or local_kwargs["fname_prefix"] == "erp_subject_":
+                            local_kwargs["fname_prefix"] = f"erp_{exp}_subject_"
+                        self.compute_subject(df=df, subject=s, experiment=exp, **local_kwargs)
+                    except Exception as e:
+                        print(f"[err] {s} ({exp}): {e}")
+            return
 
-
+        # dask path: submit a batch per experiment
+        for exp in experiments_resolved:
+            cfg = {"experiment": exp, **kwargs}
+            if "fname_prefix" not in cfg or cfg["fname_prefix"] == "erp_subject_":
+                cfg["fname_prefix"] = f"erp_{exp}_subject_"
+            futures = self.client.map(_compute_subject_worker, subjects_resolved, df=df, config=cfg)
+            wait(futures)
+            try:
+                errs = da.get_exceptions(futures, range(len(subjects_resolved)))
+                print(f"[dask] {exp} errors:", errs)
+            except Exception:
+                print(f"[dask] {exp} completed without reported exceptions")
 
     # ---------- group load / concat ----------
     def load_group(
         self,
         subjects: Iterable[str],
-        indir: str = "Assignment_4",
+        indir: str = "results",               # default aligned with compute_subject outdir
         fname_prefix: str = "erp_subject_",
         outfile: str = "erp_group.pkl",
     ) -> Optional[xr.DataArray]:
         """
         Load per-subject pickles and concat on new 'subject' dim.
         Returns (subject, channel, time) or None.
+
+        Tip: when you ran multi-experiment batches, your files are
+        named like erp_<EXP>_subject_<SUBJ>.pkl — pass fname_prefix accordingly.
         """
         arrs = []
         keep_subjects = []
@@ -329,7 +394,7 @@ class ERPGenerator:
                 arrs.append(da)
                 keep_subjects.append(s)
             except FileNotFoundError:
-                print(f"[skip] {s}: not found")
+                print(f"[skip] {s}: not found at {path}")
             except Exception as e:
                 print(f"[skip] {s}: {e}")
 

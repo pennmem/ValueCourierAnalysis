@@ -1,0 +1,66 @@
+distributed.nanny - INFO - Closing Nanny at 'tcp://192.168.86.142:46023'
+distributed.dask_worker - INFO - End worker
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/site-packages/distributed/comm/core.py", line 286, in connect
+    timeout=min(intermediate_cap, time_left()),
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/asyncio/tasks.py", line 442, in wait_for
+    return fut.result()
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/site-packages/distributed/comm/tcp.py", line 410, in connect
+    convert_stream_closed_error(self, e)
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/site-packages/distributed/comm/tcp.py", line 126, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <distributed.comm.tcp.TCPConnector object at 0x2ab4f8a5ee10>: ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/site-packages/distributed/core.py", line 269, in _
+    await asyncio.wait_for(self.start(), timeout=timeout)
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/asyncio/tasks.py", line 442, in wait_for
+    return fut.result()
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/site-packages/distributed/nanny.py", line 333, in start
+    msg = await self.scheduler.register_nanny()
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/site-packages/distributed/core.py", line 860, in send_recv_from_rpc
+    comm = await self.pool.connect(self.addr)
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/site-packages/distributed/core.py", line 1048, in connect
+    raise exc
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/site-packages/distributed/core.py", line 1032, in connect
+    comm = await fut
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/site-packages/distributed/comm/core.py", line 310, in connect
+    ) from active_exception
+OSError: Timed out trying to connect to tcp://192.168.86.107:35907 after 30 s
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/site-packages/distributed/cli/dask_worker.py", line 469, in <module>
+    go()
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/site-packages/distributed/cli/dask_worker.py", line 465, in go
+    main()
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/site-packages/distributed/cli/dask_worker.py", line 451, in main
+    loop.run_sync(run)
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/site-packages/tornado/ioloop.py", line 530, in run_sync
+    return future_cell[0].result()
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/site-packages/distributed/cli/dask_worker.py", line 445, in run
+    await asyncio.gather(*nannies)
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/asyncio/tasks.py", line 630, in _wrap_awaitable
+    return (yield from awaitable.__await__())
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop/lib/python3.7/site-packages/distributed/core.py", line 275, in _
+    type(self).__name__, timeout
+concurrent.futures._base.TimeoutError: Nanny failed to start in 60 seconds

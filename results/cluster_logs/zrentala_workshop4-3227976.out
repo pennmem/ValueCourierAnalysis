@@ -1,0 +1,51 @@
+Opening raw data file /protocols/ltp/subjects/LTP001/experiments/ValueCourier/sessions/0/ephys/current_processed/LTP001_session_0_clean_raw.fif...
+    Range : 0 ... 4190207 =      0.000 ...  2046.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP001/experiments/ValueCourier/sessions/0/ephys/current_processed/LTP001_session_0_clean_raw-1.fif...
+    Range : 4190208 ... 8380415 =   2046.000 ...  4092.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP001/experiments/ValueCourier/sessions/0/ephys/current_processed/LTP001_session_0_clean_raw-2.fif...
+    Range : 8380416 ... 10915839 =   4092.000 ...  5330.000 secs
+Ready.
+Reading 0 ... 10915839  =      0.000 ...  5330.000 secs...
+Not setting metadata
+75 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 75 events and 4916 original time points ...
+0 bad epochs dropped
+[skip] LTP001 s0 (ValueCourier): time misalignment after resample
+[skip] LTP001 (ValueCourier): no valid sessions
+Opening raw data file /protocols/ltp/subjects/LTP606/experiments/ValueCourier/sessions/0/ephys/current_processed/LTP606_session_0_clean_raw.fif...
+    Range : 0 ... 4190207 =      0.000 ...  2046.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP606/experiments/ValueCourier/sessions/0/ephys/current_processed/LTP606_session_0_clean_raw-1.fif...
+    Range : 4190208 ... 8380415 =   2046.000 ...  4092.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP606/experiments/ValueCourier/sessions/0/ephys/current_processed/LTP606_session_0_clean_raw-2.fif...
+    Range : 8380416 ... 10821631 =   4092.000 ...  5284.000 secs
+Ready.
+Reading 0 ... 10821631  =      0.000 ...  5284.000 secs...
+Not setting metadata
+75 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 75 events and 4916 original time points ...
+0 bad epochs dropped
+[skip] LTP606 s0 (ValueCourier): time misalignment after resample
+Opening raw data file /protocols/ltp/subjects/LTP606/experiments/ValueCourier/sessions/1/ephys/current_processed/LTP606_session_1_clean_raw.fif...
+    Range : 0 ... 4190207 =      0.000 ...  2046.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP606/experiments/ValueCourier/sessions/1/ephys/current_processed/LTP606_session_1_clean_raw-1.fif...
+    Range : 4190208 ... 8380415 =   2046.000 ...  4092.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP606/experiments/ValueCourier/sessions/1/ephys/current_processed/LTP606_session_1_clean_raw-2.fif...
+    Range : 8380416 ... 11229183 =   4092.000 ...  5483.000 secs
+Ready.
+Reading 0 ... 11229183  =      0.000 ...  5483.000 secs...
+Not setting metadata
+150 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 150 events and 4916 original time points ...
+0 bad epochs dropped
