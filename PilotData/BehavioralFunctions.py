@@ -331,14 +331,11 @@ def plot_error_diff_vs_binned_cluster_score(*dfs, labels=None):
 
         cats = pd.CategoricalDtype(categories=['low','medium','high'], ordered=True)
         df['TC_bin'] = df['TC_bin'].astype(cats)
-        df = df[df['TC_bin'].isin(['low', 'high'])]  # no medium
 
         # Compute summary stats
         summ = df.groupby('TC_bin', observed=True)['error_diff_adj'].agg(['mean', 'count', 'std']).reset_index()
         summ['se'] = summ['std'] / np.sqrt(summ['count'])
-        x_map = {'low': 0, 'high': 1}  # no medium
-        summ['x'] = summ['TC_bin'].map(x_map)  # no medium
-        # summ['x'] = summ['TC_bin'].cat.codes
+        summ['x'] = summ['TC_bin'].cat.codes
 
         label = labels[i] if labels else f'Dataset {i+1}'
         ax.errorbar(
@@ -350,10 +347,8 @@ def plot_error_diff_vs_binned_cluster_score(*dfs, labels=None):
             label=label
         )
 
-    # ax.set_xticks([0,1,2])
-    ax.set_xticks([0,1])
-    # ax.set_xticklabels(['low','medium','high'])
-    ax.set_xticklabels(['low','high'])
+    ax.set_xticks([0,1,2])
+    ax.set_xticklabels(['low','medium','high'])
     ax.set_xlabel('Temporal Clustering Score', fontsize=22)
     ax.set_ylabel('|Error| Difference', fontsize=22)
     ax.tick_params(labelsize=18)
