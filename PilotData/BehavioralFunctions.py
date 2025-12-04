@@ -361,3 +361,133 @@ def plot_error_diff_vs_binned_cluster_score(*dfs, labels=None):
         
     plt.tight_layout()
     plt.show()
+    
+    
+def compute_trial_error_conditions(in_df):
+    """
+    Compute error per trial in 4 conditions:
+        1. valuerecall - mean(itemvalue of whole list)
+        2. valuerecall - mean(itemvalue of list with first 2 and last 3 items removed)
+        3. valuerecall - mean(itemvalue of correctly recalled items)
+        4. valuerecall - mean(itemvalue of correctly recalled items from list with first 2 and last 3 items removed)
+    """
+    def compute_trial_errors(evs_df):
+        subject = evs_df['subject'].iloc[0]
+        session = evs_df['session'].iloc[0]
+        trial = evs_df['trial'].iloc[0]
+        storepointtype = evs_df['storepointtype'].iloc[0]
+        valuerecall = evs_df['valuerecall'].iloc[0]
+        list_len = evs_df['serialpos'].max()
+        
+        # Condition 1: all items
+        mean_all = evs_df['itemvalue'].mean() if list_len > 0 else np.nan
+        
+        # Condition 2: items in the middle
+        middle_mask = (evs_df['serialpos'] > 2) & (evs_df['serialpos'] <= (list_len-3))
+        middle_list = evs_df[middle_mask]
+        mean_middle = middle_list['itemvalue'].mean() if len(middle_list) > 0 else np.nan
+        
+        # Condition 3: correctly recalled items
+        correct_list = evs_df[evs_df['recalled'] == 1]
+        mean_correct = correct_list['itemvalue'].mean() if len(correct_list) > 0 else np.nan
+        
+        # Condition 4: correctly recalled items in the middle
+        corr_mid_list = correct_list[middle_mask]
+        mean_corr_mid = corr_mid_list['itemvalue'].mean() if len(corr_mid_list) > 0 else np.nan
+        
+        return pd.Series({
+            'subject': subject,
+            'session': session,
+            'trial': trial,
+            'storepointtype': storepointtype,
+            'valuerecall': valuerecall,
+            'error_all': abs(valuerecall - mean_all),
+            'error_middle': abs(valuerecall - mean_middle),
+            'error_correct': abs(valuerecall - mean_correct),
+            'error_corr_mid' : abs(valuerecall - mean_corr_mid)
+        })
+        
+    word_evs = in_df[in_df['type'] == 'WORD']
+    trial_errors = word_evs.groupby(['subject', 'session', 'trial'], as_index=False).apply(compute_trial_errors).reset_index(drop=True)
+    return trial_errors
+
+
+def get_mixed_model_fitted_error_conditions(in_df):
+    """
+    Compute mean |error| for the 4 error conditions for each subject and association condition (Temporal vs. random)
+    """
+    temporal_clustering_df = compute_temporal_clustering(in_df)
+    error_by_trial = compute_trial_error_conditions(in_df)
+
+    sub_error = (error_by_trial.groupby(['subject', 'storepointtype'], as_index=False)
+                 .agg(
+                     err_all=('error_all', 'mean'),
+                     err_middle=('error_middle', 'mean'),
+                     err_correct=('error_correct', 'mean'),
+                     err_corr_mid=('error_corr_mid', 'mean')))
+    
+    sub_error = sub_error.merge(temporal_clustering_df, on='subject', how='left')
+    return sub_error
+
+
+def plot_error_vs_cluster_score_conditions(in_df):
+    """
+    Generate two graphs (Temporal vs. random association condition), plotting mean |error| against TC score for the 4 error conditions
+    """
+    error_cols = {
+        'err_all': 'All items',
+        'err_middle': 'Middle items',
+        'err_correct': 'Correctly recalled items',
+        'err_corr_mid': 'Correct middle items'
+    }
+
+    for storepointtype in ['Temporal', 'random']:
+        df = in_df[in_df['storepointtype'] == storepointtype]
+        if df.empty:
+            continue
+
+        # Bin TC into low/medium/high
+        edges = np.linspace(df['TC'].min(), df['TC'].max(), 4)
+        df['TC_bin'] = pd.cut(
+            df['TC'],
+            bins=edges,
+            labels=['low', 'medium', 'high'],
+            include_lowest=True,
+            right=True
+        )
+        cats = pd.CategoricalDtype(categories=['low', 'medium', 'high'], ordered=True)
+        df['TC_bin'] = df['TC_bin'].astype(cats)
+
+        fig, ax = plt.subplots(figsize=(8, 6))
+
+        for col, label in error_cols.items():
+            summ = (
+                df.groupby('TC_bin', observed=True)[col]
+                .agg(['mean', 'count', 'std'])
+                .reset_index()
+            )
+            summ['se'] = summ['std'] / np.sqrt(summ['count'])
+            summ['x'] = summ['TC_bin'].cat.codes
+
+            ax.errorbar(
+                summ['x'],
+                summ['mean'],
+                yerr=summ['se'],
+                fmt='o-',
+                capsize=3,
+                label=label
+            )
+
+        ax.set_xticks([0,1,2])
+        ax.set_xticklabels(['low', 'medium', 'high'])
+        ax.set_xlabel('Temporal Clustering Score', fontsize=22)
+        ax.set_ylabel('Mean |Error|', fontsize=22)
+        ax.tick_params(labelsize=18)
+        ax.yaxis.grid(True)
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+        ax.set_title(f'{storepointtype} condition', fontsize=22)
+        ax.legend(fontsize=12)
+
+        plt.tight_layout()
+        plt.show()
