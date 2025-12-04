@@ -1,0 +1,94 @@
+2025-12-03 16:05:58,066 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.107:44484'
+2025-12-03 16:05:59,352 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.107:33635
+2025-12-03 16:05:59,353 - distributed.worker - INFO -          Listening to: tcp://192.168.86.107:33635
+2025-12-03 16:05:59,353 - distributed.worker - INFO -           Worker name:             SLURMCluster-3
+2025-12-03 16:05:59,353 - distributed.worker - INFO -          dashboard at:       192.168.86.107:43103
+2025-12-03 16:05:59,353 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.107:36675
+2025-12-03 16:05:59,353 - distributed.worker - INFO - -------------------------------------------------
+2025-12-03 16:05:59,353 - distributed.worker - INFO -               Threads:                          1
+2025-12-03 16:05:59,353 - distributed.worker - INFO -                Memory:                  51.22 GiB
+2025-12-03 16:05:59,353 - distributed.worker - INFO -       Local Directory: /home1/joycerose14/scratch/dask-scratch-space/worker-drraj96t
+2025-12-03 16:05:59,353 - distributed.worker - INFO - -------------------------------------------------
+2025-12-03 16:05:59,634 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-12-03 16:05:59,634 - distributed.worker - INFO -         Registered to: tcp://192.168.86.107:36675
+2025-12-03 16:05:59,634 - distributed.worker - INFO - -------------------------------------------------
+2025-12-03 16:05:59,635 - distributed.core - INFO - Starting established connection to tcp://192.168.86.107:36675
+2025-12-03 16:08:55,735 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 35.94 GiB -- Worker memory limit: 51.22 GiB
+2025-12-03 16:08:59,459 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 41.10 GiB -- Worker memory limit: 51.22 GiB
+2025-12-03 16:09:05,836 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 47.78 GiB -- Worker memory limit: 51.22 GiB
+2025-12-03 16:09:08,186 - distributed.nanny.memory - WARNING - Worker tcp://192.168.86.107:33635 (pid=55840) exceeded 95% memory budget. Restarting...
+2025-12-03 16:09:12,924 - distributed.nanny - INFO - Worker process 55840 was killed by signal 15
+2025-12-03 16:09:12,933 - distributed.nanny - WARNING - Restarting worker
+2025-12-03 16:09:14,448 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.107:38419
+2025-12-03 16:09:14,448 - distributed.worker - INFO -          Listening to: tcp://192.168.86.107:38419
+2025-12-03 16:09:14,448 - distributed.worker - INFO -           Worker name:             SLURMCluster-3
+2025-12-03 16:09:14,448 - distributed.worker - INFO -          dashboard at:       192.168.86.107:35336
+2025-12-03 16:09:14,448 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.107:36675
+2025-12-03 16:09:14,448 - distributed.worker - INFO - -------------------------------------------------
+2025-12-03 16:09:14,448 - distributed.worker - INFO -               Threads:                          1
+2025-12-03 16:09:14,449 - distributed.worker - INFO -                Memory:                  51.22 GiB
+2025-12-03 16:09:14,449 - distributed.worker - INFO -       Local Directory: /home1/joycerose14/scratch/dask-scratch-space/worker-7jbdyhr9
+2025-12-03 16:09:14,449 - distributed.worker - INFO - -------------------------------------------------
+2025-12-03 16:09:14,770 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-12-03 16:09:14,771 - distributed.worker - INFO -         Registered to: tcp://192.168.86.107:36675
+2025-12-03 16:09:14,771 - distributed.worker - INFO - -------------------------------------------------
+2025-12-03 16:09:14,771 - distributed.core - INFO - Starting established connection to tcp://192.168.86.107:36675
+2025-12-03 16:12:10,673 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 35.91 GiB -- Worker memory limit: 51.22 GiB
+2025-12-03 16:12:13,896 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 41.09 GiB -- Worker memory limit: 51.22 GiB
+2025-12-03 16:12:19,885 - distributed.nanny.memory - WARNING - Worker tcp://192.168.86.107:38419 (pid=56207) exceeded 95% memory budget. Restarting...
+2025-12-03 16:12:24,359 - distributed.nanny - INFO - Worker process 56207 was killed by signal 15
+2025-12-03 16:12:24,366 - distributed.nanny - WARNING - Restarting worker
+2025-12-03 16:12:25,736 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.107:34692
+2025-12-03 16:12:25,736 - distributed.worker - INFO -          Listening to: tcp://192.168.86.107:34692
+2025-12-03 16:12:25,736 - distributed.worker - INFO -           Worker name:             SLURMCluster-3
+2025-12-03 16:12:25,736 - distributed.worker - INFO -          dashboard at:       192.168.86.107:45880
+2025-12-03 16:12:25,736 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.107:36675
+2025-12-03 16:12:25,736 - distributed.worker - INFO - -------------------------------------------------
+2025-12-03 16:12:25,736 - distributed.worker - INFO -               Threads:                          1
+2025-12-03 16:12:25,736 - distributed.worker - INFO -                Memory:                  51.22 GiB
+2025-12-03 16:12:25,736 - distributed.worker - INFO -       Local Directory: /home1/joycerose14/scratch/dask-scratch-space/worker-sz92vhm4
+2025-12-03 16:12:25,736 - distributed.worker - INFO - -------------------------------------------------
+2025-12-03 16:12:26,037 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-12-03 16:12:26,037 - distributed.worker - INFO -         Registered to: tcp://192.168.86.107:36675
+2025-12-03 16:12:26,037 - distributed.worker - INFO - -------------------------------------------------
+2025-12-03 16:12:26,038 - distributed.core - INFO - Starting established connection to tcp://192.168.86.107:36675
+2025-12-03 16:15:24,738 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 35.97 GiB -- Worker memory limit: 51.22 GiB
+2025-12-03 16:15:27,957 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 41.03 GiB -- Worker memory limit: 51.22 GiB
+2025-12-03 16:15:33,486 - distributed.nanny.memory - WARNING - Worker tcp://192.168.86.107:34692 (pid=56499) exceeded 95% memory budget. Restarting...
+2025-12-03 16:15:38,105 - distributed.nanny - INFO - Worker process 56499 was killed by signal 15
+2025-12-03 16:15:38,109 - distributed.nanny - WARNING - Restarting worker
+2025-12-03 16:15:39,458 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.107:38697
+2025-12-03 16:15:39,458 - distributed.worker - INFO -          Listening to: tcp://192.168.86.107:38697
+2025-12-03 16:15:39,458 - distributed.worker - INFO -           Worker name:             SLURMCluster-3
+2025-12-03 16:15:39,458 - distributed.worker - INFO -          dashboard at:       192.168.86.107:40997
+2025-12-03 16:15:39,458 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.107:36675
+2025-12-03 16:15:39,458 - distributed.worker - INFO - -------------------------------------------------
+2025-12-03 16:15:39,459 - distributed.worker - INFO -               Threads:                          1
+2025-12-03 16:15:39,459 - distributed.worker - INFO -                Memory:                  51.22 GiB
+2025-12-03 16:15:39,459 - distributed.worker - INFO -       Local Directory: /home1/joycerose14/scratch/dask-scratch-space/worker-6q1jrpne
+2025-12-03 16:15:39,459 - distributed.worker - INFO - -------------------------------------------------
+2025-12-03 16:15:39,756 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-12-03 16:15:39,756 - distributed.worker - INFO -         Registered to: tcp://192.168.86.107:36675
+2025-12-03 16:15:39,756 - distributed.worker - INFO - -------------------------------------------------
+2025-12-03 16:15:39,757 - distributed.core - INFO - Starting established connection to tcp://192.168.86.107:36675
+2025-12-03 16:18:42,260 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 35.90 GiB -- Worker memory limit: 51.22 GiB
+2025-12-03 16:18:45,566 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 40.99 GiB -- Worker memory limit: 51.22 GiB
+2025-12-03 16:18:50,785 - distributed.nanny.memory - WARNING - Worker tcp://192.168.86.107:38697 (pid=56752) exceeded 95% memory budget. Restarting...
+2025-12-03 16:18:55,295 - distributed.nanny - INFO - Worker process 56752 was killed by signal 15
+2025-12-03 16:18:55,297 - distributed.nanny - WARNING - Restarting worker
+2025-12-03 16:18:56,153 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/joycerose14/scratch/dask-scratch-space/worker-z9ab1ndi', purging
+2025-12-03 16:18:56,566 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.107:38032
+2025-12-03 16:18:56,566 - distributed.worker - INFO -          Listening to: tcp://192.168.86.107:38032
+2025-12-03 16:18:56,566 - distributed.worker - INFO -           Worker name:             SLURMCluster-3
+2025-12-03 16:18:56,566 - distributed.worker - INFO -          dashboard at:       192.168.86.107:38968
+2025-12-03 16:18:56,567 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.107:36675
+2025-12-03 16:18:56,567 - distributed.worker - INFO - -------------------------------------------------
+2025-12-03 16:18:56,567 - distributed.worker - INFO -               Threads:                          1
+2025-12-03 16:18:56,567 - distributed.worker - INFO -                Memory:                  51.22 GiB
+2025-12-03 16:18:56,567 - distributed.worker - INFO -       Local Directory: /home1/joycerose14/scratch/dask-scratch-space/worker-qptj266e
+2025-12-03 16:18:56,567 - distributed.worker - INFO - -------------------------------------------------
+2025-12-03 16:18:56,838 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-12-03 16:18:56,839 - distributed.worker - INFO -         Registered to: tcp://192.168.86.107:36675
+2025-12-03 16:18:56,839 - distributed.worker - INFO - -------------------------------------------------
+2025-12-03 16:18:56,839 - distributed.core - INFO - Starting established connection to tcp://192.168.86.107:36675
+slurmstepd: error: *** JOB 3229173 ON node07 CANCELLED AT 2025-12-03T16:18:58 ***
