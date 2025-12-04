@@ -441,7 +441,7 @@ def plot_error_vs_cluster_score_conditions(in_df):
         'err_corr_mid': 'Correct middle items'
     }
 
-    for storepointtype in ['Temporal', 'random']:
+    for storepointtype in ['Temporal', 'Random']:
         df = in_df[in_df['storepointtype'] == storepointtype]
         if df.empty:
             continue
