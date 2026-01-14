@@ -1,0 +1,27 @@
+2025-12-24 13:13:11,677 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.104:43655'
+2025-12-24 13:13:12,287 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-9pklgpef', purging
+2025-12-24 13:13:12,291 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-xykkco2y', purging
+2025-12-24 13:13:12,293 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-zbepz1nd', purging
+2025-12-24 13:13:12,297 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-iu75vawr', purging
+2025-12-24 13:13:12,300 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-om5vnz9x', purging
+2025-12-24 13:13:12,302 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-6hofeshp', purging
+2025-12-24 13:13:12,305 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-u0d2tty3', purging
+2025-12-24 13:13:12,965 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.104:44604
+2025-12-24 13:13:12,965 - distributed.worker - INFO -          Listening to: tcp://192.168.86.104:44604
+2025-12-24 13:13:12,965 - distributed.worker - INFO -           Worker name:           SLURMCluster-500
+2025-12-24 13:13:12,966 - distributed.worker - INFO -          dashboard at:       192.168.86.104:41679
+2025-12-24 13:13:12,966 - distributed.worker - INFO - Waiting to connect to:   tcp://128.91.77.24:38250
+2025-12-24 13:13:12,966 - distributed.worker - INFO - -------------------------------------------------
+2025-12-24 13:13:12,966 - distributed.worker - INFO -               Threads:                          1
+2025-12-24 13:13:12,966 - distributed.worker - INFO -                Memory:                   0.93 GiB
+2025-12-24 13:13:12,966 - distributed.worker - INFO -       Local Directory: /home1/zrentala/dask-worker-space/dask-scratch-space/worker-hkrtnbt5
+2025-12-24 13:13:12,966 - distributed.worker - INFO - -------------------------------------------------
+2025-12-24 13:13:12,992 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-12-24 13:13:12,992 - distributed.worker - INFO - Starting Worker plugin deliveryRoutes.pyde97b66e-4ade-4aa2-834d-1b7e19da83c0
+2025-12-24 13:13:12,992 - distributed.worker - INFO - Starting Worker plugin deliveryRoutes.py03f42059-8b43-488a-a877-98f69402da9b
+2025-12-24 13:13:12,994 - distributed.utils - INFO - Reload module deliveryRoutes from .py file
+2025-12-24 13:13:13,704 - distributed.utils - INFO - Reload module deliveryRoutes from .py file
+2025-12-24 13:13:13,715 - distributed.worker - INFO -         Registered to:   tcp://128.91.77.24:38250
+2025-12-24 13:13:13,715 - distributed.worker - INFO - -------------------------------------------------
+2025-12-24 13:13:13,715 - distributed.core - INFO - Starting established connection to tcp://128.91.77.24:38250
+slurmstepd: error: *** JOB 3238972 ON node04 CANCELLED AT 2025-12-24T13:18:52 ***

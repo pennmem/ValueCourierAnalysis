@@ -1,0 +1,57 @@
+2025-12-24 13:45:24,947 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.135:41199'
+2025-12-24 13:45:26,415 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.135:44675
+2025-12-24 13:45:26,415 - distributed.worker - INFO -          Listening to: tcp://192.168.86.135:44675
+2025-12-24 13:45:26,415 - distributed.worker - INFO -           Worker name:            SLURMCluster-81
+2025-12-24 13:45:26,416 - distributed.worker - INFO -          dashboard at:       192.168.86.135:44932
+2025-12-24 13:45:26,416 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.140:46552
+2025-12-24 13:45:26,416 - distributed.worker - INFO - -------------------------------------------------
+2025-12-24 13:45:26,416 - distributed.worker - INFO -               Threads:                          1
+2025-12-24 13:45:26,416 - distributed.worker - INFO -                Memory:                   0.93 GiB
+2025-12-24 13:45:26,416 - distributed.worker - INFO -       Local Directory: /home1/zrentala/dask-worker-space/dask-scratch-space/worker-aaqqldsv
+2025-12-24 13:45:26,416 - distributed.worker - INFO - -------------------------------------------------
+2025-12-24 13:45:26,437 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-12-24 13:45:26,438 - distributed.worker - INFO - Starting Worker plugin deliveryRoutes.py625f03e1-a4e3-492e-9f43-fb55c70c4573
+2025-12-24 13:45:26,438 - distributed.worker - INFO - Starting Worker plugin deliveryRoutes.pyf5e797f9-eb5c-4eca-aeb7-baddbb82feec
+2025-12-24 13:45:26,439 - distributed.utils - INFO - Reload module deliveryRoutes from .py file
+2025-12-24 13:45:27,215 - distributed.utils - INFO - Reload module deliveryRoutes from .py file
+2025-12-24 13:45:27,226 - distributed.worker - INFO -         Registered to: tcp://192.168.86.140:46552
+2025-12-24 13:45:27,226 - distributed.worker - INFO - -------------------------------------------------
+2025-12-24 13:45:27,227 - distributed.core - INFO - Starting established connection to tcp://192.168.86.140:46552
+2025-12-24 15:50:37,746 - distributed.worker - INFO - Stopping worker at tcp://192.168.86.135:44675. Reason: scheduler-remove-worker
+2025-12-24 15:50:37,749 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://192.168.86.135:41199'. Reason: scheduler-remove-worker
+2025-12-24 15:50:37,750 - distributed.worker - INFO - Removing Worker plugin shuffle
+2025-12-24 15:50:37,750 - distributed.worker - INFO - Removing Worker plugin deliveryRoutes.py625f03e1-a4e3-492e-9f43-fb55c70c4573
+2025-12-24 15:50:37,750 - distributed.worker - INFO - Removing Worker plugin deliveryRoutes.pyf5e797f9-eb5c-4eca-aeb7-baddbb82feec
+2025-12-24 15:50:37,752 - distributed.worker - ERROR - Failed to communicate with scheduler during heartbeat.
+Traceback (most recent call last):
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/comm/tcp.py", line 226, in read
+    frames_nosplit_nbytes_bin = await stream.read_bytes(fmt_size)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/worker.py", line 1273, in heartbeat
+    response = await retry_operation(
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/utils_comm.py", line 416, in retry_operation
+    return await retry(
+           ^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/utils_comm.py", line 395, in retry
+    return await coro()
+           ^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/core.py", line 1259, in send_recv_from_rpc
+    return await send_recv(comm=comm, op=key, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/core.py", line 1018, in send_recv
+    response = await comm.read(deserializers=deserializers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/comm/tcp.py", line 237, in read
+    convert_stream_closed_error(self, e)
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/comm/tcp.py", line 137, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) ConnectionPool.heartbeat_worker local=tcp://192.168.86.135:38586 remote=tcp://192.168.86.140:46552>: Stream is closed
+2025-12-24 15:50:37,767 - distributed.nanny - INFO - Worker closed
+2025-12-24 15:50:37,767 - distributed.core - INFO - Connection to tcp://192.168.86.140:46552 has been closed.
+slurmstepd: error: *** JOB 3240341 ON node35 CANCELLED AT 2025-12-24T15:50:38 ***

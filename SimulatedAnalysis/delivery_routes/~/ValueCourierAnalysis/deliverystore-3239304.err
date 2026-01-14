@@ -1,0 +1,609 @@
+2025-12-24 13:18:57,207 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.142:39636'
+2025-12-24 13:18:57,966 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-9i5q3s04', purging
+2025-12-24 13:18:57,968 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-2m8j3ll8', purging
+2025-12-24 13:18:57,970 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-zbc7dmfp', purging
+2025-12-24 13:18:57,973 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-owvbr5fw', purging
+2025-12-24 13:18:57,975 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-8vtxb22k', purging
+2025-12-24 13:18:57,977 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-6oyv9q06', purging
+2025-12-24 13:18:57,979 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-kpebmnb0', purging
+2025-12-24 13:18:57,981 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-q0plco9h', purging
+2025-12-24 13:18:57,983 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-28xm9urf', purging
+2025-12-24 13:18:57,987 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-70kutbuk', purging
+2025-12-24 13:18:57,989 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-v3y3m0s4', purging
+2025-12-24 13:18:57,991 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-x5ckn8xb', purging
+2025-12-24 13:18:57,993 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-4jpjnd5x', purging
+2025-12-24 13:18:57,995 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-20kvhgbt', purging
+2025-12-24 13:18:57,998 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-de5cqhvx', purging
+2025-12-24 13:18:58,000 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-mfk_vz3f', purging
+2025-12-24 13:18:58,002 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-5qh1c49w', purging
+2025-12-24 13:18:58,005 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-hexefj_a', purging
+2025-12-24 13:18:58,007 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-cdf6w1kd', purging
+2025-12-24 13:18:58,009 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-kjq59vpd', purging
+2025-12-24 13:18:58,012 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7lz94tao', purging
+2025-12-24 13:18:58,014 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-tn7qtxah', purging
+2025-12-24 13:18:58,017 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-eri5maa7', purging
+2025-12-24 13:18:58,019 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-f1fjvbqm', purging
+2025-12-24 13:18:58,022 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ijcsuw7y', purging
+2025-12-24 13:18:58,024 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-hkrtnbt5', purging
+2025-12-24 13:18:58,028 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-4gpud4da', purging
+2025-12-24 13:18:58,030 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-nx0_k9we', purging
+2025-12-24 13:18:58,033 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-d046v7n8', purging
+2025-12-24 13:18:58,036 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-y3ik4ind', purging
+2025-12-24 13:18:58,038 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-g5hu1qpq', purging
+2025-12-24 13:18:58,041 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-0f30airn', purging
+2025-12-24 13:18:58,043 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-r67jackk', purging
+2025-12-24 13:18:58,046 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-wo3lvawj', purging
+2025-12-24 13:18:58,048 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-f1gfgoxy', purging
+2025-12-24 13:18:58,050 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-lbm9gi98', purging
+2025-12-24 13:18:58,052 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-tg56xtfd', purging
+2025-12-24 13:18:58,054 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-xzfk7dex', purging
+2025-12-24 13:18:58,056 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ja8v3xel', purging
+2025-12-24 13:18:58,058 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-sroqbxho', purging
+2025-12-24 13:18:58,060 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-brm6b5_2', purging
+2025-12-24 13:18:58,063 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-t1e31fkh', purging
+2025-12-24 13:18:58,065 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-xaxlt2pm', purging
+2025-12-24 13:18:58,068 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-p7_fvpi7', purging
+2025-12-24 13:18:58,070 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-3qbjs7tg', purging
+2025-12-24 13:18:58,072 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-vaxp8wwt', purging
+2025-12-24 13:18:58,074 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-salcuqix', purging
+2025-12-24 13:18:58,076 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-8a8ut54v', purging
+2025-12-24 13:18:58,079 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-3zebxbm_', purging
+2025-12-24 13:18:58,081 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-19rj563t', purging
+2025-12-24 13:18:58,083 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-8v0w6frk', purging
+2025-12-24 13:18:58,085 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-dwakyyv2', purging
+2025-12-24 13:18:58,087 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-0xrcme_x', purging
+2025-12-24 13:18:58,090 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-x4qpt1y5', purging
+2025-12-24 13:18:58,092 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ygx523_a', purging
+2025-12-24 13:18:58,094 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-uwfg_y_b', purging
+2025-12-24 13:18:58,096 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-c_jket0n', purging
+2025-12-24 13:18:58,098 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-qg6m39dx', purging
+2025-12-24 13:18:58,100 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-3nc592du', purging
+2025-12-24 13:18:58,102 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-q5hu2fb7', purging
+2025-12-24 13:18:58,104 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-owb5oybz', purging
+2025-12-24 13:18:58,106 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-y4m9q7tf', purging
+2025-12-24 13:18:58,108 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-68s4qtt0', purging
+2025-12-24 13:18:58,110 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-qhx4yo8k', purging
+2025-12-24 13:18:58,112 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-05sq2dzi', purging
+2025-12-24 13:18:58,114 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-vdnoibkn', purging
+2025-12-24 13:18:58,116 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-zgbuk91s', purging
+2025-12-24 13:18:58,118 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-cibxtps1', purging
+2025-12-24 13:18:58,120 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-dky9frip', purging
+2025-12-24 13:18:58,123 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-gwqye_5p', purging
+2025-12-24 13:18:58,125 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-cjp3vgew', purging
+2025-12-24 13:18:58,127 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-cog_m01u', purging
+2025-12-24 13:18:58,129 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ye2jf77n', purging
+2025-12-24 13:18:58,131 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-s873ns13', purging
+2025-12-24 13:18:58,133 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-c51j0etw', purging
+2025-12-24 13:18:58,135 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-m4w3u3pm', purging
+2025-12-24 13:18:58,137 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-3op433s4', purging
+2025-12-24 13:18:58,139 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-c3f1qfmq', purging
+2025-12-24 13:18:58,141 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-atsho0gg', purging
+2025-12-24 13:18:58,143 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-qx_2h8sn', purging
+2025-12-24 13:18:58,145 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-qz6o3zps', purging
+2025-12-24 13:18:58,147 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-55as_s0f', purging
+2025-12-24 13:18:58,149 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-mln6vudb', purging
+2025-12-24 13:18:58,152 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-e6tza3gx', purging
+2025-12-24 13:18:58,154 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-u8pvp2a3', purging
+2025-12-24 13:18:58,156 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-yez4ctn3', purging
+2025-12-24 13:18:58,158 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-tgpms86u', purging
+2025-12-24 13:18:58,160 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-1k01d80o', purging
+2025-12-24 13:18:58,162 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-6kx5hm1h', purging
+2025-12-24 13:18:58,165 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-e97kdaun', purging
+2025-12-24 13:18:58,167 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-0yanp0bi', purging
+2025-12-24 13:18:58,169 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-8vqkumx2', purging
+2025-12-24 13:18:58,172 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-hfjxf8lz', purging
+2025-12-24 13:18:58,174 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-43acsls9', purging
+2025-12-24 13:18:58,176 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-6n4dqo44', purging
+2025-12-24 13:18:58,179 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-fwpu3dit', purging
+2025-12-24 13:18:58,181 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-w2tcen0f', purging
+2025-12-24 13:18:58,184 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ng790yzi', purging
+2025-12-24 13:18:58,186 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-zt7ht71o', purging
+2025-12-24 13:18:58,189 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-489b3nen', purging
+2025-12-24 13:18:58,191 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-dwpcdv14', purging
+2025-12-24 13:18:58,194 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-3ve5zsvo', purging
+2025-12-24 13:18:58,196 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-a4op2tss', purging
+2025-12-24 13:18:58,198 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-namw94bz', purging
+2025-12-24 13:18:58,201 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-42yhwnaj', purging
+2025-12-24 13:18:58,203 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-6v729_sx', purging
+2025-12-24 13:18:58,206 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-v5ite_lh', purging
+2025-12-24 13:18:58,208 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-55v3o47b', purging
+2025-12-24 13:18:58,210 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-fembaim7', purging
+2025-12-24 13:18:58,213 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-74tt3vrs', purging
+2025-12-24 13:18:58,215 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-n245lqo4', purging
+2025-12-24 13:18:58,217 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-xjkbz0_w', purging
+2025-12-24 13:18:58,219 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-g7ul2su9', purging
+2025-12-24 13:18:58,221 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-69po7h6t', purging
+2025-12-24 13:18:58,223 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-dabcokx9', purging
+2025-12-24 13:18:58,225 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ncxe8czc', purging
+2025-12-24 13:18:58,227 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-sjk87dts', purging
+2025-12-24 13:18:58,230 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-cmvjh37x', purging
+2025-12-24 13:18:58,232 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-zve5dn1o', purging
+2025-12-24 13:18:58,235 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-88g2mokv', purging
+2025-12-24 13:18:58,237 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-p7nnqfxs', purging
+2025-12-24 13:18:58,240 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-1zts9kdb', purging
+2025-12-24 13:18:58,242 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-hdnvx6ov', purging
+2025-12-24 13:18:58,245 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-boflqnb_', purging
+2025-12-24 13:18:58,247 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-p_eexm40', purging
+2025-12-24 13:18:58,249 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-3d4w5kah', purging
+2025-12-24 13:18:58,251 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-s83p88qk', purging
+2025-12-24 13:18:58,253 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-t4h2sz2v', purging
+2025-12-24 13:18:58,255 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-0fy876cg', purging
+2025-12-24 13:18:58,257 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-lc_dola2', purging
+2025-12-24 13:18:58,259 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-kdyd_jrg', purging
+2025-12-24 13:18:58,261 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ljq0h3es', purging
+2025-12-24 13:18:58,264 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-wg5qt74t', purging
+2025-12-24 13:18:58,266 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-f_zerohp', purging
+2025-12-24 13:18:58,268 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-yizyf27v', purging
+2025-12-24 13:18:58,271 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-f33u9w7q', purging
+2025-12-24 13:18:58,273 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-g3xkmd_j', purging
+2025-12-24 13:18:58,276 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-q4q_j4lw', purging
+2025-12-24 13:18:58,278 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-h0qactbv', purging
+2025-12-24 13:18:58,280 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-adm4299s', purging
+2025-12-24 13:18:58,281 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-oy1g36kv', purging
+2025-12-24 13:18:58,284 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-naehn585', purging
+2025-12-24 13:18:58,286 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-8_8zfvji', purging
+2025-12-24 13:18:58,288 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-eqj3so9j', purging
+2025-12-24 13:18:58,291 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-m47qzh78', purging
+2025-12-24 13:18:58,294 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-t15953ij', purging
+2025-12-24 13:18:58,296 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-k0rbp363', purging
+2025-12-24 13:18:58,299 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-9w2zksk0', purging
+2025-12-24 13:18:58,301 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-f1pa2mfa', purging
+2025-12-24 13:18:58,304 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-x68dtmj7', purging
+2025-12-24 13:18:58,306 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-w14s79sv', purging
+2025-12-24 13:18:58,310 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-rpxd58hm', purging
+2025-12-24 13:18:58,313 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-t9ua0lzx', purging
+2025-12-24 13:18:58,315 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7giutvl8', purging
+2025-12-24 13:18:58,317 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7erk1vio', purging
+2025-12-24 13:18:58,320 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-og4d3u42', purging
+2025-12-24 13:18:58,322 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-xmaaydkx', purging
+2025-12-24 13:18:58,324 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-00cspct_', purging
+2025-12-24 13:18:58,326 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-jo5_yybf', purging
+2025-12-24 13:18:58,328 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-aanwr5d0', purging
+2025-12-24 13:18:58,330 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-pn6zrt44', purging
+2025-12-24 13:18:58,332 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-bng4ij8q', purging
+2025-12-24 13:18:58,334 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-9pjjfjbk', purging
+2025-12-24 13:18:58,337 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-m7yacnwr', purging
+2025-12-24 13:18:58,339 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-rann5x50', purging
+2025-12-24 13:18:58,342 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-gc15wk4g', purging
+2025-12-24 13:18:58,344 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7zj2o797', purging
+2025-12-24 13:18:58,346 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7qfi1_7g', purging
+2025-12-24 13:18:58,349 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-3u0yyiqu', purging
+2025-12-24 13:18:58,351 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-33poe5pt', purging
+2025-12-24 13:18:58,354 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-220ec5yh', purging
+2025-12-24 13:18:58,356 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-yta5m79o', purging
+2025-12-24 13:18:58,359 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-x90sq884', purging
+2025-12-24 13:18:58,361 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-onnow8yk', purging
+2025-12-24 13:18:58,364 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-9nmbrnkm', purging
+2025-12-24 13:18:58,366 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-jepamrwx', purging
+2025-12-24 13:18:58,368 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-wpz8fuw9', purging
+2025-12-24 13:18:58,371 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-kkkv6z8s', purging
+2025-12-24 13:18:58,374 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-64hy3xax', purging
+2025-12-24 13:18:58,376 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ge3q8g23', purging
+2025-12-24 13:18:58,379 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-jienq1jo', purging
+2025-12-24 13:18:58,381 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-18twibw1', purging
+2025-12-24 13:18:58,384 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-872ku97q', purging
+2025-12-24 13:18:58,386 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-zurefjzv', purging
+2025-12-24 13:18:58,388 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-qtr1lmrq', purging
+2025-12-24 13:18:58,391 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7ge8fyrc', purging
+2025-12-24 13:18:58,393 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-94imtcyt', purging
+2025-12-24 13:18:58,395 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-1b7z_38f', purging
+2025-12-24 13:18:58,397 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7ubc4n1x', purging
+2025-12-24 13:18:58,400 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ixw9zhx9', purging
+2025-12-24 13:18:58,402 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-gu77zmoc', purging
+2025-12-24 13:18:58,404 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-x3zbgt1j', purging
+2025-12-24 13:18:58,407 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-j76mzeqs', purging
+2025-12-24 13:18:58,409 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-6rf0krvw', purging
+2025-12-24 13:18:58,412 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-q_ffo0wj', purging
+2025-12-24 13:18:58,414 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-s4f31qrm', purging
+2025-12-24 13:18:58,417 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-nge60d2a', purging
+2025-12-24 13:18:58,419 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-296aw9r2', purging
+2025-12-24 13:18:58,421 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ztiba9vw', purging
+2025-12-24 13:18:58,423 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-r2_yae6g', purging
+2025-12-24 13:18:58,425 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-li8bqrss', purging
+2025-12-24 13:18:58,428 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-z8v4_9et', purging
+2025-12-24 13:18:58,430 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-h3_q8dt8', purging
+2025-12-24 13:18:58,433 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-cc7kmcee', purging
+2025-12-24 13:18:58,435 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-xv7__bux', purging
+2025-12-24 13:18:58,438 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-rxd7zj8b', purging
+2025-12-24 13:18:58,440 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-g_xqn5t2', purging
+2025-12-24 13:18:58,443 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-c8gwqk50', purging
+2025-12-24 13:18:58,446 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ele5_88m', purging
+2025-12-24 13:18:58,449 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-nogy1w8k', purging
+2025-12-24 13:18:58,451 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-p6emy0s4', purging
+2025-12-24 13:18:58,454 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-aolgw0fc', purging
+2025-12-24 13:18:58,456 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-xuvjrv0a', purging
+2025-12-24 13:18:58,459 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-o6abmswj', purging
+2025-12-24 13:18:58,461 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ecces735', purging
+2025-12-24 13:18:58,463 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-rcaac8k5', purging
+2025-12-24 13:18:58,466 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-pryxz9vh', purging
+2025-12-24 13:18:58,468 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-wykloduq', purging
+2025-12-24 13:18:58,470 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-f6ylhl5f', purging
+2025-12-24 13:18:58,473 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7vqlc_x6', purging
+2025-12-24 13:18:58,475 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-5smwu9x8', purging
+2025-12-24 13:18:58,478 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-zcpgwt9j', purging
+2025-12-24 13:18:58,480 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-vwhwue4r', purging
+2025-12-24 13:18:58,483 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-s7sx28v_', purging
+2025-12-24 13:18:58,485 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-5y3n9x64', purging
+2025-12-24 13:18:58,488 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7jmd20va', purging
+2025-12-24 13:18:58,490 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-nn58zgav', purging
+2025-12-24 13:18:58,492 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7wp5a2uu', purging
+2025-12-24 13:18:58,495 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-bcj3g5oy', purging
+2025-12-24 13:18:58,497 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-dy6l7kqf', purging
+2025-12-24 13:18:58,499 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-xxvnelj6', purging
+2025-12-24 13:18:58,502 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-rax38ahb', purging
+2025-12-24 13:18:58,504 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-yis5ofzz', purging
+2025-12-24 13:18:58,506 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ysf23ghi', purging
+2025-12-24 13:18:58,509 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-xcq_66yo', purging
+2025-12-24 13:18:58,511 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-2t3nqk9q', purging
+2025-12-24 13:18:58,514 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-uhynujnn', purging
+2025-12-24 13:18:58,517 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-2zu67cyq', purging
+2025-12-24 13:18:58,519 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-30jl5tuw', purging
+2025-12-24 13:18:58,521 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-t01cb3gi', purging
+2025-12-24 13:18:58,524 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-uwqcxtgk', purging
+2025-12-24 13:18:58,526 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-kbn2hr6e', purging
+2025-12-24 13:18:58,528 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ysa33vd0', purging
+2025-12-24 13:18:58,531 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-5vjdth5r', purging
+2025-12-24 13:18:58,533 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ih1o5ff_', purging
+2025-12-24 13:18:58,535 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-c_oxbuan', purging
+2025-12-24 13:18:58,538 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-4293nvno', purging
+2025-12-24 13:18:58,540 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-8_yvafxq', purging
+2025-12-24 13:18:58,543 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-025j5y1d', purging
+2025-12-24 13:18:58,545 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-vrxe7dfw', purging
+2025-12-24 13:18:58,547 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-o4qjfq74', purging
+2025-12-24 13:18:58,550 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-4loh7ezj', purging
+2025-12-24 13:18:58,552 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-djp6cuzj', purging
+2025-12-24 13:18:58,555 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-njhoitvx', purging
+2025-12-24 13:18:58,557 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-j3z5_isj', purging
+2025-12-24 13:18:58,559 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-sj8q9db9', purging
+2025-12-24 13:18:58,562 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-33_hucyh', purging
+2025-12-24 13:18:58,564 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-2ee2xytl', purging
+2025-12-24 13:18:58,566 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-u6ok3143', purging
+2025-12-24 13:18:58,569 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-tm9hex5p', purging
+2025-12-24 13:18:58,571 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-x_cxwmlv', purging
+2025-12-24 13:18:58,573 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-5072ghjb', purging
+2025-12-24 13:18:58,576 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ngrsd2kz', purging
+2025-12-24 13:18:58,578 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-4j06l4vd', purging
+2025-12-24 13:18:58,580 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ac9w6gut', purging
+2025-12-24 13:18:58,583 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7abq_xz2', purging
+2025-12-24 13:18:58,585 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-_0ffvo3g', purging
+2025-12-24 13:18:58,588 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-s46rj1pv', purging
+2025-12-24 13:18:58,590 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ckqkkfkv', purging
+2025-12-24 13:18:58,592 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7tlenapv', purging
+2025-12-24 13:18:58,595 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-1mbsaan0', purging
+2025-12-24 13:18:58,597 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-chgay928', purging
+2025-12-24 13:18:58,599 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-976hskab', purging
+2025-12-24 13:18:58,602 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-0y_45u2d', purging
+2025-12-24 13:18:58,604 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-1t9xfvwo', purging
+2025-12-24 13:18:58,607 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-xf0i1vz6', purging
+2025-12-24 13:18:58,609 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-u5jz0ci3', purging
+2025-12-24 13:18:58,612 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-_jsxul6z', purging
+2025-12-24 13:18:58,614 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-vpy8g1um', purging
+2025-12-24 13:18:58,616 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-krw48ybe', purging
+2025-12-24 13:18:58,618 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-9m3vdlio', purging
+2025-12-24 13:18:58,621 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-pllasmb1', purging
+2025-12-24 13:18:58,623 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7p0v2u_i', purging
+2025-12-24 13:18:58,626 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-0xpaakgb', purging
+2025-12-24 13:18:58,628 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-tu83jd80', purging
+2025-12-24 13:18:58,631 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-iavhyh17', purging
+2025-12-24 13:18:58,633 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-gyj71x57', purging
+2025-12-24 13:18:58,636 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-hn5z_6zz', purging
+2025-12-24 13:18:58,638 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-56yjxbbv', purging
+2025-12-24 13:18:58,641 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-axhu75pi', purging
+2025-12-24 13:18:58,644 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-d6sb9hb8', purging
+2025-12-24 13:18:58,647 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-twsa14xa', purging
+2025-12-24 13:18:58,649 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-pbb_npzf', purging
+2025-12-24 13:18:58,652 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-a4dvb5p2', purging
+2025-12-24 13:18:58,654 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-yey9h88t', purging
+2025-12-24 13:18:58,657 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-m91jk1o0', purging
+2025-12-24 13:18:58,659 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-09ptzum5', purging
+2025-12-24 13:18:58,662 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-peef8_of', purging
+2025-12-24 13:18:58,664 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-u4slakg6', purging
+2025-12-24 13:18:58,667 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-tf97zv_3', purging
+2025-12-24 13:18:58,670 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-08wjodz0', purging
+2025-12-24 13:18:58,673 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-xh3kb4ai', purging
+2025-12-24 13:18:58,675 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-fnua7iap', purging
+2025-12-24 13:18:58,678 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-z8ljpcjp', purging
+2025-12-24 13:18:58,680 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-n0xs5dba', purging
+2025-12-24 13:18:58,683 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-di16ke_9', purging
+2025-12-24 13:18:58,685 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-nkgin4rb', purging
+2025-12-24 13:18:58,687 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-xx5bga2s', purging
+2025-12-24 13:18:58,690 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-_y79j4ru', purging
+2025-12-24 13:18:58,692 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-mubba76f', purging
+2025-12-24 13:18:58,694 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-oxuhnn6u', purging
+2025-12-24 13:18:58,697 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ai9ty548', purging
+2025-12-24 13:18:58,699 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-wrx07ko_', purging
+2025-12-24 13:18:58,701 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-1et6iapc', purging
+2025-12-24 13:18:58,704 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-5t_9w925', purging
+2025-12-24 13:18:58,706 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ddf2y11r', purging
+2025-12-24 13:18:58,708 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-8jlwb0ac', purging
+2025-12-24 13:18:58,711 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-q6umy347', purging
+2025-12-24 13:18:58,713 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-zje025pc', purging
+2025-12-24 13:18:58,716 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-u_9kevpk', purging
+2025-12-24 13:18:58,718 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ymbur6o3', purging
+2025-12-24 13:18:58,720 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-i2qe3i57', purging
+2025-12-24 13:18:58,723 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-iwm_m3f8', purging
+2025-12-24 13:18:58,725 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-j14b4nyo', purging
+2025-12-24 13:18:58,728 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-6c7ru137', purging
+2025-12-24 13:18:58,730 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-rttkj8uo', purging
+2025-12-24 13:18:58,733 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-5j6dk1kd', purging
+2025-12-24 13:18:58,735 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-3yec_9_y', purging
+2025-12-24 13:18:58,738 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-6lzo5ox1', purging
+2025-12-24 13:18:58,740 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-2shu5oxj', purging
+2025-12-24 13:18:58,742 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-tl1uumof', purging
+2025-12-24 13:18:58,745 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-cimfv2kn', purging
+2025-12-24 13:18:58,748 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-gfo778j8', purging
+2025-12-24 13:18:58,750 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-jtygl43c', purging
+2025-12-24 13:18:58,752 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-00k3gxp9', purging
+2025-12-24 13:18:58,755 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-uzowm1d9', purging
+2025-12-24 13:18:58,757 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-sj3_ml4w', purging
+2025-12-24 13:18:58,759 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-q0slqrte', purging
+2025-12-24 13:18:58,761 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-8dsi9qwp', purging
+2025-12-24 13:18:58,764 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-4r7bqqk7', purging
+2025-12-24 13:18:58,766 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-e6la4asm', purging
+2025-12-24 13:18:58,768 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-4vu7x8wx', purging
+2025-12-24 13:18:58,771 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-4g8yi6h2', purging
+2025-12-24 13:18:58,773 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-elemx8x3', purging
+2025-12-24 13:18:58,776 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-wrvuqavj', purging
+2025-12-24 13:18:58,778 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-lwej65xa', purging
+2025-12-24 13:18:58,780 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-mp4r5muu', purging
+2025-12-24 13:18:58,783 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-pk9q0ysj', purging
+2025-12-24 13:18:58,785 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7ns3dq_8', purging
+2025-12-24 13:18:58,787 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-6__vfoqt', purging
+2025-12-24 13:18:58,789 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-isvd8l6x', purging
+2025-12-24 13:18:58,792 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-vn6i8h20', purging
+2025-12-24 13:18:58,794 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-yrkj6mm7', purging
+2025-12-24 13:18:58,796 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-c0zzp2gs', purging
+2025-12-24 13:18:58,799 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-6ikpe3hl', purging
+2025-12-24 13:18:58,801 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-_n2669zi', purging
+2025-12-24 13:18:58,803 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-vcde3x5q', purging
+2025-12-24 13:18:58,806 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-_pfsrr_a', purging
+2025-12-24 13:18:58,808 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-8uoforrf', purging
+2025-12-24 13:18:58,811 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-5jz3y79i', purging
+2025-12-24 13:18:58,813 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-04x2dlce', purging
+2025-12-24 13:18:58,815 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-v8l0rfk5', purging
+2025-12-24 13:18:58,817 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-rhkyklbm', purging
+2025-12-24 13:18:58,820 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-l3bkvhhz', purging
+2025-12-24 13:18:58,822 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-vicgnscr', purging
+2025-12-24 13:18:58,825 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-0tsr4v99', purging
+2025-12-24 13:18:58,827 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-rhs1wq1b', purging
+2025-12-24 13:18:58,829 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-tv_kznaz', purging
+2025-12-24 13:18:58,831 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-gy51bgjm', purging
+2025-12-24 13:18:58,834 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-t78rbog0', purging
+2025-12-24 13:18:58,836 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-jvc233u7', purging
+2025-12-24 13:18:58,839 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-0rhfy8v_', purging
+2025-12-24 13:18:58,841 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-zal44rp1', purging
+2025-12-24 13:18:58,843 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ukk3x3yc', purging
+2025-12-24 13:18:58,846 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-w_xqh8lv', purging
+2025-12-24 13:18:58,848 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-15r2tifd', purging
+2025-12-24 13:18:58,850 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-39ggrvvj', purging
+2025-12-24 13:18:58,853 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-8nvfjnjp', purging
+2025-12-24 13:18:58,855 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-jweu0kcu', purging
+2025-12-24 13:18:58,857 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7oq_eko0', purging
+2025-12-24 13:18:58,859 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-lxs7cr27', purging
+2025-12-24 13:18:58,862 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-kbnj6k7e', purging
+2025-12-24 13:18:58,864 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7yfm17do', purging
+2025-12-24 13:18:58,867 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-8ebbo4a0', purging
+2025-12-24 13:18:58,869 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-y88ia9k8', purging
+2025-12-24 13:18:58,872 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-xyardxyy', purging
+2025-12-24 13:18:58,874 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ziczxp29', purging
+2025-12-24 13:18:58,876 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-09gz9q_l', purging
+2025-12-24 13:18:58,878 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-wbphp_dy', purging
+2025-12-24 13:18:58,881 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-4b4ttj37', purging
+2025-12-24 13:18:58,883 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-b22q5gvw', purging
+2025-12-24 13:18:58,886 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-dbw6ihe2', purging
+2025-12-24 13:18:58,889 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-j3foxv1q', purging
+2025-12-24 13:18:58,891 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-eucqbejg', purging
+2025-12-24 13:18:58,893 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-1t95qk8w', purging
+2025-12-24 13:18:58,896 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-tkf7erbv', purging
+2025-12-24 13:18:58,898 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ndg1brnd', purging
+2025-12-24 13:18:58,900 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-uxyarxg2', purging
+2025-12-24 13:18:58,902 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-box23frp', purging
+2025-12-24 13:18:58,905 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7r1rrgs4', purging
+2025-12-24 13:18:58,907 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7wraviry', purging
+2025-12-24 13:18:58,909 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-72xjfkdw', purging
+2025-12-24 13:18:58,912 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ewpfz3cz', purging
+2025-12-24 13:18:58,915 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-l4l5f_dk', purging
+2025-12-24 13:18:58,917 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-m67nqcw4', purging
+2025-12-24 13:18:58,920 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-zedr02f2', purging
+2025-12-24 13:18:58,922 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-n81davs9', purging
+2025-12-24 13:18:58,924 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-szf818m9', purging
+2025-12-24 13:18:58,927 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-4eb636be', purging
+2025-12-24 13:18:58,929 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-qsim07d8', purging
+2025-12-24 13:18:58,931 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-8ci_042n', purging
+2025-12-24 13:18:58,934 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-jvuojl9i', purging
+2025-12-24 13:18:58,936 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-pu261unp', purging
+2025-12-24 13:18:58,938 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-5ihpb0os', purging
+2025-12-24 13:18:58,940 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-lswacig9', purging
+2025-12-24 13:18:58,943 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-i4ximw1d', purging
+2025-12-24 13:18:58,945 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-bigwd9k8', purging
+2025-12-24 13:18:58,947 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-va4djycs', purging
+2025-12-24 13:18:58,950 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-gstlv8_8', purging
+2025-12-24 13:18:58,952 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-rk9mg5ko', purging
+2025-12-24 13:18:58,955 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-fopzf9j4', purging
+2025-12-24 13:18:58,957 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-mwz2lrrg', purging
+2025-12-24 13:18:58,959 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-y4i0oxzz', purging
+2025-12-24 13:18:58,961 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-wrq2ij6d', purging
+2025-12-24 13:18:58,964 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-9yhpi6ie', purging
+2025-12-24 13:18:58,966 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7iqtfm3a', purging
+2025-12-24 13:18:58,968 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-qcmhjjcz', purging
+2025-12-24 13:18:58,970 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-gg3m9poc', purging
+2025-12-24 13:18:58,973 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-gjy915xg', purging
+2025-12-24 13:18:58,976 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-uhh7ufzc', purging
+2025-12-24 13:18:58,979 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-2_k0wigu', purging
+2025-12-24 13:18:58,981 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-aj491aiy', purging
+2025-12-24 13:18:58,983 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-l1qfzal4', purging
+2025-12-24 13:18:58,986 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-o_5xfn4u', purging
+2025-12-24 13:18:58,988 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-kxemxsee', purging
+2025-12-24 13:18:58,990 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-bj33r0v_', purging
+2025-12-24 13:18:58,992 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-s4iu8a2l', purging
+2025-12-24 13:18:58,995 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-578_xdl1', purging
+2025-12-24 13:18:58,997 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-rdh4x4t2', purging
+2025-12-24 13:18:59,000 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-nyv039ny', purging
+2025-12-24 13:18:59,003 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-budzi0l3', purging
+2025-12-24 13:18:59,005 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-_sbm89ws', purging
+2025-12-24 13:18:59,007 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-y8jsanqc', purging
+2025-12-24 13:18:59,010 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-m_pv421j', purging
+2025-12-24 13:18:59,012 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-h585gw90', purging
+2025-12-24 13:18:59,014 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-x9mnzvdb', purging
+2025-12-24 13:18:59,016 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-55d9lrg3', purging
+2025-12-24 13:18:59,019 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-xhl5xmd9', purging
+2025-12-24 13:18:59,021 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-l4523egc', purging
+2025-12-24 13:18:59,023 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-yyzid0cx', purging
+2025-12-24 13:18:59,026 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-azvzdmeg', purging
+2025-12-24 13:18:59,028 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-23xmxmch', purging
+2025-12-24 13:18:59,030 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-vjet_q44', purging
+2025-12-24 13:18:59,033 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-jtbwv2k6', purging
+2025-12-24 13:18:59,035 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-pz7y48ql', purging
+2025-12-24 13:18:59,038 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-n28by0t8', purging
+2025-12-24 13:18:59,040 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-gc4zwhcr', purging
+2025-12-24 13:18:59,043 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-b4cwfm45', purging
+2025-12-24 13:18:59,045 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-u5lxpf3h', purging
+2025-12-24 13:18:59,048 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-a8t3zojo', purging
+2025-12-24 13:18:59,050 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-m_96qreq', purging
+2025-12-24 13:18:59,052 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-tgcjwkeg', purging
+2025-12-24 13:18:59,055 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-v3agpsno', purging
+2025-12-24 13:18:59,057 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-uy9mg6ve', purging
+2025-12-24 13:18:59,060 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-homdo_t7', purging
+2025-12-24 13:18:59,062 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-5cmqnbjx', purging
+2025-12-24 13:18:59,064 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ql0xedwi', purging
+2025-12-24 13:18:59,067 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-su0f4a9h', purging
+2025-12-24 13:18:59,069 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-k2jcgb2w', purging
+2025-12-24 13:18:59,072 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ezunxxww', purging
+2025-12-24 13:18:59,074 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-zbz2jecc', purging
+2025-12-24 13:18:59,076 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-b_gfvk3l', purging
+2025-12-24 13:18:59,079 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-20modtov', purging
+2025-12-24 13:18:59,081 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-u23bn725', purging
+2025-12-24 13:18:59,083 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-1qptlwpg', purging
+2025-12-24 13:18:59,086 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-htbnneet', purging
+2025-12-24 13:18:59,088 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ipsmurky', purging
+2025-12-24 13:18:59,091 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-8jjtc738', purging
+2025-12-24 13:18:59,093 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-86bv8fcy', purging
+2025-12-24 13:18:59,095 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-azvn6cxz', purging
+2025-12-24 13:18:59,098 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-t6zggtyb', purging
+2025-12-24 13:18:59,100 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-fh88d9z0', purging
+2025-12-24 13:18:59,102 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-pkix7eb_', purging
+2025-12-24 13:18:59,105 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-6xzdltji', purging
+2025-12-24 13:18:59,107 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-onlpukv4', purging
+2025-12-24 13:18:59,111 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-hrhbk_iu', purging
+2025-12-24 13:18:59,113 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-hvxejteu', purging
+2025-12-24 13:18:59,116 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-n6atg4z1', purging
+2025-12-24 13:18:59,118 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-0__l3k2s', purging
+2025-12-24 13:18:59,120 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-jtmm2y4h', purging
+2025-12-24 13:18:59,123 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-p0hz50y9', purging
+/home1/zrentala/.conda/envs/zrentala/lib/python3.11/contextlib.py:144: UserWarning: Creating scratch directories is taking a surprisingly long time. (1.18s) This is often due to running workers on a network file system. Consider specifying a local-directory to point workers to write scratch data to a local disk.
+  next(self.gen)
+2025-12-24 13:18:59,742 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.142:45533
+2025-12-24 13:18:59,743 - distributed.worker - INFO -          Listening to: tcp://192.168.86.142:45533
+2025-12-24 13:18:59,743 - distributed.worker - INFO -           Worker name:           SLURMCluster-947
+2025-12-24 13:18:59,743 - distributed.worker - INFO -          dashboard at:       192.168.86.142:44041
+2025-12-24 13:18:59,743 - distributed.worker - INFO - Waiting to connect to:   tcp://128.91.77.24:38250
+2025-12-24 13:18:59,743 - distributed.worker - INFO - -------------------------------------------------
+2025-12-24 13:18:59,743 - distributed.worker - INFO -               Threads:                          1
+2025-12-24 13:18:59,743 - distributed.worker - INFO -                Memory:                   0.93 GiB
+2025-12-24 13:18:59,743 - distributed.worker - INFO -       Local Directory: /home1/zrentala/dask-worker-space/dask-scratch-space/worker-vma6inf_
+2025-12-24 13:18:59,743 - distributed.worker - INFO - -------------------------------------------------
+2025-12-24 13:19:29,744 - distributed.worker - INFO - Waiting to connect to:   tcp://128.91.77.24:38250
+2025-12-24 13:19:55,199 - distributed.nanny - INFO - Closing Nanny at 'tcp://192.168.86.142:39636'. Reason: failure-to-start-<class 'TimeoutError'>
+2025-12-24 13:19:55,200 - distributed.dask_worker - INFO - End worker
+Traceback (most recent call last):
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/nanny.py", line 896, in _wait_until_connected
+    msg = self.init_result_q.get_nowait()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/multiprocessing/queues.py", line 135, in get_nowait
+    return self.get(False)
+           ^^^^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/multiprocessing/queues.py", line 116, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/utils.py", line 1928, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/nanny.py", line 369, in start_unsafe
+    response = await self.instantiate()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/nanny.py", line 438, in instantiate
+    result = await wait_for(self.process.start(), self.death_timeout)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/utils.py", line 1928, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/nanny.py", line 759, in start
+    msg = await self._wait_until_connected(uid)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/nanny.py", line 898, in _wait_until_connected
+    await asyncio.sleep(self._init_msg_interval)
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/asyncio/tasks.py", line 649, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/core.py", line 528, in start
+    await wait_for(self.start_unsafe(), timeout=timeout)
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/utils.py", line 1927, in wait_for
+    async with asyncio.timeout(timeout):
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/asyncio/timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/cli/dask_worker.py", line 546, in <module>
+    main()  # pragma: no cover
+    ^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/click/core.py", line 1485, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/click/core.py", line 1406, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/click/core.py", line 1269, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/click/core.py", line 824, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/cli/dask_worker.py", line 452, in main
+    asyncio_run(run(), loop_factory=get_loop_factory())
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/compatibility.py", line 204, in asyncio_run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/cli/dask_worker.py", line 449, in run
+    [task.result() for task in done]
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/cli/dask_worker.py", line 449, in <listcomp>
+    [task.result() for task in done]
+     ^^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/cli/dask_worker.py", line 422, in wait_for_nannies_to_finish
+    await asyncio.gather(*nannies)
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/asyncio/tasks.py", line 694, in _wrap_awaitable
+    return (yield from awaitable.__await__())
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/core.py", line 530, in start
+    await _close_on_failure(exc)
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/core.py", line 523, in _close_on_failure
+    await self.close(reason=f"failure-to-start-{type(exc)}")
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/nanny.py", line 619, in close
+    await self.kill(timeout=timeout, reason=reason)
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/nanny.py", line 400, in kill
+    await self.process.kill(reason=reason, timeout=timeout)
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/nanny.py", line 845, in kill
+    assert self.status in (
+           ^^^^^^^^^^^^^^^^
+AssertionError: Status.starting
+2025-12-24 13:19:55,223 - distributed.process - INFO - reaping stray process <SpawnProcess name='Dask Worker process (from Nanny)' pid=32241 parent=32099 started daemon>
+2025-12-24 13:19:55,238 - distributed.process - WARNING - [<AsyncProcess Dask Worker process (from Nanny)>] process 32241 exit status was already read will report exitcode 255

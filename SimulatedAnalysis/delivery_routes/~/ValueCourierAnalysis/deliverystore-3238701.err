@@ -1,0 +1,20 @@
+2025-12-24 13:11:28,127 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.134:41383'
+2025-12-24 13:11:45,712 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.134:41015
+2025-12-24 13:11:45,716 - distributed.worker - INFO -          Listening to: tcp://192.168.86.134:41015
+2025-12-24 13:11:45,716 - distributed.worker - INFO -           Worker name:           SLURMCluster-612
+2025-12-24 13:11:45,717 - distributed.worker - INFO -          dashboard at:       192.168.86.134:33269
+2025-12-24 13:11:45,717 - distributed.worker - INFO - Waiting to connect to:   tcp://128.91.77.24:38250
+2025-12-24 13:11:45,717 - distributed.worker - INFO - -------------------------------------------------
+2025-12-24 13:11:45,717 - distributed.worker - INFO -               Threads:                          1
+2025-12-24 13:11:45,717 - distributed.worker - INFO -                Memory:                   0.93 GiB
+2025-12-24 13:11:45,718 - distributed.worker - INFO -       Local Directory: /home1/zrentala/dask-worker-space/dask-scratch-space/worker-p6emy0s4
+2025-12-24 13:11:45,718 - distributed.worker - INFO - -------------------------------------------------
+2025-12-24 13:11:46,339 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-12-24 13:11:46,340 - distributed.worker - INFO - Starting Worker plugin deliveryRoutes.pyde97b66e-4ade-4aa2-834d-1b7e19da83c0
+2025-12-24 13:11:46,341 - distributed.worker - INFO - Starting Worker plugin deliveryRoutes.py03f42059-8b43-488a-a877-98f69402da9b
+2025-12-24 13:11:46,351 - distributed.utils - INFO - Reload module deliveryRoutes from .py file
+2025-12-24 13:11:56,716 - distributed.utils - INFO - Reload module deliveryRoutes from .py file
+2025-12-24 13:11:56,835 - distributed.worker - INFO -         Registered to:   tcp://128.91.77.24:38250
+2025-12-24 13:11:56,836 - distributed.worker - INFO - -------------------------------------------------
+2025-12-24 13:11:56,836 - distributed.core - INFO - Starting established connection to tcp://128.91.77.24:38250
+slurmstepd: error: *** JOB 3238701 ON node34 CANCELLED AT 2025-12-24T13:18:49 ***

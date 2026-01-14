@@ -1,0 +1,23 @@
+2025-12-24 13:11:20,768 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.144:38827'
+2025-12-24 13:11:37,032 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ctws3zd2', purging
+/home1/zrentala/.conda/envs/zrentala/lib/python3.11/contextlib.py:144: UserWarning: Creating scratch directories is taking a surprisingly long time. (2.98s) This is often due to running workers on a network file system. Consider specifying a local-directory to point workers to write scratch data to a local disk.
+  next(self.gen)
+2025-12-24 13:11:42,929 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.144:33466
+2025-12-24 13:11:42,930 - distributed.worker - INFO -          Listening to: tcp://192.168.86.144:33466
+2025-12-24 13:11:42,930 - distributed.worker - INFO -           Worker name:           SLURMCluster-363
+2025-12-24 13:11:42,930 - distributed.worker - INFO -          dashboard at:       192.168.86.144:39633
+2025-12-24 13:11:42,930 - distributed.worker - INFO - Waiting to connect to:   tcp://128.91.77.24:38250
+2025-12-24 13:11:42,930 - distributed.worker - INFO - -------------------------------------------------
+2025-12-24 13:11:42,930 - distributed.worker - INFO -               Threads:                          1
+2025-12-24 13:11:42,931 - distributed.worker - INFO -                Memory:                   0.93 GiB
+2025-12-24 13:11:42,931 - distributed.worker - INFO -       Local Directory: /home1/zrentala/dask-worker-space/dask-scratch-space/worker-9w2zksk0
+2025-12-24 13:11:42,931 - distributed.worker - INFO - -------------------------------------------------
+2025-12-24 13:11:42,988 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-12-24 13:11:42,988 - distributed.worker - INFO - Starting Worker plugin deliveryRoutes.pyde97b66e-4ade-4aa2-834d-1b7e19da83c0
+2025-12-24 13:11:42,989 - distributed.worker - INFO - Starting Worker plugin deliveryRoutes.py03f42059-8b43-488a-a877-98f69402da9b
+2025-12-24 13:11:42,991 - distributed.utils - INFO - Reload module deliveryRoutes from .py file
+2025-12-24 13:11:54,125 - distributed.utils - INFO - Reload module deliveryRoutes from .py file
+2025-12-24 13:11:54,281 - distributed.worker - INFO -         Registered to:   tcp://128.91.77.24:38250
+2025-12-24 13:11:54,281 - distributed.worker - INFO - -------------------------------------------------
+2025-12-24 13:11:54,282 - distributed.core - INFO - Starting established connection to tcp://128.91.77.24:38250
+slurmstepd: error: *** JOB 3238637 ON node44 CANCELLED AT 2025-12-24T13:18:49 ***
