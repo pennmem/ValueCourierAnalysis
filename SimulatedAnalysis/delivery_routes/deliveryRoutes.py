@@ -22,23 +22,23 @@ store_pos_dict: Dict[str, Tuple[float, float, float]] = {
     "dentist": (132.31, -45, 51.82),
     "craft_shop": (90.36, -45, 77.95),
     "grocery_store": (146.02, -45, -42.77),
-    "jewelry_store": (-74.31, -45, -87.02),
-    "florist": (24.76, -45, 131.85),
+    "jewelry_store": (-1.15, -45, -35.74),
+    "florist": (46.02, -45, 140.51),
     "hardware_store": (19.61, -45, -19.5),
     "gym": (36.49, -45, 57.81),
-    "pizzeria": (174.37, -45, 60.6),
-    "pet_store": (53.11, -45, 173.45),
+    "pizzeria": (76.23, -45, 59.53),
+    "pet_store": (-43.09, -45, -79.9),
     "music_store": (-47.05, -45, 110.15),
-    "pharmacy": (-3.87, -45, 60.99),
+    "pharmacy": (-16.94, -45, 88.54),
     "toy_store": (52.3, -45, -51.73),
-    "bank": (-76.62, -45, 150.13),
+    "bank": (61.47, -45, 111.55),
     "bookstore": (112.54, -45, 38.16),
-    "noodle_house": (99.22, -45, -68.06),
-    "party_store": (-113.73, -45, -62.33),
+    "noodle_house": (68.38, -45, -39.3),
+    "party_store": (-0.21, -45, 44.03),
     "burger_joint": (90, -45, 13.03),
-    "gelateria": (3.54, -45, 147.15),
-    "salon": (21.74, -45, -85.57),
-    "tech_shop": (176.53, -45, -17.32),
+    "gelateria": (-26.5, -45, 132.71),
+    "salon": (-23.69, -45, -13.81),
+    "tech_shop": (95.32, -45, -23.08),
     
 }
 
@@ -103,30 +103,29 @@ node_adj_dict = {
     "darkcity_6": {"darkcity_3", "darkcity_5", "darkcity_0", "island_1"},
 
     # -------- Stores --------
-    "pet_store": {"island_0","island_4"},
+    "pet_store": {"suburbs_7","suburbs_8"},
     "florist": {"island_1", "island_2"},
     "gelateria": {"island_2", "island_4"},
     "music_store": {"island_2", "island_3"},
-    "bank": {"island_4", "island_5"},
-    "pharmacy": {"suburbs_11", "island_2"},
-    "salon": {"suburbs_0", "suburbs_10", "hardware_store"},
-    "hardware_store": {"salon", "suburbs_10", "suburbs_0"},
+    "bank": {"island_1", "darkcity_6"},
+    "pharmacy": {"suburbs_11", "island_2", "party_store"},
+    "salon": {"suburbs_12", "suburbs_13", "bakery"},
+    "hardware_store": {"suburbs_10", "suburbs_0"},
     "barber_shop": {"suburbs_4", "suburbs_5"},
-    "jewelry_store": {"suburbs_8", "suburbs_2"},
-    "party_store": {"suburbs_3", "suburbs_9"},
-    "jewelry_store": {"suburbs_8", "suburbs_2"},
+    "jewelry_store": {"suburbs_11", "suburbs_6"},
+    "party_store": {"suburbs_11", "suburbs_2", "pharmacy"},
     "bike_shop": {"suburbs_16", "suburbs_15"},
-    "bakery": {"suburbs_16", "suburbs_12"},
+    "bakery": {"suburbs_16", "suburbs_12", "salon"},
     "post_office": {"suburbs_10"},
     "gym": {"darkcity_6", "darkcity_3"},
     "craft_shop": {"darkcity_5", "darkcity_6"},
-    "pizzeria": {"darkcity_4", "skyscraper_15"},
+    "pizzeria": {"darkcity_6", "bookstore"},
     "dentist": {"darkcity_5", "skyscraper_16"},
-    "tech_shop": {"skyscraper_10", "skyscraper_15"},
-    "bookstore": {"darkcity_0", "darkcity_6"},
+    "tech_shop": {"skyscraper_12", "skyscraper_13"},
+    "bookstore": {"darkcity_0", "darkcity_6", "pizzeria"},
     "grocery_store": {"skyscraper_11", "skyscraper_6",},
     "clothing_store": {"skyscraper_6", "skyscraper_7",},
-    "noodle_house": {"skyscraper_2", "skyscraper_3",},
+    "noodle_house": {"skyscraper_13", "skyscraper_8",},
     "toy_store": {"skyscraper_9", "skyscraper_14",},
     "cafe": {"skyscraper_17", "skyscraper_16",},
     "burger_joint": {"skyscraper_17", "skyscraper_18",},
@@ -215,10 +214,10 @@ close_store_dict: Dict[str, List[str]] = {
 }
 
 store_quadrant_dict: Dict[str, List[str]] = {
-    "suburbs": ["barber_shop", "jewelry_store", "bike_shop", "bakery", "hardware_store", "party_store","salon"],
+    "suburbs": ["barber_shop", "jewelry_store", "bike_shop", "bakery", "hardware_store", "party_store","salon", "pet_store"],
     "skyscraper": ["toy_store", "clothing_store", "grocery_store", "cafe", "noodle_house", "tech_shop"],
     "darkcity": ["pizzeria", "dentist", "craft_shop", "gym", "bookstore", "burger_joint"],
-    "island": ["pet_store", "florist", "music_store", "pharmacy", "bank","gelateria"],
+    "island": ["florist", "music_store", "pharmacy", "bank","gelateria"],
 }
 
 quadrant_transition_dict: Dict[str, List[str]] = {
@@ -1018,7 +1017,8 @@ def worker_generate_and_solve(
         tries = 0
         while True:
             include_list = tuple(sorted(rng.sample(store_names, k=K)))
-            if include_list not in seen:
+            has_post_close_stores = include_list[0] in post_close_set and include_list[K - 1] in post_close_set
+            if include_list not in seen and has_post_close_stores:
                 seen.add(include_list)
                 break
             tries += 1
