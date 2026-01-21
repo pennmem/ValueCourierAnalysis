@@ -1,0 +1,39 @@
+2025-12-09 14:29:39,327 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.140:34903'
+2025-12-09 14:29:40,423 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/scratch/dask-scratch-space/worker-716i6bsa', purging
+2025-12-09 14:29:40,977 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.140:35702
+2025-12-09 14:29:40,977 - distributed.worker - INFO -          Listening to: tcp://192.168.86.140:35702
+2025-12-09 14:29:40,978 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2025-12-09 14:29:40,978 - distributed.worker - INFO -          dashboard at:       192.168.86.140:39583
+2025-12-09 14:29:40,978 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.107:33295
+2025-12-09 14:29:40,978 - distributed.worker - INFO - -------------------------------------------------
+2025-12-09 14:29:40,978 - distributed.worker - INFO -               Threads:                          1
+2025-12-09 14:29:40,978 - distributed.worker - INFO -                Memory:                  74.51 GiB
+2025-12-09 14:29:40,978 - distributed.worker - INFO -       Local Directory: /home1/zrentala/scratch/dask-scratch-space/worker-i2np8ptp
+2025-12-09 14:29:40,978 - distributed.worker - INFO - -------------------------------------------------
+2025-12-09 14:29:41,348 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-12-09 14:29:41,349 - distributed.worker - INFO -         Registered to: tcp://192.168.86.107:33295
+2025-12-09 14:29:41,349 - distributed.worker - INFO - -------------------------------------------------
+2025-12-09 14:29:41,349 - distributed.core - INFO - Starting established connection to tcp://192.168.86.107:33295
+slurmstepd: error: *** JOB 3233940 ON node40 CANCELLED AT 2025-12-09T16:07:47 ***
+2025-12-09 16:07:47,864 - distributed.worker - INFO - Stopping worker at tcp://192.168.86.140:35702. Reason: scheduler-close
+2025-12-09 16:07:47,867 - distributed.batched - INFO - Batched Comm Closed <TCP (closed) Worker->Scheduler local=tcp://192.168.86.140:40130 remote=tcp://192.168.86.107:33295>
+Traceback (most recent call last):
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop_311/lib/python3.11/site-packages/distributed/comm/tcp.py", line 316, in write
+    raise StreamClosedError()
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop_311/lib/python3.11/site-packages/distributed/batched.py", line 115, in _background_send
+    nbytes = yield coro
+             ^^^^^^^^^^
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop_311/lib/python3.11/site-packages/tornado/gen.py", line 767, in run
+    value = future.result()
+            ^^^^^^^^^^^^^^^
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop_311/lib/python3.11/site-packages/distributed/comm/tcp.py", line 327, in write
+    convert_stream_closed_error(self, e)
+  File "/usr/global/miniconda/py310_23.1.0-1/envs/workshop_311/lib/python3.11/site-packages/distributed/comm/tcp.py", line 143, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Worker->Scheduler local=tcp://192.168.86.140:40130 remote=tcp://192.168.86.107:33295>: Stream is closed
+2025-12-09 16:07:47,878 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://192.168.86.140:34903'. Reason: scheduler-close

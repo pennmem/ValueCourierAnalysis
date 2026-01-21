@@ -30,15 +30,15 @@ def compute_first_recall(data, list_len):
     return first_recall_df['recalled'].to_numpy(dtype=float) / n_lists
 
 
-def compute_lag_crp_single_subject_array(data, list_len):
+def compute_lag_crp_single_subject_array(data, list_len,type_column="type"):
     center = list_len - 1
     min_lag = -center
     max_lag = center + 1
     actual = {lag: 0 for lag in range(min_lag, max_lag)}
     possible = {lag: 0 for lag in range(min_lag, max_lag)}
     for session_id, session_data in data.groupby('session'):
-        recalls = session_data[session_data.type == 'REC_WORD']
-        words = session_data[session_data.type == 'WORD']
+        recalls = session_data[session_data[type_column] == 'REC_WORD']
+        words = session_data[session_data[type_column] == 'WORD']
         if recalls.empty or words.empty:
             print(f"session {session_id} has no events")
             continue
@@ -76,7 +76,7 @@ def compute_lag_crp_single_subject_array(data, list_len):
 
 
 def get_recall_prob_per_subject(in_df):
-    pres = in_df.type=='WORD'
+    pres = in_df[type_column]=='WORD'
     recall_by_sub = in_df[pres].groupby('subject')\
         .agg({'recalled':'mean'})\
         .rename(columns={"recalled":"Recall_Probability"}
@@ -174,8 +174,8 @@ def plot_subject_group_pointplot(in_df, subjects, x_col, y_col, graph_configs=No
     plt.show()
     
 
-def get_spc(in_df):
-    spc_df = in_df.query("type=='WORD'").groupby(
+def get_spc(in_df, type_column="type"):
+    spc_df = in_df.query("@type_column=='WORD'").groupby(
         ['subject', 'session', 'serialpos']
     ).agg({'recalled':np.nanmean}).reset_index()
 
@@ -183,7 +183,7 @@ def get_spc(in_df):
 
 
 def get_prob_first_recall(in_df):
-    recword = in_df.query('type=="REC_WORD"')
+    recword = in_df.query('@type_column=="REC_WORD"')
     recword['pos'] = recword.groupby(['subject', 'session', 'trial']).cumcount()
     first_recall_df = recword.query('pos == 0 and serialpos >= 0')
     first_recall_df = first_recall_df.groupby(
@@ -194,7 +194,7 @@ def get_prob_first_recall(in_df):
     return first_recall_df
 
 
-def compute_temporal_clustering(in_df):
+def compute_temporal_clustering(in_df, type_column="type"):
     """Compute temporal clustering (TC) per subject."""
     temporal_clustering_df = (
         in_df.groupby(['subject'])
@@ -202,7 +202,8 @@ def compute_temporal_clustering(in_df):
             pd_temp_fact,
             itemno_column='itemno',
             list_index=['subject', 'session', 'trial'],
-            skip_first_n=0
+            skip_first_n=0,
+            type_column=type_column
         )
         .rename('TC')
         .reset_index()
@@ -211,9 +212,9 @@ def compute_temporal_clustering(in_df):
     return temporal_clustering_df
 
 
-def compute_trial_error(in_df):
+def compute_trial_error(in_df,type_column="type"):
     """Compute absolute error per trial (valuerecall - actualvalue)."""
-    word_evs = in_df[in_df['type'] == 'WORD']
+    word_evs = in_df[in_df[type_column] == 'WORD']
     error_by_trial = (
         word_evs.groupby(['subject', 'session', 'trial'], as_index=False)
         .agg(
@@ -240,6 +241,10 @@ import statsmodels.formula.api as smf
 def fit_models_and_get_residuals(merged):
     """Fit mixed model and compute residual-adjusted error."""
     # Mixed effects model summary
+    cols = ["abs_error", "storepointtype", "TC", "Recall_Probability", "subject"]
+    print(merged[cols].isna().sum())
+    print("N rows in merged:", len(merged))
+
     model = smf.mixedlm(
         "abs_error ~ storepointtype + TC + Recall_Probability",
         data=merged,
@@ -272,7 +277,7 @@ def compute_error_diff_adj(merged):
     return error_wide_adj[['subject', 'error_diff_adj']]
 
 
-def get_mixed_model_fitted_error(in_df, recall_by_sub):
+def get_mixed_model_fitted_error(in_df, recall_by_sub, type_column="type"):
     """
     Full pipeline:
       1. Compute temporal clustering (TC)
@@ -285,10 +290,11 @@ def get_mixed_model_fitted_error(in_df, recall_by_sub):
       DataFrame with columns ['subject', 'TC', 'error_diff_adj']
     """
     # Step 1
-    temporal_clustering_df = compute_temporal_clustering(in_df)
+    temporal_clustering_df = compute_temporal_clustering(in_df,type_column)
 
     # Step 2
-    error_by_trial = compute_trial_error(in_df)
+    error_by_trial = compute_trial_error(in_df,type_column)
+    print(error_by_trial)
 
     # Step 3
     merged = merge_predictors(error_by_trial, temporal_clustering_df, recall_by_sub)
@@ -363,7 +369,7 @@ def plot_error_diff_vs_binned_cluster_score(*dfs, labels=None):
     plt.show()
     
     
-def compute_trial_error_conditions(in_df):
+def compute_trial_error_conditions(in_df, type_column="type"):
     """
     Compute error per trial in 4 conditions:
         1. valuerecall - mean(itemvalue of whole list)
@@ -407,7 +413,7 @@ def compute_trial_error_conditions(in_df):
             'error_corr_mid' : abs(valuerecall - mean_corr_mid)
         })
         
-    word_evs = in_df[in_df['type'] == 'WORD']
+    word_evs = in_df[in_df[type_column] == 'WORD']
     trial_errors = word_evs.groupby(['subject', 'session', 'trial'], as_index=False).apply(compute_trial_errors).reset_index(drop=True)
     return trial_errors
 

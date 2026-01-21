@@ -1,0 +1,96 @@
+Index(['onset', 'duration', 'trial_type', 'sample', 'stim_file', 'actualvalue',
+       'compensation', 'eegfile', 'eogArtifact', 'experiment', 'intruded',
+       'intrusion', 'item', 'itemno', 'itemvalue', 'montage', 'msoffset',
+       'multiplier', 'numingroupchosen', 'phase', 'playerrotY', 'presX',
+       'presZ', 'primacybuf', 'protocol', 'recalled', 'rectime', 'recencybuf',
+       'serialpos', 'session', 'store', 'storeX', 'storeZ', 'storepointtype',
+       'subject', 'trial', 'valuerecall'],
+      dtype='object')
+Extracting EDF parameters from /home1/maint/LTP_BIDS/sub-LTP606/ses-0/eeg/sub-LTP606_ses-0_task-valuecourier_eeg.bdf...
+BDF file detected
+Setting channel info structure...
+Creating raw.info structure...
+Reading events from /home1/maint/LTP_BIDS/sub-LTP606/ses-0/eeg/sub-LTP606_ses-0_task-valuecourier_events.tsv.
+Reading channel info from /home1/maint/LTP_BIDS/sub-LTP606/ses-0/eeg/sub-LTP606_ses-0_task-valuecourier_channels.tsv.
+Reading electrode coords from /home1/maint/LTP_BIDS/sub-LTP606/ses-0/eeg/sub-LTP606_ses-0_space-CapTrak_electrodes.tsv.
+Used Annotations descriptions: ['FINAL_COMPENSATION', 'POINTER_ON', 'PRACTICE_DELIVERY_END', 'PRACTICE_DELIVERY_START', 'PRACTICE_VALUE_RECALL', 'PRACTICE_WORD', 'REC_START', 'REC_STOP', 'REC_WORD', 'REC_WORD_VV', 'SESS_END', 'SESS_START', 'TL_END', 'TL_START', 'TRIAL_END', 'TRIAL_START', 'VALUE_RECALL', 'VIDEO_START', 'VIDEO_STOP', 'WORD', 'store mappings']
+Multiple event values for single event times found. Creating new event value to reflect simultaneous events.
+Not setting metadata
+240 matching events found
+Setting baseline interval to [-1.0, 0.0] s
+Applying baseline correction (mode: mean)
+0 projection items activated
+Loading data for 240 events and 10241 original time points ...
+0 bad epochs dropped
+Index(['onset', 'duration', 'trial_type', 'sample', 'stim_file', 'actualvalue',
+       'compensation', 'eegfile', 'eogArtifact', 'experiment', 'intruded',
+       'intrusion', 'item', 'itemno', 'itemvalue', 'montage', 'msoffset',
+       'multiplier', 'numingroupchosen', 'phase', 'playerrotY', 'presX',
+       'presZ', 'primacybuf', 'protocol', 'recalled', 'rectime', 'recencybuf',
+       'serialpos', 'session', 'store', 'storeX', 'storeZ', 'storepointtype',
+       'subject', 'trial', 'valuerecall'],
+      dtype='object')
+Extracting EDF parameters from /home1/maint/LTP_BIDS/sub-LTP606/ses-0/eeg/sub-LTP606_ses-0_task-valuecourier_eeg.bdf...
+BDF file detected
+Setting channel info structure...
+Creating raw.info structure...
+Reading events from /home1/maint/LTP_BIDS/sub-LTP606/ses-0/eeg/sub-LTP606_ses-0_task-valuecourier_events.tsv.
+Reading channel info from /home1/maint/LTP_BIDS/sub-LTP606/ses-0/eeg/sub-LTP606_ses-0_task-valuecourier_channels.tsv.
+Reading electrode coords from /home1/maint/LTP_BIDS/sub-LTP606/ses-0/eeg/sub-LTP606_ses-0_space-CapTrak_electrodes.tsv.
+Used Annotations descriptions: ['FINAL_COMPENSATION', 'POINTER_ON', 'PRACTICE_DELIVERY_END', 'PRACTICE_DELIVERY_START', 'PRACTICE_VALUE_RECALL', 'PRACTICE_WORD', 'REC_START', 'REC_STOP', 'REC_WORD', 'REC_WORD_VV', 'SESS_END', 'SESS_START', 'TL_END', 'TL_START', 'TRIAL_END', 'TRIAL_START', 'VALUE_RECALL', 'VIDEO_START', 'VIDEO_STOP', 'WORD', 'store mappings']
+Multiple event values for single event times found. Creating new event value to reflect simultaneous events.
+Not setting metadata
+240 matching events found
+Setting baseline interval to [-1.0, 0.0] s
+Applying baseline correction (mode: mean)
+0 projection items activated
+Loading data for 240 events and 10241 original time points ...
+0 bad epochs dropped
+Index(['onset', 'duration', 'trial_type', 'sample', 'stim_file', 'actualvalue',
+       'compensation', 'eegfile', 'eogArtifact', 'experiment', 'intruded',
+       'intrusion', 'item', 'itemno', 'itemvalue', 'montage', 'msoffset',
+       'multiplier', 'numingroupchosen', 'phase', 'playerrotY', 'presX',
+       'presZ', 'primacybuf', 'protocol', 'recalled', 'rectime', 'recencybuf',
+       'serialpos', 'session', 'store', 'storeX', 'storeZ', 'storepointtype',
+       'subject', 'trial', 'valuerecall'],
+      dtype='object')
+Extracting EDF parameters from /home1/maint/LTP_BIDS/sub-LTP606/ses-0/eeg/sub-LTP606_ses-0_task-valuecourier_eeg.bdf...
+BDF file detected
+Setting channel info structure...
+Creating raw.info structure...
+Reading events from /home1/maint/LTP_BIDS/sub-LTP606/ses-0/eeg/sub-LTP606_ses-0_task-valuecourier_events.tsv.
+Reading channel info from /home1/maint/LTP_BIDS/sub-LTP606/ses-0/eeg/sub-LTP606_ses-0_task-valuecourier_channels.tsv.
+Reading electrode coords from /home1/maint/LTP_BIDS/sub-LTP606/ses-0/eeg/sub-LTP606_ses-0_space-CapTrak_electrodes.tsv.
+Used Annotations descriptions: ['FINAL_COMPENSATION', 'POINTER_ON', 'PRACTICE_DELIVERY_END', 'PRACTICE_DELIVERY_START', 'PRACTICE_VALUE_RECALL', 'PRACTICE_WORD', 'REC_START', 'REC_STOP', 'REC_WORD', 'REC_WORD_VV', 'SESS_END', 'SESS_START', 'TL_END', 'TL_START', 'TRIAL_END', 'TRIAL_START', 'VALUE_RECALL', 'VIDEO_START', 'VIDEO_STOP', 'WORD', 'store mappings']
+Multiple event values for single event times found. Creating new event value to reflect simultaneous events.
+Not setting metadata
+240 matching events found
+Setting baseline interval to [-1.0, 0.0] s
+Applying baseline correction (mode: mean)
+0 projection items activated
+Loading data for 240 events and 10241 original time points ...
+0 bad epochs dropped
+Index(['onset', 'duration', 'trial_type', 'sample', 'stim_file', 'actualvalue',
+       'compensation', 'eegfile', 'eogArtifact', 'experiment', 'intruded',
+       'intrusion', 'item', 'itemno', 'itemvalue', 'montage', 'msoffset',
+       'multiplier', 'numingroupchosen', 'phase', 'playerrotY', 'presX',
+       'presZ', 'primacybuf', 'protocol', 'recalled', 'rectime', 'recencybuf',
+       'serialpos', 'session', 'store', 'storeX', 'storeZ', 'storepointtype',
+       'subject', 'trial', 'valuerecall'],
+      dtype='object')
+Extracting EDF parameters from /home1/maint/LTP_BIDS/sub-LTP606/ses-0/eeg/sub-LTP606_ses-0_task-valuecourier_eeg.bdf...
+BDF file detected
+Setting channel info structure...
+Creating raw.info structure...
+Reading events from /home1/maint/LTP_BIDS/sub-LTP606/ses-0/eeg/sub-LTP606_ses-0_task-valuecourier_events.tsv.
+Reading channel info from /home1/maint/LTP_BIDS/sub-LTP606/ses-0/eeg/sub-LTP606_ses-0_task-valuecourier_channels.tsv.
+Reading electrode coords from /home1/maint/LTP_BIDS/sub-LTP606/ses-0/eeg/sub-LTP606_ses-0_space-CapTrak_electrodes.tsv.
+Used Annotations descriptions: ['FINAL_COMPENSATION', 'POINTER_ON', 'PRACTICE_DELIVERY_END', 'PRACTICE_DELIVERY_START', 'PRACTICE_VALUE_RECALL', 'PRACTICE_WORD', 'REC_START', 'REC_STOP', 'REC_WORD', 'REC_WORD_VV', 'SESS_END', 'SESS_START', 'TL_END', 'TL_START', 'TRIAL_END', 'TRIAL_START', 'VALUE_RECALL', 'VIDEO_START', 'VIDEO_STOP', 'WORD', 'store mappings']
+Multiple event values for single event times found. Creating new event value to reflect simultaneous events.
+Not setting metadata
+240 matching events found
+Setting baseline interval to [-1.0, 0.0] s
+Applying baseline correction (mode: mean)
+0 projection items activated
+Loading data for 240 events and 10241 original time points ...
+0 bad epochs dropped

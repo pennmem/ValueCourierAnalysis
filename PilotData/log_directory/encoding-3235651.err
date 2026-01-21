@@ -1,0 +1,144 @@
+2025-12-12 11:32:44,749 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.140:33157'
+2025-12-12 11:32:46,424 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.140:33101
+2025-12-12 11:32:46,424 - distributed.worker - INFO -          Listening to: tcp://192.168.86.140:33101
+2025-12-12 11:32:46,424 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2025-12-12 11:32:46,424 - distributed.worker - INFO -          dashboard at:       192.168.86.140:43625
+2025-12-12 11:32:46,424 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.107:37738
+2025-12-12 11:32:46,424 - distributed.worker - INFO - -------------------------------------------------
+2025-12-12 11:32:46,424 - distributed.worker - INFO -               Threads:                          1
+2025-12-12 11:32:46,424 - distributed.worker - INFO -                Memory:                  74.51 GiB
+2025-12-12 11:32:46,425 - distributed.worker - INFO -       Local Directory: /home1/zrentala/scratch/dask-scratch-space/worker-uyc_pwwq
+2025-12-12 11:32:46,425 - distributed.worker - INFO - -------------------------------------------------
+2025-12-12 11:32:46,808 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-12-12 11:32:46,809 - distributed.worker - INFO -         Registered to: tcp://192.168.86.107:37738
+2025-12-12 11:32:46,809 - distributed.worker - INFO - -------------------------------------------------
+2025-12-12 11:32:46,810 - distributed.core - INFO - Starting established connection to tcp://192.168.86.107:37738
+/tmp/ipykernel_7018/1017331495.py:44: RuntimeWarning: The unit for channel(s) EXG5, EXG6, EXG7, EXG8 has changed from V to NA.
+/tmp/ipykernel_7018/1017331495.py:44: RuntimeWarning: The unit for channel(s) Status has changed from NA to V.
+/tmp/ipykernel_7018/1017331495.py:44: RuntimeWarning: There are channels without locations (n/a) that are not marked as bad: ['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8']
+/tmp/ipykernel_7018/1017331495.py:44: RuntimeWarning: Not setting positions of 8 eog/misc channels found in montage:
+['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8']
+Consider setting the channel types to be of EEG/sEEG/ECoG/DBS/fNIRS using inst.set_channel_types before calling inst.set_montage, or omit these channels when creating your montage.
+2025-12-12 11:36:17,312 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 52.17 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:36:27,312 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 55.09 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:36:37,410 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 58.07 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:36:42,914 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 59.62 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:36:47,410 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 60.98 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:36:57,410 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 63.92 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:37:07,510 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 66.90 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:37:17,611 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 69.84 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:37:20,923 - distributed.nanny.memory - WARNING - Worker tcp://192.168.86.140:33101 (pid=134970) exceeded 95% memory budget. Restarting...
+2025-12-12 11:37:27,584 - distributed.nanny - INFO - Worker process 134970 was killed by signal 15
+2025-12-12 11:37:27,588 - distributed.nanny - WARNING - Restarting worker
+2025-12-12 11:37:29,014 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.140:38677
+2025-12-12 11:37:29,014 - distributed.worker - INFO -          Listening to: tcp://192.168.86.140:38677
+2025-12-12 11:37:29,014 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2025-12-12 11:37:29,014 - distributed.worker - INFO -          dashboard at:       192.168.86.140:33313
+2025-12-12 11:37:29,014 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.107:37738
+2025-12-12 11:37:29,014 - distributed.worker - INFO - -------------------------------------------------
+2025-12-12 11:37:29,014 - distributed.worker - INFO -               Threads:                          1
+2025-12-12 11:37:29,014 - distributed.worker - INFO -                Memory:                  74.51 GiB
+2025-12-12 11:37:29,014 - distributed.worker - INFO -       Local Directory: /home1/zrentala/scratch/dask-scratch-space/worker-10_9cd94
+2025-12-12 11:37:29,014 - distributed.worker - INFO - -------------------------------------------------
+2025-12-12 11:37:29,321 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-12-12 11:37:29,321 - distributed.worker - INFO -         Registered to: tcp://192.168.86.107:37738
+2025-12-12 11:37:29,321 - distributed.worker - INFO - -------------------------------------------------
+2025-12-12 11:37:29,322 - distributed.core - INFO - Starting established connection to tcp://192.168.86.107:37738
+/tmp/ipykernel_7018/1017331495.py:44: RuntimeWarning: The unit for channel(s) EXG5, EXG6, EXG7, EXG8 has changed from V to NA.
+/tmp/ipykernel_7018/1017331495.py:44: RuntimeWarning: The unit for channel(s) Status has changed from NA to V.
+/tmp/ipykernel_7018/1017331495.py:44: RuntimeWarning: There are channels without locations (n/a) that are not marked as bad: ['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8']
+/tmp/ipykernel_7018/1017331495.py:44: RuntimeWarning: Not setting positions of 8 eog/misc channels found in montage:
+['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8']
+Consider setting the channel types to be of EEG/sEEG/ECoG/DBS/fNIRS using inst.set_channel_types before calling inst.set_montage, or omit these channels when creating your montage.
+2025-12-12 11:40:57,122 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 52.18 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:41:07,123 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 55.12 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:41:17,221 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 58.12 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:41:22,527 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 59.64 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:41:27,222 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 61.06 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:41:37,326 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 64.06 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:41:47,326 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 67.06 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:41:57,422 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 70.04 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:42:00,022 - distributed.nanny.memory - WARNING - Worker tcp://192.168.86.140:38677 (pid=135615) exceeded 95% memory budget. Restarting...
+2025-12-12 11:42:06,668 - distributed.nanny - INFO - Worker process 135615 was killed by signal 15
+2025-12-12 11:42:06,672 - distributed.nanny - WARNING - Restarting worker
+2025-12-12 11:42:08,097 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.140:45801
+2025-12-12 11:42:08,097 - distributed.worker - INFO -          Listening to: tcp://192.168.86.140:45801
+2025-12-12 11:42:08,097 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2025-12-12 11:42:08,097 - distributed.worker - INFO -          dashboard at:       192.168.86.140:40953
+2025-12-12 11:42:08,097 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.107:37738
+2025-12-12 11:42:08,097 - distributed.worker - INFO - -------------------------------------------------
+2025-12-12 11:42:08,097 - distributed.worker - INFO -               Threads:                          1
+2025-12-12 11:42:08,097 - distributed.worker - INFO -                Memory:                  74.51 GiB
+2025-12-12 11:42:08,097 - distributed.worker - INFO -       Local Directory: /home1/zrentala/scratch/dask-scratch-space/worker-7ua0mqus
+2025-12-12 11:42:08,097 - distributed.worker - INFO - -------------------------------------------------
+2025-12-12 11:42:08,410 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-12-12 11:42:08,411 - distributed.worker - INFO -         Registered to: tcp://192.168.86.107:37738
+2025-12-12 11:42:08,411 - distributed.worker - INFO - -------------------------------------------------
+2025-12-12 11:42:08,411 - distributed.core - INFO - Starting established connection to tcp://192.168.86.107:37738
+/tmp/ipykernel_7018/1017331495.py:44: RuntimeWarning: The unit for channel(s) EXG5, EXG6, EXG7, EXG8 has changed from V to NA.
+/tmp/ipykernel_7018/1017331495.py:44: RuntimeWarning: The unit for channel(s) Status has changed from NA to V.
+/tmp/ipykernel_7018/1017331495.py:44: RuntimeWarning: There are channels without locations (n/a) that are not marked as bad: ['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8']
+/tmp/ipykernel_7018/1017331495.py:44: RuntimeWarning: Not setting positions of 8 eog/misc channels found in montage:
+['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8']
+Consider setting the channel types to be of EEG/sEEG/ECoG/DBS/fNIRS using inst.set_channel_types before calling inst.set_montage, or omit these channels when creating your montage.
+2025-12-12 11:45:37,213 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 52.16 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:45:47,313 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 55.15 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:45:57,414 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 58.13 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:46:02,723 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 59.64 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:46:07,414 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 61.06 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:46:17,512 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 64.06 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:46:27,612 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 67.04 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:46:37,713 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 70.00 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:46:40,522 - distributed.nanny.memory - WARNING - Worker tcp://192.168.86.140:45801 (pid=136337) exceeded 95% memory budget. Restarting...
+2025-12-12 11:46:47,170 - distributed.nanny - INFO - Worker process 136337 was killed by signal 15
+2025-12-12 11:46:47,173 - distributed.nanny - WARNING - Restarting worker
+2025-12-12 11:46:48,559 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.140:45225
+2025-12-12 11:46:48,560 - distributed.worker - INFO -          Listening to: tcp://192.168.86.140:45225
+2025-12-12 11:46:48,560 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2025-12-12 11:46:48,560 - distributed.worker - INFO -          dashboard at:       192.168.86.140:38592
+2025-12-12 11:46:48,560 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.107:37738
+2025-12-12 11:46:48,560 - distributed.worker - INFO - -------------------------------------------------
+2025-12-12 11:46:48,560 - distributed.worker - INFO -               Threads:                          1
+2025-12-12 11:46:48,560 - distributed.worker - INFO -                Memory:                  74.51 GiB
+2025-12-12 11:46:48,560 - distributed.worker - INFO -       Local Directory: /home1/zrentala/scratch/dask-scratch-space/worker-h0vzqrk_
+2025-12-12 11:46:48,560 - distributed.worker - INFO - -------------------------------------------------
+2025-12-12 11:46:48,863 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-12-12 11:46:48,864 - distributed.worker - INFO -         Registered to: tcp://192.168.86.107:37738
+2025-12-12 11:46:48,864 - distributed.worker - INFO - -------------------------------------------------
+2025-12-12 11:46:48,864 - distributed.core - INFO - Starting established connection to tcp://192.168.86.107:37738
+/tmp/ipykernel_7018/1017331495.py:44: RuntimeWarning: The unit for channel(s) EXG5, EXG6, EXG7, EXG8 has changed from V to NA.
+/tmp/ipykernel_7018/1017331495.py:44: RuntimeWarning: The unit for channel(s) Status has changed from NA to V.
+/tmp/ipykernel_7018/1017331495.py:44: RuntimeWarning: There are channels without locations (n/a) that are not marked as bad: ['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8']
+/tmp/ipykernel_7018/1017331495.py:44: RuntimeWarning: Not setting positions of 8 eog/misc channels found in montage:
+['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8']
+Consider setting the channel types to be of EEG/sEEG/ECoG/DBS/fNIRS using inst.set_channel_types before calling inst.set_montage, or omit these channels when creating your montage.
+2025-12-12 11:50:17,166 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 52.16 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:50:27,265 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 55.15 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:50:37,266 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 58.11 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:50:42,568 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 59.61 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:50:47,367 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 61.07 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:50:57,367 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 64.04 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:51:07,465 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 67.03 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:51:17,565 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 70.00 GiB -- Worker memory limit: 74.51 GiB
+2025-12-12 11:51:20,322 - distributed.nanny.memory - WARNING - Worker tcp://192.168.86.140:45225 (pid=136933) exceeded 95% memory budget. Restarting...
+2025-12-12 11:51:26,967 - distributed.nanny - INFO - Worker process 136933 was killed by signal 15
+2025-12-12 11:51:26,971 - distributed.nanny - WARNING - Restarting worker
+2025-12-12 11:51:28,394 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.140:43661
+2025-12-12 11:51:28,394 - distributed.worker - INFO -          Listening to: tcp://192.168.86.140:43661
+2025-12-12 11:51:28,394 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2025-12-12 11:51:28,394 - distributed.worker - INFO -          dashboard at:       192.168.86.140:33915
+2025-12-12 11:51:28,394 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.107:37738
+2025-12-12 11:51:28,394 - distributed.worker - INFO - -------------------------------------------------
+2025-12-12 11:51:28,394 - distributed.worker - INFO -               Threads:                          1
+2025-12-12 11:51:28,394 - distributed.worker - INFO -                Memory:                  74.51 GiB
+2025-12-12 11:51:28,394 - distributed.worker - INFO -       Local Directory: /home1/zrentala/scratch/dask-scratch-space/worker-r6w4e3tr
+2025-12-12 11:51:28,395 - distributed.worker - INFO - -------------------------------------------------
+2025-12-12 11:51:28,703 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-12-12 11:51:28,704 - distributed.worker - INFO -         Registered to: tcp://192.168.86.107:37738
+2025-12-12 11:51:28,704 - distributed.worker - INFO - -------------------------------------------------
+2025-12-12 11:51:28,704 - distributed.core - INFO - Starting established connection to tcp://192.168.86.107:37738
+slurmstepd: error: *** JOB 3235651 ON node40 CANCELLED AT 2025-12-12T11:51:29 ***
+2025-12-12 11:51:29,673 - distributed.worker - INFO - Stopping worker at tcp://192.168.86.140:43661. Reason: scheduler-remove-worker
+2025-12-12 11:51:29,677 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://192.168.86.140:33157'. Reason: scheduler-remove-worker
+2025-12-12 11:51:29,682 - distributed.nanny - INFO - Worker closed
+2025-12-12 11:51:29,682 - distributed.core - INFO - Connection to tcp://192.168.86.107:37738 has been closed.

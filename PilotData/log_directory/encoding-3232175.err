@@ -1,0 +1,18 @@
+2025-12-08 15:46:53,100 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.108:43682'
+2025-12-08 15:46:55,643 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.108:43049
+2025-12-08 15:46:55,652 - distributed.worker - INFO -          Listening to: tcp://192.168.86.108:43049
+2025-12-08 15:46:55,652 - distributed.worker - INFO -           Worker name:             SLURMCluster-2
+2025-12-08 15:46:55,652 - distributed.worker - INFO -          dashboard at:       192.168.86.108:37435
+2025-12-08 15:46:55,652 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.107:32948
+2025-12-08 15:46:55,652 - distributed.worker - INFO - -------------------------------------------------
+2025-12-08 15:46:55,653 - distributed.worker - INFO -               Threads:                          1
+2025-12-08 15:46:55,653 - distributed.worker - INFO -                Memory:                  74.51 GiB
+2025-12-08 15:46:55,653 - distributed.worker - INFO -       Local Directory: /home1/zrentala/scratch/dask-scratch-space/worker-716i6bsa
+2025-12-08 15:46:55,653 - distributed.worker - INFO - -------------------------------------------------
+2025-12-08 15:46:56,363 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-12-08 15:46:56,364 - distributed.worker - INFO -         Registered to: tcp://192.168.86.107:32948
+2025-12-08 15:46:56,364 - distributed.worker - INFO - -------------------------------------------------
+2025-12-08 15:46:56,365 - distributed.core - INFO - Starting established connection to tcp://192.168.86.107:32948
+2025-12-08 15:50:40,104 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.91s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+slurmstepd: error: *** JOB 3232175 ON node08 CANCELLED AT 2025-12-08T16:19:54 ***
+2025-12-08 16:19:54,806 - distributed.worker - INFO - Stopping worker at tcp://192.168.86.108:43049. Reason: scheduler-close

@@ -1,0 +1,20 @@
+2026-01-12 12:22:30,874 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.108:33598'
+2026-01-12 12:22:32,320 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.108:43365
+2026-01-12 12:22:32,320 - distributed.worker - INFO -          Listening to: tcp://192.168.86.108:43365
+2026-01-12 12:22:32,321 - distributed.worker - INFO -           Worker name:             SLURMCluster-4
+2026-01-12 12:22:32,321 - distributed.worker - INFO -          dashboard at:       192.168.86.108:46857
+2026-01-12 12:22:32,321 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.104:39299
+2026-01-12 12:22:32,321 - distributed.worker - INFO - -------------------------------------------------
+2026-01-12 12:22:32,321 - distributed.worker - INFO -               Threads:                          1
+2026-01-12 12:22:32,321 - distributed.worker - INFO -                Memory:                  74.51 GiB
+2026-01-12 12:22:32,321 - distributed.worker - INFO -       Local Directory: /home1/zrentala/scratch/dask-scratch-space/worker-hxgtlnxg
+2026-01-12 12:22:32,321 - distributed.worker - INFO - -------------------------------------------------
+2026-01-12 12:22:32,662 - distributed.worker - INFO - Starting Worker plugin shuffle
+2026-01-12 12:22:32,662 - distributed.worker - INFO -         Registered to: tcp://192.168.86.104:39299
+2026-01-12 12:22:32,662 - distributed.worker - INFO - -------------------------------------------------
+2026-01-12 12:22:32,663 - distributed.core - INFO - Starting established connection to tcp://192.168.86.104:39299
+2026-01-12 12:45:34,492 - distributed.worker - INFO - Stopping worker at tcp://192.168.86.108:43365. Reason: scheduler-remove-worker
+2026-01-12 12:45:34,496 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://192.168.86.108:33598'. Reason: scheduler-remove-worker
+2026-01-12 12:45:34,503 - distributed.nanny - INFO - Worker closed
+2026-01-12 12:45:34,503 - distributed.core - INFO - Connection to tcp://192.168.86.104:39299 has been closed.
+slurmstepd: error: *** JOB 3241085 ON node08 CANCELLED AT 2026-01-12T12:45:34 ***

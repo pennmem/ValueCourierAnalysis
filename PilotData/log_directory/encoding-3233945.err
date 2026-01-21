@@ -1,0 +1,58 @@
+2025-12-09 17:01:33,994 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.140:45927'
+2025-12-09 17:01:34,950 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/scratch/dask-scratch-space/worker-qzt9ejo4', purging
+2025-12-09 17:01:35,437 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.140:39160
+2025-12-09 17:01:35,437 - distributed.worker - INFO -          Listening to: tcp://192.168.86.140:39160
+2025-12-09 17:01:35,437 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2025-12-09 17:01:35,437 - distributed.worker - INFO -          dashboard at:       192.168.86.140:42328
+2025-12-09 17:01:35,437 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.107:39301
+2025-12-09 17:01:35,437 - distributed.worker - INFO - -------------------------------------------------
+2025-12-09 17:01:35,437 - distributed.worker - INFO -               Threads:                          1
+2025-12-09 17:01:35,437 - distributed.worker - INFO -                Memory:                  74.51 GiB
+2025-12-09 17:01:35,437 - distributed.worker - INFO -       Local Directory: /home1/zrentala/scratch/dask-scratch-space/worker-dft9mujv
+2025-12-09 17:01:35,438 - distributed.worker - INFO - -------------------------------------------------
+2025-12-09 17:01:35,803 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-12-09 17:01:35,804 - distributed.worker - INFO -         Registered to: tcp://192.168.86.107:39301
+2025-12-09 17:01:35,804 - distributed.worker - INFO - -------------------------------------------------
+2025-12-09 17:01:35,804 - distributed.core - INFO - Starting established connection to tcp://192.168.86.107:39301
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: The unit for channel(s) EXG5, EXG6, EXG7, EXG8 has changed from V to NA.
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: The unit for channel(s) Status has changed from NA to V.
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: There are channels without locations (n/a) that are not marked as bad: ['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8']
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: Not setting positions of 8 eog/misc channels found in montage:
+['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8']
+Consider setting the channel types to be of EEG/sEEG/ECoG/DBS/fNIRS using inst.set_channel_types before calling inst.set_montage, or omit these channels when creating your montage.
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: The unit for channel(s) EXG5, EXG6, EXG7, EXG8 has changed from V to NA.
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: The unit for channel(s) Status has changed from NA to V.
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: There are channels without locations (n/a) that are not marked as bad: ['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8']
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: Not setting positions of 8 eog/misc channels found in montage:
+['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8']
+Consider setting the channel types to be of EEG/sEEG/ECoG/DBS/fNIRS using inst.set_channel_types before calling inst.set_montage, or omit these channels when creating your montage.
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: The unit for channel(s) EXG5, EXG6, EXG7, EXG8 has changed from V to NA.
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: The unit for channel(s) Status has changed from NA to V.
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: There are channels without locations (n/a) that are not marked as bad: ['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8']
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: Not setting positions of 8 eog/misc channels found in montage:
+['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8']
+Consider setting the channel types to be of EEG/sEEG/ECoG/DBS/fNIRS using inst.set_channel_types before calling inst.set_montage, or omit these channels when creating your montage.
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: The unit for channel(s) EXG5, EXG6, EXG7, EXG8 has changed from V to NA.
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: The unit for channel(s) Status has changed from NA to V.
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: There are channels without locations (n/a) that are not marked as bad: ['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8']
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: Not setting positions of 8 eog/misc channels found in montage:
+['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8']
+Consider setting the channel types to be of EEG/sEEG/ECoG/DBS/fNIRS using inst.set_channel_types before calling inst.set_montage, or omit these channels when creating your montage.
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: The unit for channel(s) EXG5, EXG6, EXG7, EXG8 has changed from V to NA.
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: The unit for channel(s) Status has changed from NA to V.
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: There are channels without locations (n/a) that are not marked as bad: ['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8']
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: Not setting positions of 8 eog/misc channels found in montage:
+['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8']
+Consider setting the channel types to be of EEG/sEEG/ECoG/DBS/fNIRS using inst.set_channel_types before calling inst.set_montage, or omit these channels when creating your montage.
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: The unit for channel(s) EXG5, EXG6, EXG7, EXG8 has changed from V to NA.
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: The unit for channel(s) Status has changed from NA to V.
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: There are channels without locations (n/a) that are not marked as bad: ['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8']
+/tmp/ipykernel_103142/1166098606.py:49: RuntimeWarning: Not setting positions of 8 eog/misc channels found in montage:
+['EXG1', 'EXG2', 'EXG3', 'EXG4', 'EXG5', 'EXG6', 'EXG7', 'EXG8']
+Consider setting the channel types to be of EEG/sEEG/ECoG/DBS/fNIRS using inst.set_channel_types before calling inst.set_montage, or omit these channels when creating your montage.
+2025-12-10 11:56:58,120 - distributed.core - INFO - Connection to tcp://192.168.86.107:39301 has been closed.
+2025-12-10 11:56:58,122 - distributed.worker - INFO - Stopping worker at tcp://192.168.86.140:39160. Reason: worker-handle-scheduler-connection-broken
+2025-12-10 11:56:58,128 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://192.168.86.140:45927'. Reason: worker-handle-scheduler-connection-broken
+2025-12-10 11:56:58,138 - distributed.nanny - INFO - Worker closed
+2025-12-10 11:57:01,100 - distributed.nanny - INFO - Closing Nanny at 'tcp://192.168.86.140:45927'. Reason: nanny-close-gracefully
+2025-12-10 11:57:01,101 - distributed.dask_worker - INFO - End worker

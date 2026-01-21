@@ -1,0 +1,21 @@
+2025-12-08 15:46:50,095 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.108:41409'
+2025-12-08 15:46:51,466 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.108:44619
+2025-12-08 15:46:51,466 - distributed.worker - INFO -          Listening to: tcp://192.168.86.108:44619
+2025-12-08 15:46:51,466 - distributed.worker - INFO -           Worker name:             SLURMCluster-1
+2025-12-08 15:46:51,466 - distributed.worker - INFO -          dashboard at:       192.168.86.108:44719
+2025-12-08 15:46:51,466 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.107:32948
+2025-12-08 15:46:51,466 - distributed.worker - INFO - -------------------------------------------------
+2025-12-08 15:46:51,466 - distributed.worker - INFO -               Threads:                          1
+2025-12-08 15:46:51,466 - distributed.worker - INFO -                Memory:                  74.51 GiB
+2025-12-08 15:46:51,467 - distributed.worker - INFO -       Local Directory: /home1/zrentala/scratch/dask-scratch-space/worker-8ber25_o
+2025-12-08 15:46:51,467 - distributed.worker - INFO - -------------------------------------------------
+2025-12-08 15:46:51,786 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-12-08 15:46:51,787 - distributed.worker - INFO -         Registered to: tcp://192.168.86.107:32948
+2025-12-08 15:46:51,787 - distributed.worker - INFO - -------------------------------------------------
+2025-12-08 15:46:51,787 - distributed.core - INFO - Starting established connection to tcp://192.168.86.107:32948
+2025-12-08 15:50:35,872 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.46s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2025-12-08 16:11:57,591 - distributed.worker - INFO - Stopping worker at tcp://192.168.86.108:44619. Reason: scheduler-remove-worker
+2025-12-08 16:11:57,595 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://192.168.86.108:41409'. Reason: scheduler-remove-worker
+2025-12-08 16:11:57,601 - distributed.nanny - INFO - Worker closed
+2025-12-08 16:11:57,602 - distributed.core - INFO - Connection to tcp://192.168.86.107:32948 has been closed.
+slurmstepd: error: *** JOB 3232174 ON node08 CANCELLED AT 2025-12-08T16:11:57 ***

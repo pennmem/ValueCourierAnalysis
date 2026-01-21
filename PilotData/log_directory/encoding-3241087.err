@@ -1,0 +1,18 @@
+2026-01-12 13:02:16,957 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.104:41703'
+2026-01-12 13:02:17,801 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/scratch/dask-scratch-space/worker-yly4au48', purging
+2026-01-12 13:02:18,238 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.104:38458
+2026-01-12 13:02:18,238 - distributed.worker - INFO -          Listening to: tcp://192.168.86.104:38458
+2026-01-12 13:02:18,238 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2026-01-12 13:02:18,238 - distributed.worker - INFO -          dashboard at:       192.168.86.104:38165
+2026-01-12 13:02:18,239 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.104:43962
+2026-01-12 13:02:18,239 - distributed.worker - INFO - -------------------------------------------------
+2026-01-12 13:02:18,239 - distributed.worker - INFO -               Threads:                          1
+2026-01-12 13:02:18,239 - distributed.worker - INFO -                Memory:                  74.51 GiB
+2026-01-12 13:02:18,239 - distributed.worker - INFO -       Local Directory: /home1/zrentala/scratch/dask-scratch-space/worker-hayi924x
+2026-01-12 13:02:18,239 - distributed.worker - INFO - -------------------------------------------------
+2026-01-12 13:02:18,527 - distributed.worker - INFO - Starting Worker plugin shuffle
+2026-01-12 13:02:18,527 - distributed.worker - INFO -         Registered to: tcp://192.168.86.104:43962
+2026-01-12 13:02:18,527 - distributed.worker - INFO - -------------------------------------------------
+2026-01-12 13:02:18,528 - distributed.core - INFO - Starting established connection to tcp://192.168.86.104:43962
+slurmstepd: error: *** JOB 3241087 ON node04 CANCELLED AT 2026-01-12T13:27:12 ***
+2026-01-12 13:27:12,624 - distributed.worker - INFO - Stopping worker at tcp://192.168.86.104:38458. Reason: scheduler-close
