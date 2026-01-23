@@ -1,0 +1,46 @@
+2026-01-15 15:02:55,146 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.102:44731'
+2026-01-15 15:02:56,901 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.102:41550
+2026-01-15 15:02:56,901 - distributed.worker - INFO -          Listening to: tcp://192.168.86.102:41550
+2026-01-15 15:02:56,901 - distributed.worker - INFO -           Worker name:            SLURMCluster-59
+2026-01-15 15:02:56,902 - distributed.worker - INFO -          dashboard at:       192.168.86.102:37175
+2026-01-15 15:02:56,902 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.140:33330
+2026-01-15 15:02:56,902 - distributed.worker - INFO - -------------------------------------------------
+2026-01-15 15:02:56,902 - distributed.worker - INFO -               Threads:                          1
+2026-01-15 15:02:56,902 - distributed.worker - INFO -                Memory:                   0.93 GiB
+2026-01-15 15:02:56,902 - distributed.worker - INFO -       Local Directory: /home1/zrentala/dask-worker-space/dask-scratch-space/worker-bn6yb8od
+2026-01-15 15:02:56,902 - distributed.worker - INFO - -------------------------------------------------
+2026-01-15 15:02:56,935 - distributed.worker - INFO - Starting Worker plugin shuffle
+2026-01-15 15:02:56,935 - distributed.worker - INFO - Starting Worker plugin deliveryRoutes.py69817309-62f8-4338-937c-9d236ea62457
+2026-01-15 15:02:56,936 - distributed.worker - INFO - Starting Worker plugin deliveryRoutes.pyf41d0134-7f7f-480a-ba40-61c5b04ead8f
+2026-01-15 15:02:56,938 - distributed.utils - INFO - Reload module deliveryRoutes from .py file
+slurmstepd: error: *** JOB 3243308 ON node02 CANCELLED AT 2026-01-15T15:02:57 ***
+2026-01-15 15:02:58,047 - distributed.utils - INFO - Reload module deliveryRoutes from .py file
+2026-01-15 15:02:58,059 - distributed.worker - INFO -         Registered to: tcp://192.168.86.140:33330
+2026-01-15 15:02:58,059 - distributed.worker - INFO - -------------------------------------------------
+2026-01-15 15:02:58,059 - distributed.core - INFO - Starting established connection to tcp://192.168.86.140:33330
+2026-01-15 15:02:58,336 - distributed.worker - INFO - Stopping worker at tcp://192.168.86.102:41550. Reason: scheduler-close
+2026-01-15 15:02:58,368 - distributed.batched - INFO - Batched Comm Closed <TCP (closed) Worker->Scheduler local=tcp://192.168.86.102:44384 remote=tcp://192.168.86.140:33330>
+Traceback (most recent call last):
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/comm/tcp.py", line 298, in write
+    raise StreamClosedError()
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/batched.py", line 115, in _background_send
+    nbytes = yield coro
+             ^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/tornado/gen.py", line 783, in run
+    value = future.result()
+            ^^^^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/comm/tcp.py", line 308, in write
+    convert_stream_closed_error(self, e)
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/comm/tcp.py", line 137, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Worker->Scheduler local=tcp://192.168.86.102:44384 remote=tcp://192.168.86.140:33330>: Stream is closed
+2026-01-15 15:02:58,494 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://192.168.86.102:44731'. Reason: scheduler-close
+2026-01-15 15:02:58,525 - distributed.worker.state_machine - WARNING - Async instruction for <Task cancelled name="execute('worker_generate_and_solve-fdfcff9b-e6b7-4eb9-82c0-e007baa7167f')" coro=<Worker.execute() done, defined at /home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/worker_state_machine.py:3608>> ended with CancelledError
+2026-01-15 15:02:58,531 - distributed.worker - INFO - Removing Worker plugin shuffle
+2026-01-15 15:02:58,536 - distributed.worker - INFO - Removing Worker plugin deliveryRoutes.py69817309-62f8-4338-937c-9d236ea62457
+2026-01-15 15:02:58,541 - distributed.worker - INFO - Removing Worker plugin deliveryRoutes.pyf41d0134-7f7f-480a-ba40-61c5b04ead8f

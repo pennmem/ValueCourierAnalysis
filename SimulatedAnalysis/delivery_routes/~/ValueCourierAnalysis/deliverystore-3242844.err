@@ -1,0 +1,11 @@
+2026-01-15 12:50:38,578 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.118:33854'
+2026-01-15 12:50:40,021 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.118:34533
+2026-01-15 12:50:40,021 - distributed.worker - INFO -          Listening to: tcp://192.168.86.118:34533
+2026-01-15 12:50:40,021 - distributed.worker - INFO -           Worker name:           SLURMCluster-744
+2026-01-15 12:50:40,021 - distributed.worker - INFO -          dashboard at:       192.168.86.118:46266
+2026-01-15 12:50:40,021 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.140:42181
+2026-01-15 12:50:40,021 - distributed.worker - INFO - -------------------------------------------------
+2026-01-15 12:50:40,021 - distributed.worker - INFO -               Threads:                          1
+2026-01-15 12:50:40,021 - distributed.worker - INFO -                Memory:                   0.93 GiB
+2026-01-15 12:50:40,021 - distributed.worker - INFO -       Local Directory: /home1/zrentala/dask-worker-space/dask-scratch-space/worker-_ob4j072
+2026-01-15 12:50:40,021 - distributed.worker - INFO - -------------------------------------------------

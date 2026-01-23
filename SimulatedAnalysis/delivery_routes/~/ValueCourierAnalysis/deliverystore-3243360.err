@@ -1,0 +1,30 @@
+2026-01-15 15:02:57,161 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.106:46536'
+slurmstepd: error: *** JOB 3243360 ON node06 CANCELLED AT 2026-01-15T15:02:57 ***
+2026-01-15 15:02:58,004 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-clk54ttg', purging
+2026-01-15 15:02:58,007 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-s63buupu', purging
+2026-01-15 15:02:58,009 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-wiuz71vp', purging
+2026-01-15 15:02:58,011 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-h1lyf7yh', purging
+2026-01-15 15:02:58,013 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-stw20iuw', purging
+2026-01-15 15:02:58,016 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-yx5l7eyv', purging
+2026-01-15 15:02:58,019 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-knn8sh1u', purging
+2026-01-15 15:02:58,024 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-muhymghu', purging
+2026-01-15 15:02:58,031 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-e29_7mnw', purging
+2026-01-15 15:02:58,033 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-6z65fsm1', purging
+2026-01-15 15:02:58,035 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-3o8nagaw', purging
+2026-01-15 15:02:58,039 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-tq5k5cef', purging
+2026-01-15 15:02:58,040 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-8gfvd3wt', purging
+2026-01-15 15:02:58,042 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-iir632vc', purging
+2026-01-15 15:02:58,043 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-hv89cbvm', purging
+2026-01-15 15:02:58,046 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-9hv5giwj', purging
+2026-01-15 15:02:58,047 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-fln2kxwe', purging
+2026-01-15 15:02:58,051 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-33jkmg16', purging
+2026-01-15 15:02:58,052 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-dq672lnb', purging
+2026-01-15 15:02:58,054 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7oahlu5q', purging
+2026-01-15 15:02:58,056 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-dadeqehf', purging
+2026-01-15 15:02:58,060 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-zdcxa1vw', purging
+2026-01-15 15:02:58,062 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-hyzns29z', purging
+2026-01-15 15:02:58,064 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-k9eguzyn', purging
+2026-01-15 15:02:58,066 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-uamjc786', purging
+2026-01-15 15:02:58,067 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-p7xo1dj4', purging
+2026-01-15 15:02:58,069 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-u222drgf', purging
+2026-01-15 15:02:58,072 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-cpvzqxrb', purging

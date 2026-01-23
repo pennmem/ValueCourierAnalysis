@@ -1,0 +1,47 @@
+2026-01-14 17:37:51,750 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.101:37444'
+2026-01-14 17:37:52,970 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.101:46428
+2026-01-14 17:37:52,970 - distributed.worker - INFO -          Listening to: tcp://192.168.86.101:46428
+2026-01-14 17:37:52,970 - distributed.worker - INFO -           Worker name:             SLURMCluster-8
+2026-01-14 17:37:52,970 - distributed.worker - INFO -          dashboard at:       192.168.86.101:33124
+2026-01-14 17:37:52,970 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.101:37331
+2026-01-14 17:37:52,970 - distributed.worker - INFO - -------------------------------------------------
+2026-01-14 17:37:52,970 - distributed.worker - INFO -               Threads:                          1
+2026-01-14 17:37:52,970 - distributed.worker - INFO -                Memory:                   0.93 GiB
+2026-01-14 17:37:52,970 - distributed.worker - INFO -       Local Directory: /home1/zrentala/dask-worker-space/dask-scratch-space/worker-d28nif4x
+2026-01-14 17:37:52,970 - distributed.worker - INFO - -------------------------------------------------
+2026-01-14 17:37:52,993 - distributed.worker - INFO - Starting Worker plugin shuffle
+2026-01-14 17:37:52,993 - distributed.worker - INFO - Starting Worker plugin deliveryRoutes.py8014446d-5a9a-46da-936a-e205ec31c27b
+2026-01-14 17:37:52,994 - distributed.worker - INFO - Starting Worker plugin deliveryRoutes.py77104db1-6a17-43cb-b7f3-745a2c13ab72
+2026-01-14 17:37:52,995 - distributed.utils - INFO - Reload module deliveryRoutes from .py file
+2026-01-14 17:37:53,799 - distributed.utils - INFO - Reload module deliveryRoutes from .py file
+2026-01-14 17:37:53,812 - distributed.worker - INFO -         Registered to: tcp://192.168.86.101:37331
+2026-01-14 17:37:53,812 - distributed.worker - INFO - -------------------------------------------------
+2026-01-14 17:37:53,812 - distributed.core - INFO - Starting established connection to tcp://192.168.86.101:37331
+slurmstepd: error: *** JOB 3241135 ON node01 CANCELLED AT 2026-01-14T17:39:34 ***
+2026-01-14 17:39:34,845 - distributed.worker - INFO - Stopping worker at tcp://192.168.86.101:46428. Reason: scheduler-close
+2026-01-14 17:39:34,847 - distributed.batched - INFO - Batched Comm Closed <TCP (closed) Worker->Scheduler local=tcp://192.168.86.101:38472 remote=tcp://192.168.86.101:37331>
+Traceback (most recent call last):
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/comm/tcp.py", line 298, in write
+    raise StreamClosedError()
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/batched.py", line 115, in _background_send
+    nbytes = yield coro
+             ^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/tornado/gen.py", line 783, in run
+    value = future.result()
+            ^^^^^^^^^^^^^^^
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/comm/tcp.py", line 308, in write
+    convert_stream_closed_error(self, e)
+  File "/home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/comm/tcp.py", line 137, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Worker->Scheduler local=tcp://192.168.86.101:38472 remote=tcp://192.168.86.101:37331>: Stream is closed
+2026-01-14 17:39:34,854 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://192.168.86.101:37444'. Reason: scheduler-close
+2026-01-14 17:39:34,855 - distributed.worker - INFO - Removing Worker plugin shuffle
+2026-01-14 17:39:34,856 - distributed.worker - INFO - Removing Worker plugin deliveryRoutes.py8014446d-5a9a-46da-936a-e205ec31c27b
+2026-01-14 17:39:34,856 - distributed.worker - INFO - Removing Worker plugin deliveryRoutes.py77104db1-6a17-43cb-b7f3-745a2c13ab72
+2026-01-14 17:39:34,862 - distributed.core - INFO - Received 'close-stream' from tcp://192.168.86.101:37331; closing.
+2026-01-14 17:39:34,862 - distributed.nanny - INFO - Worker closed

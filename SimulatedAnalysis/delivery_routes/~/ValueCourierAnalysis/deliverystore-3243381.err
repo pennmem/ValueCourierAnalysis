@@ -1,0 +1,8 @@
+2026-01-15 15:02:57,109 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.142:39050'
+2026-01-15 15:02:57,798 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7yegfd2u', purging
+2026-01-15 15:02:57,812 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-ochc2y_k', purging
+2026-01-15 15:02:57,821 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-xikg9iqh', purging
+2026-01-15 15:02:57,834 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-p8rtuohy', purging
+2026-01-15 15:02:57,837 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-l0_xs3pi', purging
+2026-01-15 15:02:57,839 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-9pt1ja1k', purging
+slurmstepd: error: *** JOB 3243381 ON node42 CANCELLED AT 2026-01-15T15:02:58 ***

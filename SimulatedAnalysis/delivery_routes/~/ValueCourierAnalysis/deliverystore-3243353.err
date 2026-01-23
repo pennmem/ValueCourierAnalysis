@@ -1,0 +1,3 @@
+2026-01-15 15:02:57,005 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.108:46680'
+slurmstepd: error: *** JOB 3243353 ON node08 CANCELLED AT 2026-01-15T15:02:57 ***
+2026-01-15 15:02:57,740 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-7yegfd2u', purging

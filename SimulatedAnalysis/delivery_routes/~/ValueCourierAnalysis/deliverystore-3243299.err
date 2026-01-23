@@ -1,0 +1,16 @@
+2026-01-15 15:02:55,020 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.102:45038'
+2026-01-15 15:02:56,905 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.102:35733
+2026-01-15 15:02:56,905 - distributed.worker - INFO -          Listening to: tcp://192.168.86.102:35733
+2026-01-15 15:02:56,905 - distributed.worker - INFO -           Worker name:            SLURMCluster-33
+2026-01-15 15:02:56,905 - distributed.worker - INFO -          dashboard at:       192.168.86.102:41681
+2026-01-15 15:02:56,906 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.140:33330
+2026-01-15 15:02:56,906 - distributed.worker - INFO - -------------------------------------------------
+2026-01-15 15:02:56,906 - distributed.worker - INFO -               Threads:                          1
+2026-01-15 15:02:56,906 - distributed.worker - INFO -                Memory:                   0.93 GiB
+2026-01-15 15:02:56,906 - distributed.worker - INFO -       Local Directory: /home1/zrentala/dask-worker-space/dask-scratch-space/worker-fln2kxwe
+2026-01-15 15:02:56,906 - distributed.worker - INFO - -------------------------------------------------
+2026-01-15 15:02:56,934 - distributed.worker - INFO - Starting Worker plugin shuffle
+2026-01-15 15:02:56,934 - distributed.worker - INFO - Starting Worker plugin deliveryRoutes.py69817309-62f8-4338-937c-9d236ea62457
+2026-01-15 15:02:56,935 - distributed.worker - INFO - Starting Worker plugin deliveryRoutes.pyf41d0134-7f7f-480a-ba40-61c5b04ead8f
+2026-01-15 15:02:56,937 - distributed.utils - INFO - Reload module deliveryRoutes from .py file
+slurmstepd: error: *** JOB 3243299 ON node02 CANCELLED AT 2026-01-15T15:02:57 ***

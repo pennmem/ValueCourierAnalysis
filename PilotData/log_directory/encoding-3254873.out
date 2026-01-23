@@ -1,0 +1,248 @@
+     eegoffset  actualvalue  compensation  ...  trial  type  valuerecall
+68     5372398    39.400002      7.898338  ...      0  WORD           30
+69     5411338    39.400002      7.898338  ...      0  WORD           30
+71     5491512    39.400002      7.898338  ...      0  WORD           30
+73     5579776    39.400002      7.898338  ...      0  WORD           30
+74     5666710    39.400002      7.898338  ...      0  WORD           30
+..         ...          ...           ...  ...    ...   ...          ...
+239   11503461    28.066668      7.898338  ...      4  WORD           39
+240   11559843    28.066668      7.898338  ...      4  WORD           39
+242   11655136    28.066668      7.898338  ...      4  WORD           39
+244   11738283    28.066668      7.898338  ...      4  WORD           39
+246   11806613    28.066668      7.898338  ...      4  WORD           39
+
+[75 rows x 38 columns]
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/0/ephys/current_processed/LTP610_session_0_clean_raw.fif...
+    Range : 0 ... 4190207 =      0.000 ...  2046.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/0/ephys/current_processed/LTP610_session_0_clean_raw-1.fif...
+    Range : 4190208 ... 8380415 =   2046.000 ...  4092.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/0/ephys/current_processed/LTP610_session_0_clean_raw-2.fif...
+    Range : 8380416 ... 12085247 =   4092.000 ...  5901.000 secs
+Ready.
+Reading 0 ... 12085247  =      0.000 ...  5901.000 secs...
+Not setting metadata
+64 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 64 events and 10241 original time points ...
+0 bad epochs dropped
+CPP total time wavelet loop:  94.54754686355591
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/0/ephys/current_processed/LTP610_session_0_clean_raw.fif...
+    Range : 0 ... 4190207 =      0.000 ...  2046.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/0/ephys/current_processed/LTP610_session_0_clean_raw-1.fif...
+    Range : 4190208 ... 8380415 =   2046.000 ...  4092.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/0/ephys/current_processed/LTP610_session_0_clean_raw-2.fif...
+    Range : 8380416 ... 12085247 =   4092.000 ...  5901.000 secs
+Ready.
+Reading 0 ... 12085247  =      0.000 ...  5901.000 secs...
+Not setting metadata
+11 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 11 events and 10241 original time points ...
+0 bad epochs dropped
+CPP total time wavelet loop:  16.316768884658813
+Empty DataFrame
+Columns: [eegoffset, actualvalue, compensation, correctPointingDirection, eegfile, eogArtifact, experiment, finalrecalled, intruded, intrusion, item, itemno, itemvalue, montage, msoffset, mstime, multiplier, numingroupchosen, phase, playerrotY, presX, presZ, primacybuf, protocol, recalled, recencybuf, rectime, serialpos, session, store, storeX, storeZ, storepointtype, subject, submittedPointingDirection, trial, type, valuerecall]
+Index: []
+     eegoffset  actualvalue  compensation  ...  trial  type  valuerecall
+12      185872    30.000000      7.534483  ...      0  WORD           31
+13      239243    30.000000      7.534483  ...      0  WORD           31
+14      289281    30.000000      7.534483  ...      0  WORD           31
+15      321262    30.000000      7.534483  ...      0  WORD           31
+16      361568    30.000000      7.534483  ...      0  WORD           31
+..         ...          ...           ...  ...    ...   ...          ...
+317   12023110    24.133333      7.534483  ...      9  WORD           32
+318   12128198    24.133333      7.534483  ...      9  WORD           32
+319   12166016    24.133333      7.534483  ...      9  WORD           32
+320   12254346    24.133333      7.534483  ...      9  WORD           32
+321   12298442    24.133333      7.534483  ...      9  WORD           32
+
+[150 rows x 38 columns]
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/2/ephys/current_processed/LTP610_session_2_clean_raw.fif...
+    Range : 0 ... 4190207 =      0.000 ...  2046.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/2/ephys/current_processed/LTP610_session_2_clean_raw-1.fif...
+    Range : 4190208 ... 8380415 =   2046.000 ...  4092.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/2/ephys/current_processed/LTP610_session_2_clean_raw-2.fif...
+    Range : 8380416 ... 12568575 =   4092.000 ...  6137.000 secs
+Ready.
+Reading 0 ... 12568575  =      0.000 ...  6137.000 secs...
+Not setting metadata
+64 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 64 events and 10241 original time points ...
+0 bad epochs dropped
+CPP total time wavelet loop:  93.90814280509949
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/2/ephys/current_processed/LTP610_session_2_clean_raw.fif...
+    Range : 0 ... 4190207 =      0.000 ...  2046.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/2/ephys/current_processed/LTP610_session_2_clean_raw-1.fif...
+    Range : 4190208 ... 8380415 =   2046.000 ...  4092.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/2/ephys/current_processed/LTP610_session_2_clean_raw-2.fif...
+    Range : 8380416 ... 12568575 =   4092.000 ...  6137.000 secs
+Ready.
+Reading 0 ... 12568575  =      0.000 ...  6137.000 secs...
+Not setting metadata
+64 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 64 events and 10241 original time points ...
+0 bad epochs dropped
+CPP total time wavelet loop:  92.95575189590454
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/2/ephys/current_processed/LTP610_session_2_clean_raw.fif...
+    Range : 0 ... 4190207 =      0.000 ...  2046.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/2/ephys/current_processed/LTP610_session_2_clean_raw-1.fif...
+    Range : 4190208 ... 8380415 =   2046.000 ...  4092.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/2/ephys/current_processed/LTP610_session_2_clean_raw-2.fif...
+    Range : 8380416 ... 12568575 =   4092.000 ...  6137.000 secs
+Ready.
+Reading 0 ... 12568575  =      0.000 ...  6137.000 secs...
+Not setting metadata
+22 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 22 events and 10241 original time points ...
+0 bad epochs dropped
+CPP total time wavelet loop:  34.52260613441467
+     eegoffset  actualvalue  compensation  ...  trial  type  valuerecall
+12      104964    19.066668      8.565524  ...      0  WORD           21
+13      133152    19.066668      8.565524  ...      0  WORD           21
+14      204350    19.066668      8.565524  ...      0  WORD           21
+15      268825    19.066668      8.565524  ...      0  WORD           21
+16      322039    19.066668      8.565524  ...      0  WORD           21
+..         ...          ...           ...  ...    ...   ...          ...
+330   11794275    28.866667      8.565524  ...      9  WORD           35
+331   11854894    28.866667      8.565524  ...      9  WORD           35
+332   11921722    28.866667      8.565524  ...      9  WORD           35
+333   11974938    28.866667      8.565524  ...      9  WORD           35
+334   12029141    28.866667      8.565524  ...      9  WORD           35
+
+[150 rows x 38 columns]
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/3/ephys/current_processed/LTP610_session_3_clean_raw.fif...
+    Range : 0 ... 4190207 =      0.000 ...  2046.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/3/ephys/current_processed/LTP610_session_3_clean_raw-1.fif...
+    Range : 4190208 ... 8380415 =   2046.000 ...  4092.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/3/ephys/current_processed/LTP610_session_3_clean_raw-2.fif...
+    Range : 8380416 ... 12349439 =   4092.000 ...  6030.000 secs
+Ready.
+Reading 0 ... 12349439  =      0.000 ...  6030.000 secs...
+Not setting metadata
+64 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 64 events and 10241 original time points ...
+0 bad epochs dropped
+CPP total time wavelet loop:  101.69722414016724
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/3/ephys/current_processed/LTP610_session_3_clean_raw.fif...
+    Range : 0 ... 4190207 =      0.000 ...  2046.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/3/ephys/current_processed/LTP610_session_3_clean_raw-1.fif...
+    Range : 4190208 ... 8380415 =   2046.000 ...  4092.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/3/ephys/current_processed/LTP610_session_3_clean_raw-2.fif...
+    Range : 8380416 ... 12349439 =   4092.000 ...  6030.000 secs
+Ready.
+Reading 0 ... 12349439  =      0.000 ...  6030.000 secs...
+Not setting metadata
+64 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 64 events and 10241 original time points ...
+0 bad epochs dropped
+CPP total time wavelet loop:  101.2772319316864
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/3/ephys/current_processed/LTP610_session_3_clean_raw.fif...
+    Range : 0 ... 4190207 =      0.000 ...  2046.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/3/ephys/current_processed/LTP610_session_3_clean_raw-1.fif...
+    Range : 4190208 ... 8380415 =   2046.000 ...  4092.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/3/ephys/current_processed/LTP610_session_3_clean_raw-2.fif...
+    Range : 8380416 ... 12349439 =   4092.000 ...  6030.000 secs
+Ready.
+Reading 0 ... 12349439  =      0.000 ...  6030.000 secs...
+Not setting metadata
+22 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 22 events and 10241 original time points ...
+0 bad epochs dropped
+CPP total time wavelet loop:  34.56176233291626
+Empty DataFrame
+Columns: [eegoffset, actualvalue, compensation, correctPointingDirection, eegfile, eogArtifact, experiment, finalrecalled, intruded, intrusion, item, itemno, itemvalue, montage, msoffset, mstime, multiplier, numingroupchosen, phase, playerrotY, presX, presZ, primacybuf, protocol, recalled, recencybuf, rectime, serialpos, session, store, storeX, storeZ, storepointtype, subject, submittedPointingDirection, trial, type, valuerecall]
+Index: []
+     eegoffset  actualvalue  compensation  ...  trial  type  valuerecall
+12      113994    29.133333      8.171101  ...      0  WORD           28
+13      141637    29.133333      8.171101  ...      0  WORD           28
+14      175906    29.133333      8.171101  ...      0  WORD           28
+15      222466    29.133333      8.171101  ...      0  WORD           28
+16      272640    29.133333      8.171101  ...      0  WORD           28
+..         ...          ...           ...  ...    ...   ...          ...
+325   11075319    12.066667      8.171101  ...      9  WORD           11
+326   11121705    12.066667      8.171101  ...      9  WORD           11
+327   11182799    12.066667      8.171101  ...      9  WORD           11
+328   11214682    12.066667      8.171101  ...      9  WORD           11
+329   11284447    12.066667      8.171101  ...      9  WORD           11
+
+[150 rows x 38 columns]
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/5/ephys/current_processed/LTP610_session_5_clean_raw.fif...
+    Range : 0 ... 4190207 =      0.000 ...  2046.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/5/ephys/current_processed/LTP610_session_5_clean_raw-1.fif...
+    Range : 4190208 ... 8380415 =   2046.000 ...  4092.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/5/ephys/current_processed/LTP610_session_5_clean_raw-2.fif...
+    Range : 8380416 ... 11548671 =   4092.000 ...  5639.000 secs
+Ready.
+Reading 0 ... 11548671  =      0.000 ...  5639.000 secs...
+Not setting metadata
+64 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 64 events and 10241 original time points ...
+0 bad epochs dropped
+CPP total time wavelet loop:  101.63426399230957
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/5/ephys/current_processed/LTP610_session_5_clean_raw.fif...
+    Range : 0 ... 4190207 =      0.000 ...  2046.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/5/ephys/current_processed/LTP610_session_5_clean_raw-1.fif...
+    Range : 4190208 ... 8380415 =   2046.000 ...  4092.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/5/ephys/current_processed/LTP610_session_5_clean_raw-2.fif...
+    Range : 8380416 ... 11548671 =   4092.000 ...  5639.000 secs
+Ready.
+Reading 0 ... 11548671  =      0.000 ...  5639.000 secs...
+Not setting metadata
+64 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 64 events and 10241 original time points ...
+0 bad epochs dropped
+CPP total time wavelet loop:  103.20646595954895
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/5/ephys/current_processed/LTP610_session_5_clean_raw.fif...
+    Range : 0 ... 4190207 =      0.000 ...  2046.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/5/ephys/current_processed/LTP610_session_5_clean_raw-1.fif...
+    Range : 4190208 ... 8380415 =   2046.000 ...  4092.000 secs
+Ready.
+Opening raw data file /protocols/ltp/subjects/LTP610/experiments/ValueCourier/sessions/5/ephys/current_processed/LTP610_session_5_clean_raw-2.fif...
+    Range : 8380416 ... 11548671 =   4092.000 ...  5639.000 secs
+Ready.
+Reading 0 ... 11548671  =      0.000 ...  5639.000 secs...
+Not setting metadata
+22 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 22 events and 10241 original time points ...
+0 bad epochs dropped

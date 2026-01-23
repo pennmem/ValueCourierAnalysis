@@ -1,0 +1,27 @@
+2026-01-15 15:09:06,994 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.107:41856'
+2026-01-15 15:09:08,225 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.107:43983
+2026-01-15 15:09:08,226 - distributed.worker - INFO -          Listening to: tcp://192.168.86.107:43983
+2026-01-15 15:09:08,226 - distributed.worker - INFO -           Worker name:            SLURMCluster-23
+2026-01-15 15:09:08,226 - distributed.worker - INFO -          dashboard at:       192.168.86.107:44668
+2026-01-15 15:09:08,226 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.140:33861
+2026-01-15 15:09:08,226 - distributed.worker - INFO - -------------------------------------------------
+2026-01-15 15:09:08,226 - distributed.worker - INFO -               Threads:                          1
+2026-01-15 15:09:08,226 - distributed.worker - INFO -                Memory:                   0.93 GiB
+2026-01-15 15:09:08,226 - distributed.worker - INFO -       Local Directory: /home1/zrentala/dask-worker-space/dask-scratch-space/worker-94z2ppj4
+2026-01-15 15:09:08,226 - distributed.worker - INFO - -------------------------------------------------
+2026-01-15 15:09:08,271 - distributed.worker - INFO - Starting Worker plugin shuffle
+2026-01-15 15:09:08,271 - distributed.worker - INFO - Starting Worker plugin deliveryRoutes.py2075465e-a336-47bf-9bc4-a09912fec8b2
+2026-01-15 15:09:08,272 - distributed.worker - INFO - Starting Worker plugin deliveryRoutes.pycc016feb-daa7-49b7-874f-f6cfc72dd7f4
+2026-01-15 15:09:08,273 - distributed.utils - INFO - Reload module deliveryRoutes from .py file
+2026-01-15 15:09:09,060 - distributed.utils - INFO - Reload module deliveryRoutes from .py file
+2026-01-15 15:09:09,071 - distributed.worker - INFO -         Registered to: tcp://192.168.86.140:33861
+2026-01-15 15:09:09,072 - distributed.worker - INFO - -------------------------------------------------
+2026-01-15 15:09:09,072 - distributed.core - INFO - Starting established connection to tcp://192.168.86.140:33861
+2026-01-16 18:55:56,472 - distributed.worker - INFO - Stopping worker at tcp://192.168.86.107:43983. Reason: scheduler-remove-worker
+2026-01-16 18:55:56,476 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://192.168.86.107:41856'. Reason: scheduler-remove-worker
+2026-01-16 18:55:56,477 - distributed.worker - INFO - Removing Worker plugin shuffle
+2026-01-16 18:55:56,478 - distributed.worker - INFO - Removing Worker plugin deliveryRoutes.py2075465e-a336-47bf-9bc4-a09912fec8b2
+2026-01-16 18:55:56,478 - distributed.worker - INFO - Removing Worker plugin deliveryRoutes.pycc016feb-daa7-49b7-874f-f6cfc72dd7f4
+2026-01-16 18:55:56,498 - distributed.nanny - INFO - Worker closed
+2026-01-16 18:55:56,498 - distributed.core - INFO - Connection to tcp://192.168.86.140:33861 has been closed.
+slurmstepd: error: *** JOB 3243719 ON node07 CANCELLED AT 2026-01-16T18:55:56 ***

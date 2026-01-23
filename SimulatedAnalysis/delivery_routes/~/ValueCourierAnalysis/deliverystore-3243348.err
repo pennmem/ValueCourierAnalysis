@@ -1,0 +1,5 @@
+2026-01-15 15:02:56,817 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.108:43047'
+slurmstepd: error: *** JOB 3243348 ON node08 CANCELLED AT 2026-01-15T15:02:57 ***
+2026-01-15 15:02:58,088 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.108:33952
+2026-01-15 15:02:58,088 - distributed.worker - INFO -          Listening to: tcp://192.168.86.108:33952
+2026-01-15 15:02:58,088 - distributed.worker - INFO -           Worker name:            SLURMCluster-83

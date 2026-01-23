@@ -1,0 +1,30 @@
+2025-12-22 19:24:30,426 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.107:35383'
+2025-12-22 19:24:31,734 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.107:39185
+2025-12-22 19:24:31,734 - distributed.worker - INFO -          Listening to: tcp://192.168.86.107:39185
+2025-12-22 19:24:31,735 - distributed.worker - INFO -           Worker name:            SLURMCluster-14
+2025-12-22 19:24:31,735 - distributed.worker - INFO -          dashboard at:       192.168.86.107:41805
+2025-12-22 19:24:31,735 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.140:43610
+2025-12-22 19:24:31,735 - distributed.worker - INFO - -------------------------------------------------
+2025-12-22 19:24:31,735 - distributed.worker - INFO -               Threads:                          1
+2025-12-22 19:24:31,735 - distributed.worker - INFO -                Memory:                   4.66 GiB
+2025-12-22 19:24:31,735 - distributed.worker - INFO -       Local Directory: /home1/zrentala/dask-worker-space/dask-scratch-space/worker-0gi0y0uf
+2025-12-22 19:24:31,735 - distributed.worker - INFO - -------------------------------------------------
+2025-12-22 19:24:31,762 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-12-22 19:24:31,762 - distributed.worker - INFO - Starting Worker plugin deliveryRoutes.py7842e43f-f687-4ae0-88be-52daf2e8083b
+2025-12-22 19:24:31,762 - distributed.worker - INFO - Starting Worker plugin deliveryRoutes.pyf06b2e0d-858e-4086-a27d-a971a30d7b26
+2025-12-22 19:24:31,763 - distributed.utils - INFO - Reload module deliveryRoutes from .py file
+2025-12-22 19:24:32,759 - distributed.utils - INFO - Reload module deliveryRoutes from .py file
+2025-12-22 19:24:32,779 - distributed.worker - INFO -         Registered to: tcp://192.168.86.140:43610
+2025-12-22 19:24:32,780 - distributed.worker - INFO - -------------------------------------------------
+2025-12-22 19:24:32,780 - distributed.core - INFO - Starting established connection to tcp://192.168.86.140:43610
+2025-12-22 21:35:47,045 - distributed.core - INFO - Connection to tcp://192.168.86.140:43610 has been closed.
+2025-12-22 21:35:47,050 - distributed.worker - INFO - Stopping worker at tcp://192.168.86.107:39185. Reason: worker-handle-scheduler-connection-broken
+2025-12-22 21:35:47,126 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://192.168.86.107:35383'. Reason: worker-handle-scheduler-connection-broken
+2025-12-22 21:35:47,132 - distributed.worker.state_machine - WARNING - Async instruction for <Task cancelled name="execute('worker_generate_and_solve-dedf70ee-a9a8-4c03-a056-fe8e32bd75c8')" coro=<Worker.execute() done, defined at /home1/zrentala/.conda/envs/zrentala/lib/python3.11/site-packages/distributed/worker_state_machine.py:3608>> ended with CancelledError
+2025-12-22 21:35:47,137 - distributed.worker - INFO - Removing Worker plugin shuffle
+2025-12-22 21:35:47,142 - distributed.worker - INFO - Removing Worker plugin deliveryRoutes.py7842e43f-f687-4ae0-88be-52daf2e8083b
+2025-12-22 21:35:47,147 - distributed.worker - INFO - Removing Worker plugin deliveryRoutes.pyf06b2e0d-858e-4086-a27d-a971a30d7b26
+2025-12-22 21:36:17,413 - distributed.nanny - INFO - Worker closed
+2025-12-22 21:36:20,043 - distributed.nanny - INFO - Closing Nanny at 'tcp://192.168.86.107:35383'. Reason: nanny-close-gracefully
+2025-12-22 21:36:20,043 - distributed.nanny - INFO - Nanny at 'tcp://192.168.86.107:35383' closed.
+2025-12-22 21:36:20,044 - distributed.dask_worker - INFO - End worker

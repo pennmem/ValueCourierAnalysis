@@ -1,6 +1,6 @@
 import random
 import argparse
-from typing import List, Tuple, Dict, Optional
+from typing import List, Tuple, Dict, Optional,Sequence
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.cm as cm
@@ -108,12 +108,12 @@ node_adj_dict = {
     "gelateria": {"island_2", "island_4"},
     "music_store": {"island_2", "island_3"},
     "bank": {"island_1", "darkcity_6"},
-    "pharmacy": {"suburbs_11", "island_2", "party_store"},
+    "pharmacy": {"island_2", "party_store"},
     "salon": {"suburbs_12", "suburbs_13", "bakery"},
     "hardware_store": {"suburbs_10", "suburbs_0"},
     "barber_shop": {"suburbs_4", "suburbs_5"},
     "jewelry_store": {"suburbs_11", "suburbs_6"},
-    "party_store": {"suburbs_11", "suburbs_2", "pharmacy"},
+    "party_store": {"suburbs_11", "island_2", "pharmacy"},
     "bike_shop": {"suburbs_16", "suburbs_15"},
     "bakery": {"suburbs_16", "suburbs_12", "salon"},
     "post_office": {"suburbs_10"},
@@ -122,7 +122,7 @@ node_adj_dict = {
     "pizzeria": {"darkcity_6", "bookstore"},
     "dentist": {"darkcity_5", "skyscraper_16"},
     "tech_shop": {"skyscraper_12", "skyscraper_13"},
-    "bookstore": {"darkcity_0", "darkcity_6", "pizzeria"},
+    "bookstore": {"darkcity_0", "pizzeria"},
     "grocery_store": {"skyscraper_11", "skyscraper_6",},
     "clothing_store": {"skyscraper_6", "skyscraper_7",},
     "noodle_house": {"skyscraper_13", "skyscraper_8",},
@@ -190,7 +190,7 @@ road_pos_dict: Dict[str, Tuple[float, float, float]] = {
     
 }
 
-post_close_set = {"pharmacy", "bakery", "gym", "hardware_store", "burger_joint", "bookstore", "toy_store", "bike_shop"}
+post_close_set = {"bakery", "gym", "hardware_store", "burger_joint", "bookstore", "toy_store", "tech_shop", "cafe", "salon", "party_store", "noodle_house" }
 
 
 close_store_dict: Dict[str, List[str]] = {
@@ -256,6 +256,129 @@ def route_distances(route: List[str]) -> Dict[Tuple[str, str], float]:
         dist_dict[(a, b)] = store_distance(storea, storeb)
 
     return dist_dict
+
+### TOP M
+def _build_topM_neighbors(
+    dist_df: pd.DataFrame,
+    stores: Sequence[str],
+    M: int,
+) -> Dict[str, List[str]]:
+    """
+    Precompute, for each store, the top-M closest *other* stores (excluding itself),
+    restricted to `stores` and ignoring missing/inf distances.
+    """
+    M = int(M)
+    if M <= 0:
+        raise ValueError("M must be a positive integer")
+
+    # ensure we only use stores that exist in dist_df
+    store_set = [s for s in stores if s in dist_df.index and s in dist_df.columns]
+
+    neighbors: Dict[str, List[str]] = {}
+    for s in store_set:
+        dists = dist_df.loc[s, store_set]
+        dists = dists.replace([float("inf")], pd.NA).dropna()
+        if s in dists.index:
+            dists = dists.drop(index=s, errors="ignore")
+        # take top M by distance
+        neighbors[s] = list(dists.sort_values().iloc[:M].index)
+
+    return neighbors
+
+
+def get_trial_stores_topM_greedy(
+    all_stores: List[str],
+    num_deliveries: int,
+    rng: random.Random,
+    dist_df: pd.DataFrame,
+    *,
+    M: int = 5,
+) -> List[str]:
+    """
+    Build a trial route:
+      - start at "post_office"
+      - pick first delivery store randomly from unvisited
+      - for each subsequent step: look at the top-M closest stores (from dist_df)
+        to the current store; among those that are still unvisited, choose the
+        *closest* one (greedy). If none are available, fall back to the globally
+        closest unvisited store by distance (still greedy), and if distances are
+        missing, fall back to random.
+
+    Returns: ["post_office", ..., "post_office"]
+    """
+    if num_deliveries <= 0:
+        return ["post_office", "post_office"]
+
+    # delivery candidates exclude endpoints
+    unvisited = [s for s in all_stores if s != "post_office"]
+    if not unvisited:
+        return ["post_office", "post_office"]
+
+    # precompute neighbor lists for speed
+    neighbors = _build_topM_neighbors(dist_df, unvisited, M=M)
+
+    trial: List[str] = ["post_office"]
+
+    # first store random (keeps some variety)
+    current = unvisited.pop(rng.randrange(len(unvisited)))
+    trial.append(current)
+
+    for _ in range(1, num_deliveries):
+        if not unvisited:
+            break
+
+        next_store: Optional[str] = None
+
+        # 1) Greedy choice among top-M neighbors
+        cand_list = neighbors.get(current, [])
+        cand_unvisited = [c for c in cand_list if c in unvisited]
+        if cand_unvisited:
+            # pick the closest among these (greedy)
+            d = dist_df.loc[current, cand_unvisited].replace([float("inf")], pd.NA).dropna()
+            if len(d) > 0:
+                next_store = d.sort_values().index[0]
+
+        # 2) Fallback: greedy closest among all unvisited
+        if next_store is None and current in dist_df.index:
+            d_all = dist_df.loc[current, unvisited].replace([float("inf")], pd.NA).dropna()
+            if len(d_all) > 0:
+                next_store = d_all.sort_values().index[0]
+
+        # 3) Last resort: random
+        if next_store is None:
+            next_store = unvisited[rng.randrange(len(unvisited))]
+
+        unvisited.remove(next_store)
+        trial.append(next_store)
+        current = next_store
+
+    trial.append("post_office")
+    return trial
+
+
+def get_total_list_topM_greedy(
+    all_stores: List[str],
+    num_trials: int,
+    num_deliveries: int,
+    rng: random.Random,
+    dist_df: pd.DataFrame,
+    *,
+    M: int = 5,
+) -> List[List[str]]:
+    """
+    Generate `num_trials` routes using the greedy top-M rule.
+    """
+    return [
+        get_trial_stores_topM_greedy(
+            all_stores,
+            num_deliveries,
+            rng,
+            dist_df=dist_df,
+            M=M,
+        )
+        for _ in range(num_trials)
+    ]
+### RADIUS
 
 def get_trial_stores_radius(
     all_stores: List[str],
@@ -338,7 +461,7 @@ def get_total_list_radius(all_stores: List[str], num_trials: int, num_deliveries
     return [get_trial_stores_radius(all_stores, num_deliveries, rng, dist_df=dist_df, radius=radius, k_nearest=k_nearest) for _ in range(num_trials)]
 
 from collections import defaultdict
-
+### QUAD
 def generate_quadrant_path(rng: random.Random) -> List[str]:
     """Generate a random path that visits each quadrant exactly once,
     respecting transitions in quadrant_transition_dict."""
@@ -523,7 +646,7 @@ def get_trial_stores_quadrant(all_stores: List[str], num_deliveries: int, rng: r
 
 def get_total_list_quad(all_stores: List[str], num_trials: int, num_deliveries: int, rng: random.Random) -> List[List[str]]:
     return [get_trial_stores_quadrant(all_stores, num_deliveries, rng) for _ in range(num_trials)]
-
+## PURE/ OG
 
 def get_trial_stores_pure(all_stores: List[str], num_deliveries: int, rng: random.Random) -> Tuple[bool, List[str]]:
     unvisited = [s for s in all_stores if s != "post_office"]
@@ -676,7 +799,7 @@ def get_total_list_simple(
 #     D = sub_df.to_numpy(dtype=float)
 
 #     return D, np.array(stores, dtype=object)
-
+### TSP
     
 import time
 import random
@@ -1017,8 +1140,8 @@ def worker_generate_and_solve(
         tries = 0
         while True:
             include_list = tuple(sorted(rng.sample(store_names, k=K)))
-            has_post_close_stores = include_list[0] in post_close_set and include_list[K - 1] in post_close_set
-            if include_list not in seen and has_post_close_stores:
+            # has_post_close_stores = include_list[0] in post_close_set and include_list[K - 1] in post_close_set
+            if include_list not in seen:
                 seen.add(include_list)
                 break
             tries += 1
@@ -1132,7 +1255,7 @@ if __name__ == "__main__":
     out_paths = client.gather(futures)
     print("Wrote:", out_paths)
     
-    combine_path_files(base_out_path, n_jobs)
+    combine_path_files(base_out_path)
 
     # optional progress
     from dask.distributed import progress

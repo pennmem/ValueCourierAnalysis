@@ -15,9 +15,9 @@ DEFAULT_SIMPLE_PARAMS = {
 DEFAULT_COMPLEX_PARAMS = {
     "decay_factor": 1.0,
     "effect_strength": 1.0,
-    "mean_range": (4, 10),
-    "var_range": (2, 6),
-    "val_range": (0, 15),
+    "mean_range": (10, 40),
+    "var_range": (5, 15),
+    "val_range": (0, 50),
 }
 
 def merge_params(defaults, overrides):
@@ -48,7 +48,7 @@ class ItemList:
             self.pos = None
         else:
             self.pos = locations.copy()
-        self.complex_params = complex_params or {}
+        self.complex_params = complex_params or DEFAULT_COMPLEX_PARAMS.copy()
         self.simple_params = simple_params or DEFAULT_SIMPLE_PARAMS.copy()
 
         if condition == "Temporal":
@@ -221,27 +221,67 @@ class ItemList:
         return self.vals
 
     
+#     def temporalConditionComplex(self):
+#         n = self.length
+#         decay_factor = self.complex_params["decay_factor"]
+#         effect_strength = self.complex_params["effect_strength"]
+#         mean_range = self.complex_params["mean_range"]
+#         var_range = self.complex_params["var_range"]
+#         val_range = self.complex_params["val_range"]
+
+#         positions = np.arange(n)
+#         cov = np.exp(-np.square(positions.reshape(-1, 1) - positions) / (2 * decay_factor**2))
+#         cov += np.eye(n) * 1e-5
+
+#         vals = self.rng.multivariate_normal(mean=np.zeros(n), cov=cov)
+#         vals *= effect_strength
+#         vals = (vals - np.mean(vals)) / np.std(vals)
+
+#         point_mean = self.rng.uniform(*mean_range)
+#         point_var = self.rng.uniform(*var_range)
+#         vals = vals * point_var + point_mean
+
+#         # ensure non-negative integers
+#         vals = np.clip(vals, val_range[0], val_range[1])
+#         vals = np.rint(vals).astype(int)
+
+#         self.vals = vals
+#         return self.vals
+
     def temporalConditionComplex(self):
         n = self.length
+
         decay_factor = self.complex_params["decay_factor"]
         effect_strength = self.complex_params["effect_strength"]
         mean_range = self.complex_params["mean_range"]
-        var_range = self.complex_params["var_range"]
-        val_range = self.complex_params["val_range"]
+        var_range  = self.complex_params["var_range"]   # <-- rename
+        val_range  = self.complex_params["val_range"]
 
         positions = np.arange(n)
-        cov = np.exp(-np.square(positions.reshape(-1, 1) - positions) / (2 * decay_factor**2))
-        cov += np.eye(n) * 1e-5
 
-        vals = self.rng.multivariate_normal(mean=np.zeros(n), cov=cov)
+        # Temporal covariance (RBF kernel)
+        cov = np.exp(
+            - (positions[:, None] - positions[None, :])**2
+            / (2 * decay_factor**2)
+        )
+        cov += np.eye(n) * 1e-6  # numerical stability
+
+        # Draw zero-mean unit-variance GP
+        vals = self.rng.multivariate_normal(
+            mean=np.zeros(n),
+            cov=cov
+        )
+
         vals *= effect_strength
-        vals = (vals - np.mean(vals)) / np.std(vals)
+        vals = (vals - vals.mean()) / vals.std()
 
+        # Sample pointwise mean and STD (not variance)
         point_mean = self.rng.uniform(*mean_range)
-        point_var = self.rng.uniform(*var_range)
-        vals = vals * point_var + point_mean
+        point_std  = self.rng.uniform(*var_range)
 
-        # ensure non-negative integers
+        vals = vals * point_std + point_mean
+
+        # Clip + discretize
         vals = np.clip(vals, val_range[0], val_range[1])
         vals = np.rint(vals).astype(int)
 

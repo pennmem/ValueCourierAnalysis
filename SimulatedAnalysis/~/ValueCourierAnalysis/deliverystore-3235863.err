@@ -1,0 +1,22 @@
+2025-12-22 18:57:30,295 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.140:41732'
+2025-12-22 18:57:30,982 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-0xjrdajz', purging
+2025-12-22 18:57:30,984 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-3us3j1c2', purging
+2025-12-22 18:57:30,986 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/dask-worker-space/dask-scratch-space/worker-febkzrzz', purging
+2025-12-22 18:57:31,596 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.140:39448
+2025-12-22 18:57:31,596 - distributed.worker - INFO -          Listening to: tcp://192.168.86.140:39448
+2025-12-22 18:57:31,596 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2025-12-22 18:57:31,596 - distributed.worker - INFO -          dashboard at:       192.168.86.140:46623
+2025-12-22 18:57:31,597 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.140:40971
+2025-12-22 18:57:31,597 - distributed.worker - INFO - -------------------------------------------------
+2025-12-22 18:57:31,597 - distributed.worker - INFO -               Threads:                          1
+2025-12-22 18:57:31,597 - distributed.worker - INFO -                Memory:                  33.53 GiB
+2025-12-22 18:57:31,597 - distributed.worker - INFO -       Local Directory: /home1/zrentala/dask-worker-space/dask-scratch-space/worker-0hsleicv
+2025-12-22 18:57:31,597 - distributed.worker - INFO - -------------------------------------------------
+2025-12-22 18:57:31,620 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-12-22 18:57:31,621 - distributed.worker - INFO - Starting Worker plugin deliveryRoutes.py2bb6dfa6-2f5a-48b5-9e7c-47e84518aea6
+2025-12-22 18:57:31,622 - distributed.utils - INFO - Reload module deliveryRoutes from .py file
+2025-12-22 18:57:32,141 - distributed.worker - INFO -         Registered to: tcp://192.168.86.140:40971
+2025-12-22 18:57:32,141 - distributed.worker - INFO - -------------------------------------------------
+2025-12-22 18:57:32,142 - distributed.core - INFO - Starting established connection to tcp://192.168.86.140:40971
+2025-12-23 11:39:19,454 - distributed.worker - INFO - Stopping worker at tcp://192.168.86.140:39448. Reason: scheduler-close
+slurmstepd: error: *** JOB 3235863 ON node40 CANCELLED AT 2025-12-23T11:39:19 ***

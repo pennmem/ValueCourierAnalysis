@@ -1,0 +1,12 @@
+2026-01-15 15:08:51,486 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.102:41303'
+2026-01-15 15:08:52,910 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.102:34337
+2026-01-15 15:08:52,910 - distributed.worker - INFO -          Listening to: tcp://192.168.86.102:34337
+2026-01-15 15:08:52,910 - distributed.worker - INFO -           Worker name:            SLURMCluster-37
+2026-01-15 15:08:52,910 - distributed.worker - INFO -          dashboard at:       192.168.86.102:38655
+2026-01-15 15:08:52,911 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.140:40952
+2026-01-15 15:08:52,911 - distributed.worker - INFO - -------------------------------------------------
+2026-01-15 15:08:52,911 - distributed.worker - INFO -               Threads:                          1
+2026-01-15 15:08:52,911 - distributed.worker - INFO -                Memory:                   0.93 GiB
+2026-01-15 15:08:52,911 - distributed.worker - INFO -       Local Directory: /home1/zrentala/dask-worker-space/dask-scratch-space/worker-3zf6ox34
+2026-01-15 15:08:52,911 - distributed.worker - INFO - -------------------------------------------------
+slurmstepd: error: *** JOB 3243509 ON node02 CANCELLED AT 2026-01-15T15:08:52 ***
