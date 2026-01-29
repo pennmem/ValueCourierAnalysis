@@ -17,7 +17,62 @@ SLICE_CFG = {"event": 0, "channel": slice(0, 5), "time": slice(0, 20)}
 # ----------------------------
 # HELPERS
 # ----------------------------
+def load_bdf_as_xarray(path: str, *, event_dim_name="event") -> xr.DataArray:
+    f = pyedflib.EdfReader(path)
+    try:
+        n_channels = f.signals_in_file
+        ch_names = list(f.getSignalLabels())
+        sfreq = float(f.getSampleFrequency(0))
+        n_samples = int(f.getNSamples()[0])
 
+        # read + convert each channel explicitly to volts
+        data_V = []
+        for ch in range(n_channels):
+            # print(ch)
+            x = f.readSignal(ch)
+            unit = f.getPhysicalDimension(ch).lower()
+
+            if unit in ("uv", "µv"):
+                x = x * 1e-6          # µV → V
+            elif unit == "mv":
+                x = x * 1e-3          # mV → V
+            elif unit == "v":
+                pass                 # already volts
+            else:
+                print(f"Unknown or invalid physical unit '{unit}' \n" + f"for channel {ch} ({ch_names[ch]})")
+
+            data_V.append(x)
+
+        # shape: (channel, time)
+        data = np.vstack(data_V)
+
+        times = np.arange(n_samples) / sfreq
+
+        # add singleton event dimension
+        data = data[None, :, :]  # (event=1, channel, time)
+
+        da = xr.DataArray(
+            data,
+            dims=(event_dim_name, "channel", "time"),
+            coords={
+                event_dim_name: [0],
+                "channel": ch_names,
+                "time": times,
+                "samplerate": sfreq,
+            },
+            name="eeg",
+            attrs={
+                "units": "V",
+                "source": "pyedflib (explicitly converted to volts)",
+            },
+        )
+
+        return da
+
+    finally:
+        f.close()
+        
+    
 def strip_event_metadata(da: xr.DataArray) -> xr.DataArray:
     if "event" not in da.dims:
         return da
@@ -700,8 +755,8 @@ def compare_eeg_sources(
             for j in range(i + 1, len(eegs_std)):
                 a_name = names[i]
                 b_name = names[j]
-
-                df_time, exact_fail, close_fail, diff_vec = compare_time_coord_pairs(
+                # df, exact_fail, close_fail, diff, close_diff_event_indices, n_events
+                df_time, exact_fail, close_fail, diff_vec, close_diff_event_indices, n_events = compare_time_coord_pairs(
                     a_name, eegs_std[i], b_name, eegs_std[j]
                 )
                 time_frames.append(df_time)

@@ -1,0 +1,28 @@
+2026-01-23 17:54:47,303 - distributed.nanny - INFO -         Start Nanny at: 'tcp://192.168.86.140:35588'
+2026-01-23 17:54:48,299 - distributed.diskutils - INFO - Found stale lock file and directory '/home1/zrentala/scratch/dask-scratch-space/worker-4754qkm0', purging
+2026-01-23 17:54:48,731 - distributed.worker - INFO -       Start worker at: tcp://192.168.86.140:45164
+2026-01-23 17:54:48,732 - distributed.worker - INFO -          Listening to: tcp://192.168.86.140:45164
+2026-01-23 17:54:48,732 - distributed.worker - INFO -           Worker name:             SLURMCluster-0
+2026-01-23 17:54:48,732 - distributed.worker - INFO -          dashboard at:       192.168.86.140:38606
+2026-01-23 17:54:48,732 - distributed.worker - INFO - Waiting to connect to: tcp://192.168.86.140:39642
+2026-01-23 17:54:48,732 - distributed.worker - INFO - -------------------------------------------------
+2026-01-23 17:54:48,732 - distributed.worker - INFO -               Threads:                          1
+2026-01-23 17:54:48,732 - distributed.worker - INFO -                Memory:                  74.51 GiB
+2026-01-23 17:54:48,732 - distributed.worker - INFO -       Local Directory: /home1/zrentala/scratch/dask-scratch-space/worker-h656dyfw
+2026-01-23 17:54:48,732 - distributed.worker - INFO - -------------------------------------------------
+2026-01-23 17:54:49,017 - distributed.worker - INFO - Starting Worker plugin shuffle
+2026-01-23 17:54:49,018 - distributed.worker - INFO -         Registered to: tcp://192.168.86.140:39642
+2026-01-23 17:54:49,018 - distributed.worker - INFO - -------------------------------------------------
+2026-01-23 17:54:49,018 - distributed.core - INFO - Starting established connection to tcp://192.168.86.140:39642
+2026-01-23 17:58:29,920 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 52.24 GiB -- Worker memory limit: 74.51 GiB
+2026-01-23 18:03:18,220 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 52.29 GiB -- Worker memory limit: 74.51 GiB
+2026-01-23 18:06:43,419 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 52.16 GiB -- Worker memory limit: 74.51 GiB
+2026-01-23 18:11:58,419 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 52.23 GiB -- Worker memory limit: 74.51 GiB
+2026-01-23 18:15:18,018 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 52.24 GiB -- Worker memory limit: 74.51 GiB
+2026-01-23 18:20:14,518 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 52.25 GiB -- Worker memory limit: 74.51 GiB
+2026-01-23 18:23:22,819 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 52.18 GiB -- Worker memory limit: 74.51 GiB
+2026-01-23 18:23:33,079 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.50s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2026-01-23 18:28:15,418 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 52.22 GiB -- Worker memory limit: 74.51 GiB
+2026-01-23 18:31:31,318 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 52.21 GiB -- Worker memory limit: 74.51 GiB
+2026-01-23 18:36:04,918 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 52.28 GiB -- Worker memory limit: 74.51 GiB
+slurmstepd: error: *** JOB 3254996 ON node40 CANCELLED AT 2026-01-23T18:37:45 ***
