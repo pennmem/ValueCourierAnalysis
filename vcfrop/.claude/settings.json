@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ' *)",
+      "Bash(ls -la \"/Users/zrentala/Documents/Value Courier/\" 2>&1 | head -50; echo \"=== data dir ===\"; ls -la \"/Users/zrentala/Documents/Value Courier/data\" 2>&1 | head -60)",
+      "Read(//Users/zrentala/Documents/Value Courier/**)",
+      "Bash(find \"/Users/zrentala/Documents/Value Courier\" -maxdepth 4 -type d -not -path \"*/node_modules/*\" -not -path \"*/.git/*\" 2>/dev/null | head -100)",
+      "Bash(find \"/Users/zrentala/Documents/Value Courier/data\" -type f -name \"*.tsv\" | sed 's/.*_task-/task-/' | sort -u; echo \"=== subjects with counts ===\"; find \"/Users/zrentala/Documents/Value Courier/data\" -type f -name \"*.tsv\" | wc -l; echo \"=== any frop named files anywhere ===\"; find \"/Users/zrentala/Documents/Value Courier\" -iname \"*frop*\" -maxdepth 6 -not -path \"*__pycache__*\" | head -40; echo \"=== 083026 named files ===\"; find \"/Users/zrentala/Documents/Value Courier\" -name \"*083026*\" -not -path \"*__pycache__*\")",
+      "Read(//Users/zrentala/**)",
+      "Read(//Users/zrentala/Documents/**)",
+      "Bash(grep -rn \"DATA_DIR\\\\|parent.parent\" \"/Users/zrentala/Documents/Value Courier/vcbehforzach/vcbeh/notebooks/\"*.ipynb 2>/dev/null | head -10; echo \"=== outside search ===\"; find ~/Downloads ~/Desktop -maxdepth 3 -iname \"*frop*\" -o -maxdepth 3 -iname \"*083026*\" 2>/dev/null | head -20; echo \"=== volumes ===\"; ls /Volumes 2>/dev/null)",
+      "Read(//Users/zrentala/Downloads/**)",
+      "Read(//Volumes/**)"
+    ]
+  }
+}
